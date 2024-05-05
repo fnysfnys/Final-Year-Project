@@ -1,0 +1,334 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/coin-change/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'coinChange' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var coinChange = function(coins, amount) {\n    function dp(target) {\n        if (target === 0) return 0;\n        if (target < 0) return -1;\n\n        let minCoins = Infinity;\n        for (const coin of coins) {\n            const subproblem = dp(target - coin);\n            if (subproblem !== -1) {\n                minCoins = Math.min(minCoins, subproblem + 1);\n            }\n        }\n\n        return minCoins === Infinity ? -1 : minCoins;\n    }\n\n    return dp(amount);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/coin-change/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'coinChange' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var coinChange = function(coins, amount) {\n    const dp = new Array(amount + 1).fill(Infinity);\n    dp[0] = 0;\n\n    for (let i = 1; i <= amount; i++) {\n        for (const coin of coins) {\n            if (i - coin >= 0) {\n                dp[i] = Math.min(dp[i], dp[i - coin] + 1);\n            }\n        }\n    }\n\n    return dp[amount] === Infinity ? -1 : dp[amount];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/coin-change/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'coinChange' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var coinChange = function(coins, amount) {\n    const dp = new Array(amount + 1).fill(Infinity);\n    dp[0] = 0;\n\n    for (const coin of coins) {\n        for (let i = coin; i <= amount; i++) {\n            dp[i] = Math.min(dp[i], dp[i - coin] + 1);\n        }\n    }\n\n    return dp[amount] === Infinity ? -1 : dp[amount];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/coin-change/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'coinChange' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var coinChange = function(coins, amount) {\n    const queue = [{ amount: amount, count: 0 }];\n\n    while (queue.length > 0) {\n        const { amount, count } = queue.shift();\n\n        if (amount === 0) {\n            return count;\n        }\n\n        for (const coin of coins) {\n            if (amount - coin >= 0) {\n                queue.push({ amount: amount - coin, count: count + 1 });\n            }\n        }\n    }\n\n    return -1;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/coin-change/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'coinChange' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var coinChange = function(coins, amount) {\n    coins.sort((a, b) => b - a); // Sort in descending order\n    let count = 0;\n\n    for (const coin of coins) {\n        while (amount >= coin) {\n            amount -= coin;\n            count++;\n        }\n    }\n\n    return amount === 0 ? count : -1;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/coin-change/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'coinChange' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var coinChange = function(coins, amount) {\n    const dp = Array.from({ length: coins.length + 1 }, () => Array(amount + 1).fill(Infinity));\n    \n    for (let i = 0; i <= coins.length; i++) {\n        dp[i][0] = 0;\n    }\n\n    for (let i = 1; i <= coins.length; i++) {\n        for (let j = 1; j <= amount; j++) {\n            if (j - coins[i - 1] >= 0) {\n                dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - coins[i - 1]] + 1);\n            } else {\n                dp[i][j] = dp[i - 1][j];\n            }\n        }\n    }\n\n    return dp[coins.length][amount] === Infinity ? -1 : dp[coins.length][amount];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/coin-change/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'coinChange' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var coinChange = function(coins, amount) {\n    const dp = new Array(amount + 1).fill(-1);\n    dp[0] = 0;\n\n    for (let i = 1; i <= amount; i++) {\n        for (const coin of coins) {\n            if (i - coin >= 0 && dp[i - coin] !== -1) {\n                dp[i] = dp[i] === -1 ? dp[i - coin] + 1 : Math.min(dp[i], dp[i - coin] + 1);\n            }\n        }\n    }\n\n    return dp[amount];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/coin-change/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'coinChange' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var coinChange = function(coins, amount) {\n    const memo = new Array(amount + 1).fill(-1);\n\n    function dp(target) {\n        if (target === 0) return 0;\n        if (target < 0) return -1;\n        if (memo[target] !== -1) return memo[target];\n\n        let minCoins = Infinity;\n        for (const coin of coins) {\n            const subproblem = dp(target - coin);\n            if (subproblem !== -1) {\n                minCoins = Math.min(minCoins, subproblem + 1);\n            }\n        }\n\n        memo[target] = minCoins === Infinity ? -1 : minCoins;\n        return memo[target];\n    }\n\n    return dp(amount);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/coin-change/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'coinChange' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var coinChange = function(coins, amount) {\n    const dp = new Array(amount + 1).fill(Infinity);\n    dp[0] = 0;\n\n    for (let i = 0; i < coins.length; i++) {\n        for (let j = coins[i]; j <= amount; j++) {\n            dp[j] = Math.min(dp[j], dp[j - coins[i]] + 1);\n        }\n    }\n\n    return dp[amount] === Infinity ? -1 : dp[amount];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/coin-change/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'coinChange' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var coinChange = function(coins, amount) {\n    const memo = new Map();\n\n    function dp(target) {\n        if (target === 0) return 0;\n        if (target < 0) return -1;\n        if (memo.has(target)) return memo.get(target);\n\n        let minCoins = Infinity;\n        for (const coin of coins) {\n            const subproblem = dp(target - coin);\n            if (subproblem !== -1) {\n                minCoins = Math.min(minCoins, subproblem + 1);\n            }\n        }\n\n        memo.set(target, minCoins === Infinity ? -1 : minCoins);\n        return memo.get(target);\n    }\n\n    return dp(amount);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

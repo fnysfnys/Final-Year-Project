@@ -1,0 +1,103 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/concatenated-words/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findAllConcatenatedWordsInADict = function(words) {\n    const arr = [];\n    \n    class Trie {\n        constructor() {\n            this.root = new TrieNode();\n        }\n        \n        create(w) {\n            let node = this.root;\n            for (let i = 0; i < w.length; ++i) {\n                const c = w[i];\n                node.next[c] = node.next[c] || new TrieNode();\n                node = node.next[c];\n            }\n            node.end = true;\n            node.word = w;\n        }\n        \n        find(w, ind, depth) {\n            let node = this.root;\n            for (let i = ind; i < w.length; ++i) {\n                const c = w[i];\n                if (node.next[c] === undefined) {\n                    return false;\n                } else {\n                    node = node.next[c];\n                }\n                \n                if (node.end === true) {\n                    if (i === w.length - 1) {\n                        if (depth >= 1) {\n                            arr.push(w);\n                            return true;\n                        } else {\n                            return false;\n                        }\n                    }\n                    if (this.find(w, i + 1, depth + 1)) {\n                        return true;\n                    }\n                }\n            }\n            return false;\n        }\n    }\n    \n    class TrieNode {\n        constructor() {\n            this.next = {};\n            this.end = false;\n            this.word = '';\n        }\n    }\n    \n    const trie = new Trie();\n    for (let i = 0; i < words.length; ++i) {\n        const w = words[i];\n        trie.create(w);\n    }\n    \n    for (let i = 0; i < words.length; ++i) {\n        const w = words[i];\n        trie.find(w, 0, 0);\n    }\n    \n    return arr;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/concatenated-words/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findAllConcatenatedWordsInADict = function(words) {\n    const set = new Set(words);\n    const memo = new Map();\n    \n    function canForm(word, start) {\n        if (start === word.length) return true;\n        if (memo.has(start)) return memo.get(start);\n        \n        for (let end = start + 1; end <= word.length; ++end) {\n            const prefix = word.substring(start, end);\n            if (set.has(prefix) && canForm(word, end)) {\n                memo.set(start, true);\n                return true;\n            }\n        }\n        \n        memo.set(start, false);\n        return false;\n    }\n    \n    const result = [];\n    for (const word of words) {\n        set.delete(word);\n        if (canForm(word, 0)) {\n            result.push(word);\n        }\n        set.add(word);\n    }\n    \n    return result;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/concatenated-words/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findAllConcatenatedWordsInADict = function(words) {\n    const set = new Set(words);\n    const result = [];\n    \n    function isConcatenated(word, start) {\n        if (start === word.length) return true;\n        for (let end = start + 1; end <= word.length; ++end) {\n            const prefix = word.substring(start, end);\n            if (set.has(prefix) && isConcatenated(word, end)) {\n                return true;\n            }\n        }\n        return false;\n    }\n    \n    for (const word of words) {\n        set.delete(word);\n        if (isConcatenated(word, 0)) {\n            result.push(word);\n        }\n        set.add(word);\n    }\n    \n    return result;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

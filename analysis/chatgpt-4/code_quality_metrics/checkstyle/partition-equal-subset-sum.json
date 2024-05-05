@@ -1,0 +1,976 @@
+{
+    "Java": {
+        "solution2": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/partition-equal-subset-sum/Java/solution2.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 197).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "47",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'nums'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution3": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/partition-equal-subset-sum/Java/solution3.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 200).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "26",
+                            "@severity": "error",
+                            "@message": "Parameter intervals should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "34",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'intervals'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 81).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution4": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/partition-equal-subset-sum/Java/solution4.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 261).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "27",
+                            "@severity": "error",
+                            "@message": "Parameter coins should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "33",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'coins'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "40",
+                            "@severity": "error",
+                            "@message": "Parameter amount should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "44",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'amount'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution8": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/partition-equal-subset-sum/Java/solution8.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 126).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "40",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'nums'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "15",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 90).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "15",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter list should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "15",
+                            "@column": "54",
+                            "@severity": "error",
+                            "@message": "Parameter tempList should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "15",
+                            "@column": "78",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "15",
+                            "@column": "82",
+                            "@severity": "error",
+                            "@message": "'int' is followed by whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                        },
+                        {
+                            "@line": "15",
+                            "@column": "90",
+                            "@severity": "error",
+                            "@message": "'{' is not preceded with whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@column": "44",
+                            "@severity": "error",
+                            "@message": "'{' is not preceded with whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@column": "11",
+                            "@severity": "error",
+                            "@message": "'else' is not followed by whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@column": "11",
+                            "@severity": "error",
+                            "@message": "'else' is not followed by whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@column": "15",
+                            "@severity": "error",
+                            "@message": "'{' is not preceded with whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "50",
+                            "@severity": "error",
+                            "@message": "'{' is not preceded with whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 88).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'if' is not followed by whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'if' is not followed by whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution9": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/partition-equal-subset-sum/Java/solution9.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 92).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 91).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 95).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter root should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@column": "40",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'root'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter node should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter low should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@column": "58",
+                            "@severity": "error",
+                            "@message": "Parameter high should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 97).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 90).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "23",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "25",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "25",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "Variable 'val' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "26",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "26",
+                            "@column": "18",
+                            "@severity": "error",
+                            "@message": "Variable 'left' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "27",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "27",
+                            "@column": "18",
+                            "@severity": "error",
+                            "@message": "Variable 'right' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "28",
+                            "@column": "18",
+                            "@severity": "error",
+                            "@message": "Parameter x should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "28",
+                            "@column": "25",
+                            "@severity": "error",
+                            "@message": "'{' at column 25 should have line break after.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution5": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/partition-equal-subset-sum/Java/solution5.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 94).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 97).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "34",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'nums'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution6": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/partition-equal-subset-sum/Java/solution6.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 143).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "34",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'nums'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Each variable declaration must be in its own statement.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MultipleVariableDeclarationsCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution10": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/partition-equal-subset-sum/Java/solution10.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 350).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 100).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@column": "47",
+                            "@severity": "error",
+                            "@message": "Parameter candidates should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@column": "53",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'candidates'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@column": "65",
+                            "@severity": "error",
+                            "@message": "Parameter target should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@column": "69",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'target'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 119).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter list should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "54",
+                            "@severity": "error",
+                            "@message": "Parameter tempList should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "78",
+                            "@severity": "error",
+                            "@message": "Parameter candidates should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "82",
+                            "@severity": "error",
+                            "@message": "'int' is followed by whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "97",
+                            "@severity": "error",
+                            "@message": "Parameter remain should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "109",
+                            "@severity": "error",
+                            "@message": "Parameter start should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "119",
+                            "@severity": "error",
+                            "@message": "'{' is not preceded with whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 81).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@column": "14",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "22",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'else' is not followed by whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                        },
+                        {
+                            "@line": "22",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'else' is not followed by whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                        },
+                        {
+                            "@line": "22",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "'{' is not preceded with whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                        },
+                        {
+                            "@line": "23",
+                            "@column": "60",
+                            "@severity": "error",
+                            "@message": "'{' is not preceded with whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"
+                        },
+                        {
+                            "@line": "25",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 129).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution7": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/partition-equal-subset-sum/Java/solution7.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 168).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 123).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'n'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "15",
+                            "@column": "22",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/partition-equal-subset-sum/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Class 'Solution' looks like designed for extension (can be subclassed), but the method 'canPartition' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Solution' final or making the method 'canPartition' static/final/abstract/empty, or adding allowed annotation for the method.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "33",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

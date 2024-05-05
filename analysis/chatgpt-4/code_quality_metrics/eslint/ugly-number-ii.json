@@ -1,0 +1,345 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/ugly-number-ii/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 24,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 24,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n * Given an integer n, return the nth ugly number.\n */\nclass MinHeap {\n    constructor() {\n        this.heap = [];\n    }\n\n    insert(num) {\n        this.heap.push(num);\n        this.heap.sort((a, b) => a - b);\n    }\n\n    remove() {\n        return this.heap.shift();\n    }\n\n    get size() {\n        return this.heap.length;\n    }\n}\n\nvar nthUglyNumber = function(n) {\n    let minHeap = new MinHeap();\n    minHeap.insert(1);\n    let value = 0;\n\n    for (let i = 0; i < n; i++) {\n        value = minHeap.remove();\n        [2, 3, 5].forEach(factor => {\n            if (!minHeap.heap.includes(value * factor)) {\n                minHeap.insert(value * factor);\n            }\n        });\n    }\n\n    return value;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/ugly-number-ii/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n * Given an integer n, return the nth ugly number.\n */\nvar nthUglyNumber = function(n) {\n    let uglyNumbers = [1];\n    let i2 = 0, i3 = 0, i5 = 0;\n\n    while (uglyNumbers.length < n) {\n        let next2 = uglyNumbers[i2] * 2;\n        let next3 = uglyNumbers[i3] * 3;\n        let next5 = uglyNumbers[i5] * 5;\n        let nextUgly = Math.min(next2, next3, next5);\n        if (nextUgly === next2) i2++;\n        if (nextUgly === next3) i3++;\n        if (nextUgly === next5) i5++;\n        uglyNumbers.push(nextUgly);\n    }\n\n    return uglyNumbers[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/ugly-number-ii/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n * Given an integer n, return the nth ugly number.\n */\nvar nthUglyNumber = function(n) {\n    let uglies = [1];\n\n    for (let i = 1; i < n; i++) {\n        let last = uglies[i - 1];\n        let nextUglies = [last * 2, last * 3, last * 5].filter(x => !uglies.includes(x));\n        uglies.push(Math.min(...nextUglies));\n        uglies.sort((a, b) => a - b);\n    }\n\n    return uglies[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/ugly-number-ii/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 25,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 25,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n * Given an integer n, return the nth ugly number.\n */\nclass PriorityQueue {\n    constructor(comparator = (a, b) => a - b) {\n        this._heap = [];\n        this._comparator = comparator;\n    }\n\n    push(value) {\n        this._heap.push(value);\n        this._heap.sort(this._comparator);\n    }\n\n    pop() {\n        return this._heap.shift();\n    }\n\n    size() {\n        return this._heap.length;\n    }\n}\n\nvar nthUglyNumber = function(n) {\n    let pq = new PriorityQueue();\n    let seen = new Set([1]);\n    pq.push(1);\n\n    while (seen.size < n) {\n        let current = pq.pop();\n        for (let factor of [\n\n2, 3, 5]) {\n            let next = current * factor;\n            if (!seen.has(next)) {\n                seen.add(next);\n                pq.push(next);\n            }\n        }\n    }\n\n    return Array.from(seen).sort((a, b) => a - b)[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/ugly-number-ii/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n * Given an integer n, return the nth ugly number.\n */\nvar nthUglyNumber = function(n) {\n    let seen = new Set([1]);\n    let heap = [1];\n\n    while (seen.size < n) {\n        let current = heap.shift();\n        for (let factor of [2, 3, 5]) {\n            let next = current * factor;\n            if (!seen.has(next)) {\n                seen.add(next);\n                heap.push(next);\n                heap.sort((a, b) => a - b);\n            }\n        }\n    }\n\n    return heap[0];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/ugly-number-ii/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n * Given an integer n, return the nth ugly number.\n */\nvar nthUglyNumber = function(n) {\n    if (n === 1) return 1;\n\n    let count = 1;\n    for (let i = 2; count < n; i++) {\n        if (isUgly(i)) count++;\n        if (count === n) return i;\n    }\n\n    function isUgly(num) {\n        for (let p of [2, 3, 5]) {\n            while (num % p === 0) num /= p;\n        }\n        return num === 1;\n    }\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/ugly-number-ii/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n * Given an integer n, return the nth ugly number.\n */\nvar nthUglyNumber = function(n) {\n    let uglyNumbers = new Set([1]);\n    let arr = [1];\n\n    while (arr.length < n) {\n        let min = Math.min(arr[0] * 2, arr[0] * 3, arr[0] * 5);\n        uglyNumbers.add(min);\n        arr.push(min);\n        arr = Array.from(uglyNumbers).sort((a, b) => a - b);\n        arr = arr.slice(arr.indexOf(min));\n    }\n\n    return arr[0];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/ugly-number-ii/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n * Given an integer n, return the nth ugly number.\n */\nvar nthUglyNumber = function(n, memo = {1: 1}) {\n    if (memo[n] !== undefined) return memo[n];\n\n    let count = 1, num = 1;\n    while (count < n) {\n        num++;\n        if (isUgly(num)) {\n            memo[++count] = num;\n        }\n    }\n\n    return memo[n];\n\n    function isUgly(num) {\n        for (let p of [2, 3, 5]) {\n            while (num % p === 0) num /= p;\n        }\n        return num === 1;\n    }\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/ugly-number-ii/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n * Given an integer n, return the nth ugly number.\n */\nvar nthUglyNumber = function(n) {\n    let nums = [1];\n    let i = 0, j = 0, k = 0;\n\n    while (nums.length < n) {\n        let next = Math.min(nums[i] * 2, nums[j] * 3, nums[k] * 5);\n        nums.push(next);\n        if (next === nums[i] * 2) i++;\n        if (next === nums[j] * 3) j++;\n        if (next === nums[k] * 5) k++;\n    }\n\n    return nums[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/ugly-number-ii/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unexpected-multiline",
+                    "severity": 2,
+                    "message": "Unexpected newline between object and [ of property access.",
+                    "line": 13,
+                    "column": 1,
+                    "nodeType": "Identifier",
+                    "messageId": "property",
+                    "endLine": 13,
+                    "endColumn": 2
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n * Given an integer n, return the nth ugly number.\n */\nvar nthUglyNumber = function(n) {\n    let dp = Array(n).fill(0);\n    dp[0] = 1;\n    let p2 = 0, p3 = 0, p5 = 0;\n\n    for (let i = 1; i < n; i++) {\n        let next2 = dp\n\n[p2] * 2, next3 = dp[p3] * 3, next5 = dp[p5] * 5;\n        dp[i] = Math.min(next2, next3, next5);\n        if (dp[i] === next2) p2++;\n        if (dp[i] === next3) p3++;\n        if (dp[i] === next5) p5++;\n    }\n\n    return dp[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

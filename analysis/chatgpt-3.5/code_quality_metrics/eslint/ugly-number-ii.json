@@ -1,0 +1,334 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/ugly-number-ii/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    const uglyNumbers = [1];\n    let i2 = 0, i3 = 0, i5 = 0;\n\n    while (uglyNumbers.length < n) {\n        const nextUgly = Math.min(uglyNumbers[i2] * 2, uglyNumbers[i3] * 3, uglyNumbers[i5] * 5);\n        uglyNumbers.push(nextUgly);\n\n        if (nextUgly === uglyNumbers[i2] * 2) i2++;\n        if (nextUgly === uglyNumbers[i3] * 3) i3++;\n        if (nextUgly === uglyNumbers[i5] * 5) i5++;\n    }\n\n    return uglyNumbers.pop();\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/ugly-number-ii/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    const uglyNumbers = new Set([1]);\n    let num = 2;\n\n    while (uglyNumbers.size < n) {\n        if (isUgly(num)) {\n            uglyNumbers.add(num);\n        }\n        num++;\n    }\n\n    return Array.from(uglyNumbers).pop();\n};\n\nfunction isUgly(num) {\n    while (num % 2 === 0) {\n        num /= 2;\n    }\n    while (num % 3 === 0) {\n        num /= 3;\n    }\n    while (num % 5 === 0) {\n        num /= 5;\n    }\n    return num === 1;\n}",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/ugly-number-ii/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    const memo = new Map();\n\n    function findNthUglyNumber(index) {\n        if (index === 1) return 1;\n        if (memo.has(index)) return memo.get(index);\n\n        const nextUgly = Math.min(\n            findNthUglyNumber(index - 1) * 2,\n            findNthUglyNumber(index - 1) * 3,\n            findNthUglyNumber(index - 1) * 5\n        );\n\n        memo.set(index, nextUgly);\n        return nextUgly;\n    }\n\n    return findNthUglyNumber(n);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/ugly-number-ii/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    const uglyNumbers = [1];\n    let p2 = 0, p3 = 0, p5 = 0;\n\n    while (uglyNumbers.length < n) {\n        const nextUgly = Math.min(uglyNumbers[p2] * 2, uglyNumbers[p3] * 3, uglyNumbers[p5] * 5);\n        uglyNumbers.push(nextUgly);\n\n        if (nextUgly === uglyNumbers[p2] * 2) p2++;\n        if (nextUgly === uglyNumbers[p3] * 3) p3++;\n        if (nextUgly === uglyNumbers[p5] * 5) p5++;\n    }\n\n    return uglyNumbers[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/ugly-number-ii/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    const heap = [1];\n    const factors = [2, 3, 5];\n\n    while (n > 1) {\n        const curr = heap.shift();\n        for (const factor of factors) {\n            const next = curr * factor;\n            if (!heap.includes(next)) {\n                heap.push(next);\n            }\n        }\n        heap.sort((a, b) => a - b);\n        n--;\n    }\n\n    return heap[0];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/ugly-number-ii/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    const uglyNumbers = [1];\n    let i2 = 0, i3 = 0, i5 = 0;\n\n    for (let i = 1; i < n; i++) {\n        const nextUgly = Math.min(uglyNumbers[i2] * 2, uglyNumbers[i3] * 3, uglyNumbers[i5] * 5);\n        uglyNumbers.push(nextUgly);\n\n        if (nextUgly === uglyNumbers[i2] * 2) i2++;\n        if (nextUgly === uglyNumbers[i3] * 3) i3++;\n        if (nextUgly === uglyNumbers[i5] * 5) i5++;\n    }\n\n    return uglyNumbers[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/ugly-number-ii/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    const uglyNumbers = [1];\n    let p2 = 0, p3 = 0, p5 = 0;\n\n    while (uglyNumbers.length < n) {\n        const nextUgly = Math.min(uglyNumbers[p2] * 2, uglyNumbers[p3] * 3, uglyNumbers[p5] * 5);\n        uglyNumbers.push(nextUgly);\n\n        if (nextUgly === uglyNumbers[p2] * 2) p2++;\n        if (nextUgly === uglyNumbers[p3] * 3) p3++;\n        if (nextUgly === uglyNumbers[p5] * 5) p5++;\n    }\n\n    return uglyNumbers.pop();\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/ugly-number-ii/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    const uglyNumbers = [1];\n    let i2 = 0, i3 = 0, i5 = 0;\n\n    while (uglyNumbers.length < n) {\n        const nextUgly = Math.min(uglyNumbers[i2] * 2, uglyNumbers[i3] * 3, uglyNumbers[i5] * 5);\n        uglyNumbers.push(nextUgly);\n\n        if (nextUgly === uglyNumbers[i2] * 2) i2++;\n        if (nextUgly === uglyNumbers[i3] * 3) i3++;\n        if (nextUgly === uglyNumbers[i5] * 5) i5++;\n    }\n\n    return uglyNumbers[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/ugly-number-ii/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    function* generateUglyNumbers() {\n        const uglyNumbers = [1];\n        let i2 = 0, i3 = 0, i5 = 0;\n\n        while (true) {\n            const nextUgly = Math.min(uglyNumbers[i2] * 2, uglyNumbers[i3] * 3, uglyNumbers[i5] * 5);\n            uglyNumbers.push(nextUgly);\n\n            if (nextUgly === uglyNumbers[i2] * 2) i2++;\n            if (nextUgly === uglyNumbers[i3] * 3) i3++;\n            if (nextUgly === uglyNumbers[i5] * 5) i5++;\n\n            yield uglyNumbers[uglyNumbers.length - 1];\n        }\n    }\n\n    const generator = generateUglyNumbers();\n    for (let i = 1; i < n; i++) {\n        generator.next();\n    }\n\n    return generator.next().value;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/ugly-number-ii/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthUglyNumber' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    const uglyNumbers = [1];\n    let i2 = 0, i3 = 0, i5 = 0;\n\n    for (let i = 1; i < n; i++) {\n        let nextUgly = uglyNumbers[i2] * 2;\n        while (nextUgly <= uglyNumbers[i - 1]) {\n            i2++;\n            nextUgly = uglyNumbers[i2] * 2;\n        }\n\n        nextUgly = uglyNumbers[i3] * 3;\n        while (nextUgly <= uglyNumbers[i - 1]) {\n            i3++;\n            nextUgly = uglyNumbers[i3] * 3;\n        }\n\n        nextUgly = uglyNumbers[i5]\n\n * 5;\n        while (nextUgly <= uglyNumbers[i - 1]) {\n            i5++;\n            nextUgly = uglyNumbers[i5] * 5;\n        }\n\n        uglyNumbers.push(Math.min(uglyNumbers[i2] * 2, uglyNumbers[i3] * 3, uglyNumbers[i5] * 5));\n    }\n\n    return uglyNumbers[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

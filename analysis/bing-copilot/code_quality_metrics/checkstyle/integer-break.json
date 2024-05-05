@@ -1,0 +1,301 @@
+{
+    "Java": {
+        "solution2": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/bing_copilot/parsed_outputs/integer-break/Java/solution2.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 93).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution3": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/bing_copilot/parsed_outputs/integer-break/Java/solution3.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "22",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "33",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "36",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution4": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/bing_copilot/parsed_outputs/integer-break/Java/solution4.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution5": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/bing_copilot/parsed_outputs/integer-break/Java/solution5.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "35",
+                            "@severity": "error",
+                            "@message": "Parameter memo should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/bing_copilot/parsed_outputs/integer-break/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "22",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "33",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "36",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

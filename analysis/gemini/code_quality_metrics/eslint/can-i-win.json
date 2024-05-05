@@ -1,0 +1,213 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/can-i-win/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canIWin(maxChoosableInteger, desiredTotal) {\n  const nimSum = (a, b) => (a ^ b) % (maxChoosableInteger + 1);\n  const winningPositions = new Set();\n\n  for (let i = 1; i <= maxChoosableInteger; i++) {\n    winningPositions.add(nimSum(desiredTotal, i));\n  }\n\n  return winningPositions.has(0);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/can-i-win/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canIWin(maxChoosableInteger, desiredTotal, memo = {}) {\n  const key = `${desiredTotal}-${maxChoosableInteger}`;\n  if (key in memo) return memo[key];\n\n  for (let i = 1; i <= maxChoosableInteger; i++) {\n    const remaining = desiredTotal - i;\n    if (remaining <= 0 || !canIWin(maxChoosableInteger - 1, remaining, memo)) {\n      memo[key] = true;\n      return true;\n    }\n  }\n\n  memo[key] = false;\n  return false;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/can-i-win/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canIWin(maxChoosableInteger, desiredTotal, alpha = -Infinity, beta = Infinity) {\n  for (let i = 1; i <= maxChoosableInteger; i++) {\n    const remaining = desiredTotal - i;\n    if (remaining <= 0 || !canIWin(maxChoosableInteger - 1, remaining, alpha, beta)) {\n      return true;\n    }\n    alpha = Math.max(alpha, remaining);\n  }\n\n  return false;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/can-i-win/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'mask' is assigned a value but never used.",
+                    "line": 2,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 2,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canIWin(maxChoosableInteger, desiredTotal) {\n  const mask = (1 << (maxChoosableInteger + 1)) - 1;\n  let states = 1;\n\n  for (let i = 1; i <= desiredTotal; i++) {\n    const nextStates = states & ~(states << i);\n    if (!nextStates) return false;\n    states |= nextStates;\n  }\n\n  return true;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/can-i-win/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canIWin(maxChoosableInteger, desiredTotal) {\n  const combinations = [];\n  for (let i = 1; i <= maxChoosableInteger; i++) {\n    combinations.push(i);\n  }\n\n  while (combinations.length) {\n    const next = combinations.shift();\n    if (next >= desiredTotal) return true;\n\n    for (let i = 0; i < combinations.length; i++) {\n      const newNum = next + combinations[i];\n      if (newNum <= desiredTotal && !combinations.includes(newNum)) {\n        combinations.push(newNum);\n      }\n    }\n  }\n\n  return false;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/can-i-win/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canIWin(maxChoosableInteger, desiredTotal) {\n  const dp = new Array(desiredTotal + 1).fill(false);\n  dp[0] = true;\n\n  for (let i = 1; i <= desiredTotal; i++) {\n    for (let j = 1; j <= maxChoosableInteger; j++) {\n      if (i - j >= 0 && !dp[i - j]) {\n        dp[i] = true;\n        break;\n      }\n    }\n  }\n\n  return dp[desiredTotal];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

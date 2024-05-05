@@ -1,0 +1,74 @@
+{
+    "Java": {
+        "solution2": {
+            "status_display": "Accepted",
+            "compare_result": "1111111111111111111111111111111111111111111",
+            "runtime": "73 ms",
+            "memory": "51.7 MB"
+        },
+        "solution1": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "1111111111111111111111111111111111111111110",
+            "runtime": "N/A",
+            "memory": "N/A"
+        }
+    },
+    "JavaScript": {
+        "solution1": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "1111111111111111111111111111111111111111110",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0010000000111111011111111100110110111011110",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution2": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "1111111111111111111111111111111111111111110",
+            "runtime": "N/A",
+            "memory": "N/A"
+        }
+    },
+    "Python": {
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "1111111111111111111111111111111111111111111",
+            "runtime": "231 ms",
+            "memory": "15.8 MB"
+        },
+        "solution5": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution4": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0010000000111111011111111100110110111011110",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution2": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution6": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        }
+    }
+}

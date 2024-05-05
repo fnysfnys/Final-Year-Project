@@ -1,0 +1,68 @@
+{
+    "Python": {
+        "solution1": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "111111111111111111111110000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "101111000111001010110000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution2": {
+            "status_display": "Wrong Answer",
+            "compare_result": "101000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        }
+    },
+    "Java": {
+        "solution2": {
+            "status_display": "Runtime Error",
+            "compare_result": "000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "100001000110011111100000001000011011",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution1": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "111111111111111111111111000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        }
+    },
+    "JavaScript": {
+        "solution1": {
+            "status_display": "Wrong Answer",
+            "compare_result": "110001111111011111110000001000011011",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution4": {
+            "status_display": "Wrong Answer",
+            "compare_result": "001100100000000010000000001000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "000100000000000010000000001000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution2": {
+            "status_display": "Wrong Answer",
+            "compare_result": "111111101111111101110000001000001000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        }
+    }
+}

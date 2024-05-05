@@ -1,0 +1,231 @@
+{
+    "Java": {
+        "solution2": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/bing_copilot/parsed_outputs/concatenated-words/Java/solution2.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "57",
+                            "@severity": "error",
+                            "@message": "Parameter words should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "13",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 106).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter word should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@column": "58",
+                            "@severity": "error",
+                            "@message": "Parameter wordSet should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@column": "79",
+                            "@severity": "error",
+                            "@message": "Parameter memo should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "25",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 123).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "30",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/bing_copilot/parsed_outputs/concatenated-words/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "34",
+                            "@severity": "error",
+                            "@message": "Variable 'children' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "Variable 'isEnd' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@column": "57",
+                            "@severity": "error",
+                            "@message": "Parameter words should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "15",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "27",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "30",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "31",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter root should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "31",
+                            "@column": "44",
+                            "@severity": "error",
+                            "@message": "Parameter word should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "39",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "40",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 95).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "40",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter root should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "40",
+                            "@column": "60",
+                            "@severity": "error",
+                            "@message": "Parameter word should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "40",
+                            "@column": "73",
+                            "@severity": "error",
+                            "@message": "Parameter index should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "40",
+                            "@column": "84",
+                            "@severity": "error",
+                            "@message": "Parameter count should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

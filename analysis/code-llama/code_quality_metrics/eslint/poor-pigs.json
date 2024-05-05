@@ -1,0 +1,554 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/poor-pigs/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToDie' is defined but never used.",
+                    "line": 1,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToTest' is defined but never used.",
+                    "line": 1,
+                    "column": 42,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 55
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n   return Math.ceil(buckets / 6);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/poor-pigs/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToDie' is defined but never used.",
+                    "line": 1,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToTest' is defined but never used.",
+                    "line": 1,
+                    "column": 42,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 55
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n   return Math.ceil(buckets / 2);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/poor-pigs/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToDie' is defined but never used.",
+                    "line": 1,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToTest' is defined but never used.",
+                    "line": 1,
+                    "column": 42,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 55
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n   return Math.ceil(buckets / 11);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/poor-pigs/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToDie' is defined but never used.",
+                    "line": 1,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToTest' is defined but never used.",
+                    "line": 1,
+                    "column": 42,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 55
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n   return Math.ceil(buckets / 5);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/poor-pigs/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToDie' is defined but never used.",
+                    "line": 1,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToTest' is defined but never used.",
+                    "line": 1,
+                    "column": 42,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 55
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n   return Math.ceil(buckets / 4);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/poor-pigs/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToDie' is defined but never used.",
+                    "line": 1,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToTest' is defined but never used.",
+                    "line": 1,
+                    "column": 42,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 55
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n   return Math.ceil(buckets / 8);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/poor-pigs/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToDie' is defined but never used.",
+                    "line": 1,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToTest' is defined but never used.",
+                    "line": 1,
+                    "column": 42,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 55
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n   return Math.ceil(buckets / 7);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/poor-pigs/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToDie' is defined but never used.",
+                    "line": 1,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToTest' is defined but never used.",
+                    "line": 1,
+                    "column": 42,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 55
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n   return Math.ceil(buckets / 3);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/poor-pigs/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToDie' is defined but never used.",
+                    "line": 1,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToTest' is defined but never used.",
+                    "line": 1,
+                    "column": 42,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 55
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n   return Math.ceil(buckets / 10);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/poor-pigs/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToDie' is defined but never used.",
+                    "line": 1,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'minutesToTest' is defined but never used.",
+                    "line": 1,
+                    "column": 42,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 55
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n   return Math.ceil(buckets / 9);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

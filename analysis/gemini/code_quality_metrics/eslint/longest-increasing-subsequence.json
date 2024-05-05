@@ -1,0 +1,136 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/longest-increasing-subsequence/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'lengthOfLIS' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var lengthOfLIS = function(nums) {\n  const dp = Array(nums.length).fill(0);\n\n  function lis(i) {\n    if (i === nums.length) return 0;\n    if (dp[i] > 0) return dp[i];\n\n    let maxLength = 1;\n    for (let j = 0; j < i; j++) {\n      if (nums[j] < nums[i]) {\n        maxLength = Math.max(maxLength, 1 + lis(j));\n      }\n    }\n    dp[i] = maxLength;\n    return maxLength;\n  }\n\n  return lis(0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/longest-increasing-subsequence/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'lengthOfLIS' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var lengthOfLIS = function(nums) {\n  const tails = [];\n\n  for (const num of nums) {\n    const i = binarySearch(tails, num);\n    if (i < tails.length) {\n      tails[i] = num;\n    } else {\n      tails.push(num);\n    }\n  }\n\n  return tails.length;\n};\n\nfunction binarySearch(arr, n) {\n  let left = 0;\n  let right = arr.length - 1;\n\n  while (left <= right) {\n    const mid = Math.floor((left + right) / 2);\n    if (arr[mid] === n) return mid;\n    else if (arr[mid] < n) left = mid + 1;\n    else right = mid - 1;\n  }\n\n  return left;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/longest-increasing-subsequence/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'lengthOfLIS' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var lengthOfLIS = function(nums) {\n  const dp = Array(nums.length).fill(1);\n\n  for (let i = 1; i < nums.length; i++) {\n    for (let j = 0; j < i; j++) {\n      if (nums[j] < nums[i]) {\n        dp[i] = Math.max(dp[i], dp[j] + 1);\n      }\n    }\n  }\n\n  return Math.max(...dp);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/longest-increasing-subsequence/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'lengthOfLIS' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var lengthOfLIS = function(nums) {\n  const memo = new Map();\n\n  function lis(i) {\n    if (memo.has(i)) return memo.get(i);\n    if (i === nums.length) return 0;\n\n    let maxLength = 1;\n    for (let j = 0; j < i; j++) {\n      if (nums[j] < nums[i]) {\n        maxLength = Math.max(maxLength, 1 + lis(j));\n      }\n    }\n    memo.set(i, maxLength);\n    return maxLength;\n  }\n\n  return lis(0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

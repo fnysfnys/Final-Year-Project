@@ -1,0 +1,661 @@
+{
+    "Java": {
+        "solution2": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/number-of-digit-one/Java/solution2.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "16",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution3": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/number-of-digit-one/Java/solution3.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "13",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution4": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/number-of-digit-one/Java/solution4.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "24",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "13",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution8": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/number-of-digit-one/Java/solution8.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "28",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "32",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution9": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/number-of-digit-one/Java/solution9.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "28",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "32",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "33",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "33",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter digit should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "36",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "40",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "44",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution6": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/number-of-digit-one/Java/solution6.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution10": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/number-of-digit-one/Java/solution10.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "28",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "32",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "33",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "33",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter digit should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "36",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "40",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "44",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "45",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "45",
+                            "@column": "53",
+                            "@severity": "error",
+                            "@message": "Parameter digit should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "48",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "52",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "56",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution7": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/number-of-digit-one/Java/solution7.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/number-of-digit-one/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "20",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "12",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

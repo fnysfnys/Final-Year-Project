@@ -1,0 +1,389 @@
+{
+    "Java": {
+        "solution2": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices-ii-subsequence/Java/solution2.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 84).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@column": "17",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution3": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices-ii-subsequence/Java/solution3.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@column": "35",
+                            "@severity": "error",
+                            "@message": "'typecast' is not followed by whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@column": "35",
+                            "@severity": "error",
+                            "@message": "'typecast' is not followed by whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@column": "42",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution4": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices-ii-subsequence/Java/solution4.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "21",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution8": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices-ii-subsequence/Java/solution8.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution9": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices-ii-subsequence/Java/solution9.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution5": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices-ii-subsequence/Java/solution5.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "36",
+                            "@severity": "error",
+                            "@message": "'-' should be on a new line.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution6": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices-ii-subsequence/Java/solution6.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 98).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "39",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "Parameter start should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "62",
+                            "@severity": "error",
+                            "@message": "Parameter prevDiff should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "76",
+                            "@severity": "error",
+                            "@message": "Parameter count should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "87",
+                            "@severity": "error",
+                            "@message": "Parameter total should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution10": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices-ii-subsequence/Java/solution10.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 81).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution7": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices-ii-subsequence/Java/solution7.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices-ii-subsequence/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

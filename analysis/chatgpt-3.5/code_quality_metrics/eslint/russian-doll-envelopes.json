@@ -1,0 +1,367 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/russian-doll-envelopes/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Using a Map\n * @param {number[][]} envelopes\n * @return {number}\n */\nvar maxEnvelopes = function(envelopes) {\n    envelopes.sort((a, b) => a[0] - b[0] || a[1] - b[1]);\n    const dp = new Map();\n\n    for (const env of envelopes) {\n        let maxCount = 0;\n        for (const [w, h] of dp.keys()) {\n            if (env[0] > w && env[1] > h) {\n                maxCount = Math.max(maxCount, dp.get(w, h));\n            }\n        }\n        dp.set(env[0], env[1], maxCount + 1);\n    }\n\n    return Math.max(...dp.values());\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/russian-doll-envelopes/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Dynamic Programming Approach\n * @param {number[][]} envelopes\n * @return {number}\n */\nvar maxEnvelopes = function(envelopes) {\n    envelopes.sort((a, b) => a[0] - b[0] || b[1] - a[1]);\n    const dp = new Array(envelopes.length).fill(1);\n    let maxCount = 1;\n\n    for (let i = 1; i < envelopes.length; i++) {\n        for (let j = 0; j < i; j++) {\n            if (envelopes[i][1] > envelopes[j][1]) {\n                dp[i] = Math.max(dp[i], dp[j] + 1);\n            }\n        }\n        maxCount = Math.max(maxCount, dp[i]);\n    }\n\n    return maxCount;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/russian-doll-envelopes/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Using a Stack\n * @param {number[][]} envelopes\n * @return {number}\n */\nvar maxEnvelopes = function(envelopes) {\n    envelopes.sort((a, b) => a[0] - b[0] || b[1] - a[1]);\n    const stack = [];\n\n    for (const env of envelopes) {\n        let left = 0;\n        let right = stack.length - 1;\n        \n        while (left <= right) {\n            const mid = Math.floor((left + right) / 2);\n            if (stack[mid][1] < env[1]) {\n                left = mid + 1;\n            } else {\n                right = mid - 1;\n            }\n        }\n\n        if (left === stack.length) {\n            stack.push(env);\n        } else {\n            stack[left] = env;\n        }\n    }\n\n    return stack.length;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/russian-doll-envelopes/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Two-Pointer Approach\n * @param {number[][]} envelopes\n * @return {number}\n */\nvar maxEnvelopes = function(envelopes) {\n    envelopes.sort((a, b) => a[0] - b[0] || b[1] - a[1]);\n    let left = 0;\n    let right = envelopes.length - 1;\n    let maxCount = 0;\n\n    while (left <= right) {\n        let count = 1;\n        const currEnv = envelopes[left];\n\n        for (let i = left + 1; i <= right; i++) {\n            if (envelopes[i][1] > currEnv[1]) {\n                currEnv[1] = envelopes[i][1];\n                count++;\n            }\n        }\n\n        maxCount = Math.max(maxCount, count);\n        left++;\n    }\n\n    return maxCount;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/russian-doll-envelopes/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Using Set and Sorting\n * @param {number[][]} envelopes\n * @return {number}\n */\nvar maxEnvelopes = function(envelopes) {\n    envelopes.sort((a, b) => a[0] - b[0] || a[1] - b[1]);\n    const dp = new Set();\n\n    for (const env of envelopes) {\n        if (dp.size === 0 || env[1] > [...dp][dp.size - 1]) {\n            dp.add(env[1]);\n        } else {\n            dp.delete([...dp][dp.size - 1]);\n            dp.add(env[1]);\n        }\n    }\n\n    return dp.size;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/russian-doll-envelopes/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Recursion and Memoization\n * @param {number[][]} envelopes\n * @return {number}\n */\nvar maxEnvelopes = function(envelopes) {\n    envelopes.sort((a, b) => a[0] - b[0] || a[1] - b[1]);\n    const memo = {};\n\n    function dp(index) {\n        if (memo[index]) {\n            return memo[index];\n        }\n\n        let maxCount = 1;\n        const [w1, h1] = envelopes[index];\n\n        for (let i = index + 1; i < envelopes.length; i++) {\n            const [w2, h2] = envelopes[i];\n            if (w2 > w1 && h2 > h1) {\n                maxCount = Math.max(maxCount, 1 + dp(i));\n            }\n        }\n\n        memo[index] = maxCount;\n        return maxCount;\n    }\n\n    let maxCount = 0;\n    for (let i = 0; i < envelopes.length; i++) {\n        maxCount = Math.max(maxCount, dp(i));\n    }\n\n    return maxCount;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/russian-doll-envelopes/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Using a Queue\n * @param {number[][]} envelopes\n * @return {number}\n */\nvar maxEnvelopes = function(envelopes) {\n    envelopes.sort((a, b) => a[0] - b[0] || b[1] - a[1]);\n    const queue = [];\n\n    for (const env of envelopes) {\n        let left = 0,\n            right = queue.length - 1;\n        \n        while (left <= right) {\n            const mid = Math.floor((left + right) / 2);\n            if (queue[mid][1] < env[1]) {\n                left = mid + 1;\n            } else {\n                right = mid - 1;\n            }\n        }\n\n        if (left === queue.length) {\n            queue.push(env);\n        } else {\n            queue[left] = env;\n        }\n    }\n\n    return queue.length;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/russian-doll-envelopes/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Binary Search Approach\n * @param {number[][]} envelopes\n * @return {number}\n */\nvar maxEnvelopes = function(envelopes) {\n    envelopes.sort((a, b) => a[0] - b[0] || b[1] - a[1]);\n    const dp = [];\n\n    for (const env of envelopes) {\n        const idx = binarySearch(dp, env[1]);\n        if (idx === dp.length) {\n            dp.push(env[1]);\n        } else {\n            dp[idx] = env[1];\n        }\n    }\n\n    return dp.length;\n};\n\nfunction binarySearch(arr, target) {\n    let left = 0;\n    let right = arr.length;\n\n    while (left < right) {\n        const mid = Math.floor((left + right) / 2);\n        if (arr[mid] < target) {\n            left = mid + 1;\n        } else {\n            right = mid;\n        }\n    }\n\n    return left;\n}",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/russian-doll-envelopes/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Using a Set and Binary Search\n * @param {number[][]} envelopes\n * @return {number}\n */\nvar maxEnvelopes = function(envelopes) {\n    envelopes.sort((a, b) => a[0] - b[0] || a[1] - b[1]);\n    const dp = new Set();\n\n    for (const env of envelopes) {\n        let target = env[1];\n        if (dp.has(target)) target++;\n        while (dp.has(target)) target++;\n        dp.add(target);\n    }\n\n    return dp.size;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/russian-doll-envelopes/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 17
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'w' is assigned a value but never used.",
+                    "line": 10,
+                    "column": 17,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 10,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'w' is assigned a value but never used.",
+                    "line": 15,
+                    "column": 17,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 15,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-constant-condition",
+                    "severity": 2,
+                    "message": "Unexpected constant condition.",
+                    "line": 63,
+                    "column": 16,
+                    "nodeType": "Literal",
+                    "messageId": "unexpected",
+                    "endLine": 63,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 4,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Using a Priority Queue (Heap)\n * @param {number[][]} envelopes\n * @return {number}\n */\nvar maxEnvelopes = function(envelopes) {\n    envelopes.sort((a, b) => a[0] - b[0] || b[1] - a[1]);\n    const heap = new MinHeap();\n\n    for (const [w, h] of envelopes) {\n        heap.insert(h);\n    }\n\n    let maxCount = 0;\n    for (const [w, h] of envelopes) {\n        if (heap.peek() >= h) {\n            heap.extractMin();\n        } else {\n            maxCount++;\n        }\n    }\n\n    return maxCount;\n};\n\nclass MinHeap {\n    constructor() {\n        this.heap = [];\n    }\n\n    insert(val) {\n        this.heap.push(val);\n        this.bubbleUp();\n    }\n\n    extractMin() {\n        const min = this.heap[0];\n        const end = this.heap.pop();\n        if (this.heap.length > 0) {\n            this.heap[0] = end;\n            this.sinkDown();\n        }\n        return min;\n    }\n\n    peek() {\n        return this.heap[0];\n    }\n\n    bubbleUp() {\n        let index = this.heap.length - 1;\n        while (index > 0) {\n            const parentIndex = Math.floor((index - 1) / 2);\n            if (this.heap[index] >= this.heap[parentIndex]) break;\n            [this.heap[index], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[index]];\n            index = parentIndex;\n        }\n    }\n\n    sinkDown() {\n        let index = 0;\n        const length = this.heap.length;\n        while (true) {\n            const leftChildIndex = 2 * index + 1;\n            const rightChildIndex = 2 * index + 2;\n            let swap = null;\n            if (leftChildIndex < length) {\n                if (this.heap[leftChildIndex] < this.heap[index]) {\n                    swap = leftChildIndex;\n                }\n            }\n            if (rightChildIndex < length) {\n                if (\n                    (swap === null && this.heap[rightChildIndex] < this.heap[index]) ||\n                    (swap !== null && this.heap[rightChildIndex] < this.heap[leftChildIndex])\n                ) {\n                    swap = rightChildIndex;\n                }\n            }\n            if (swap === null) break;\n            [this.heap[index], this.heap[swap]] = [this.heap[swap], this.heap[index]];\n            index = swap;\n        }\n    }\n}",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

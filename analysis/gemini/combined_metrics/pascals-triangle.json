@@ -1,0 +1,172 @@
+{
+    "Python": {
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "111111111111111111111111111111",
+            "runtime": "46 ms",
+            "memory": "16.7 MB",
+            "complexity": 3,
+            "normalised_warnings": 0.1111111111111111
+        },
+        "solution5": {
+            "status_display": "Runtime Error",
+            "compare_result": "000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 3,
+            "normalised_warnings": 0.14285714285714285
+        },
+        "solution4": {
+            "status_display": "Runtime Error",
+            "compare_result": "000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "normalised_warnings": 0.6666666666666666
+        },
+        "solution9": {
+            "status_display": "Wrong Answer",
+            "compare_result": "010000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 2,
+            "normalised_warnings": 0.2222222222222222
+        },
+        "solution8": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "111111111100000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "normalised_warnings": 0.5
+        },
+        "solution7": {
+            "status_display": "Accepted",
+            "compare_result": "111111111111111111111111111111",
+            "runtime": "41 ms",
+            "memory": "16.6 MB",
+            "complexity": 3,
+            "normalised_warnings": 1.6666666666666667
+        },
+        "solution3": {
+            "status_display": "Accepted",
+            "compare_result": "111111111111111111111111111111",
+            "runtime": "31 ms",
+            "memory": "16.5 MB",
+            "complexity": 4,
+            "normalised_warnings": 0.2
+        },
+        "solution2": {
+            "status_display": "Accepted",
+            "compare_result": "111111111111111111111111111111",
+            "runtime": "28 ms",
+            "memory": "16.5 MB",
+            "complexity": 4,
+            "normalised_warnings": 0.14285714285714285
+        },
+        "solution6": {
+            "status_display": "Wrong Answer",
+            "compare_result": "011000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "normalised_warnings": 0.5
+        }
+    },
+    "Java": {
+        "solution2": {
+            "status_display": "Runtime Error",
+            "compare_result": "000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 3,
+            "readability": 0.12401968985795975,
+            "normalised_warnings": 0.375
+        },
+        "solution3": {
+            "status_display": "Accepted",
+            "compare_result": "111111111111111111111111111111",
+            "runtime": "1 ms",
+            "memory": "41.9 MB",
+            "complexity": 5,
+            "readability": 0.20119412243366241,
+            "normalised_warnings": 0.22727272727272727
+        },
+        "solution4": {
+            "status_display": "Wrong Answer",
+            "compare_result": "011000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 3,
+            "readability": 0.3248915374279022,
+            "normalised_warnings": 0.2
+        },
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "111111111111111111111111111111",
+            "runtime": "1 ms",
+            "memory": "41.7 MB",
+            "complexity": 3,
+            "readability": 0.15744201838970184,
+            "normalised_warnings": 0.21052631578947367
+        }
+    },
+    "JavaScript": {
+        "solution5": {
+            "status_display": "Accepted",
+            "compare_result": "111111111111111111111111111111",
+            "runtime": "48 ms",
+            "memory": "50.4 MB",
+            "complexity": 5,
+            "normalised_warnings": 0.0
+        },
+        "solution1": {
+            "status_display": "Wrong Answer",
+            "compare_result": "010000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "normalised_warnings": 0.0
+        },
+        "solution4": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "111111111111111111111111111000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 6,
+            "normalised_warnings": 0.0
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "111111111111111111111111000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "normalised_warnings": 0.0
+        },
+        "solution7": {
+            "status_display": "Runtime Error",
+            "compare_result": "000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 4,
+            "normalised_warnings": 0.0
+        },
+        "solution6": {
+            "status_display": "Wrong Answer",
+            "compare_result": "000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 4,
+            "normalised_warnings": 0.0
+        },
+        "solution2": {
+            "status_display": "Accepted",
+            "compare_result": "111111111111111111111111111111",
+            "runtime": "59 ms",
+            "memory": "50.5 MB",
+            "complexity": 3,
+            "normalised_warnings": 0.0
+        }
+    }
+}

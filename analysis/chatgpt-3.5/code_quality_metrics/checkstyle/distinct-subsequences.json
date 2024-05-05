@@ -1,0 +1,617 @@
+{
+    "Java": {
+        "solution2": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/Java/solution2.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 91).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "43",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "53",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Parameter m should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "70",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "77",
+                            "@severity": "error",
+                            "@message": "Parameter memo should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "26",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution3": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/Java/solution3.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution4": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/Java/solution4.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution8": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/Java/solution8.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 91).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "43",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "53",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Parameter m should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "70",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "77",
+                            "@severity": "error",
+                            "@message": "Parameter memo should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "27",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution9": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/Java/solution9.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "22",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution5": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/Java/solution5.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 87).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "43",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "53",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Parameter sIndex should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "75",
+                            "@severity": "error",
+                            "@message": "Parameter tIndex should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "13",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution10": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/Java/solution10.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution7": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/Java/solution7.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 101).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "43",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "53",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Parameter sIndex should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "75",
+                            "@severity": "error",
+                            "@message": "Parameter tIndex should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "87",
+                            "@severity": "error",
+                            "@message": "Parameter memo should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 83).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "27",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter s should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter t should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

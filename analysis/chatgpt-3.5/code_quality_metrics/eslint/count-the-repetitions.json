@@ -1,0 +1,367 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/count-the-repetitions/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var getMaxRepetitions = function(s1, n1, s2, n2) {\n    const dp = Array.from({ length: s1.length + 1 }, () => Array(s2.length).fill(0));\n    let count1 = 0, count2 = 0, i = 0, j = 0;\n\n    while (count1 < n1) {\n        if (s1[i] === s2[j]) {\n            j++;\n            if (j === s2.length) {\n                j = 0;\n                count2++;\n            }\n        }\n        i++;\n\n        if (i === s1.length) {\n            i = 0;\n            count1++;\n            if (count1 === n1) break;\n            if (dp[i][j] !== 0) {\n                const prevCount1 = dp[i][j][0];\n                const prevCount2 = dp[i][j][1];\n                const cycleCount1 = count1 - prevCount1;\n                const cycleCount2 = count2 - prevCount2;\n                const cycles = Math.floor((n1 - count1) / cycleCount1);\n                count1 += cycles * cycleCount1;\n                count2 += cycles * cycleCount2;\n            } else {\n                dp[i][j] = [count1, count2];\n            }\n        }\n    }\n\n    return Math.floor(count2 / n2);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/count-the-repetitions/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var getMaxRepetitions = function(s1, n1, s2, n2) {\n    let count1 = 0, count2 = 0, i = 0, j = 0;\n    while (count1 < n1) {\n        if (s1[i] === s2[j]) {\n            j++;\n            if (j === s2.length) {\n                j = 0;\n                count2++;\n            }\n        }\n        i++;\n        if (i === s1.length) {\n            i = 0;\n            count1++;\n        }\n    }\n    return Math.floor(count2 / n2);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/count-the-repetitions/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var getMaxRepetitions = function(s1, n1, s2, n2) {\n    const arr1 = s1.split('');\n    const arr2 = s2.split('');\n    let count1 = 0, count2 = 0, i = 0, j = 0;\n\n    while (count1 < n1) {\n        if (arr1[i] === arr2[j]) {\n            j++;\n            if (j === arr2.length) {\n                j = 0;\n                count2++;\n            }\n        }\n        i++;\n\n        if (i === arr1.length) {\n            i = 0;\n            count1++;\n        }\n    }\n\n    return Math.floor(count2 / n2);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/count-the-repetitions/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var getMaxRepetitions = function(s1, n1, s2, n2) {\n    let i = 0, j = 0, count1 = 0, count2 = 0;\n    const seen = new Map();\n    while (count1 < n1) {\n        if (i === s1.length) {\n            if (seen.has(j)) {\n                const [count1Prev, count2Prev] = seen.get(j);\n                const cycleCount1 = count1 - count1Prev;\n                const cycleCount2 = count2 - count2Prev;\n                const cycles = Math.floor((n1 - count1Prev) / cycleCount1);\n                count1 += cycles * cycleCount1;\n                count2 += cycles * cycleCount2;\n            } else {\n                seen.set(j, [count1, count2]);\n            }\n        }\n        if (s1[i] === s2[j]) {\n            j++;\n            if (j === s2.length) {\n                j = 0;\n                count2++;\n            }\n        }\n        i++;\n        count1++;\n    }\n    return Math.floor(count2 / n2);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/count-the-repetitions/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'count1' is assigned a value but never used.",
+                    "line": 15,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 15,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var getMaxRepetitions = function(s1, n1, s2, n2) {\n    let i = 0, j = 0, count1 = 0, count2 = 0;\n    for (let k = 0; k < n1; k++) {\n        while (i < s1.length) {\n            if (s1[i] === s2[j]) {\n                j++;\n                if (j === s2.length) {\n                    j = 0;\n                    count2++;\n                }\n            }\n            i++;\n        }\n        i = 0;\n        count1++;\n    }\n    return Math.floor(count2 / n2);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/count-the-repetitions/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var getMaxRepetitions = function(s1, n1, s2, n2) {\n    let count1 = 0, count2 = 0, i = 0, j = 0;\n    let windowStart = 0, windowEnd = 0;\n\n    while (count1 < n1) {\n        if (s1[i] === s2[j]) {\n            j++;\n            if (j === s2.length) {\n                j = 0;\n                count2++;\n                windowEnd = i;\n            }\n        }\n        i++;\n\n        if (i === s1.length) {\n            i = 0;\n            count1++;\n            if (i === windowStart) break;\n            windowStart = windowEnd;\n        }\n    }\n\n    return Math.floor(count2 / n2);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/count-the-repetitions/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'str1' is assigned a value but never used.",
+                    "line": 7,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 7,
+                    "endColumn": 13
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'str2' is assigned a value but never used.",
+                    "line": 8,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 8,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var getMaxRepetitions = function(s1, n1, s2, n2) {\n    let str1 = '', str2 = '';\n    let count1 = 0, count2 = 0;\n    let i = 0, j = 0;\n\n    while (count1 < n1) {\n        str1 += s1[i];\n        str2 += s2[j];\n        i++;\n        j++;\n\n        if (i === s1.length) {\n            i = 0;\n            count1++;\n        }\n        if (j === s2.length) {\n            j = 0;\n            count2++;\n        }\n    }\n\n    return Math.floor(count2 / n2);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/count-the-repetitions/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var getMaxRepetitions = function(s1, n1, s2, n2) {\n    let i = 0, j = 0, count1 = 0, count2 = 0;\n    while (count1 < n1) {\n        if (s1[i] === s2[j]) {\n            j++;\n            if (j === s2.length) {\n                j = 0;\n                count2++;\n            }\n        }\n        i++;\n        if (i === s1.length) {\n            i = 0;\n            count1++;\n        }\n    }\n    return Math.floor(count2 / n2);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/count-the-repetitions/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var getMaxRepetitions = function(s1, n1, s2, n2) {\n    const regex = new RegExp(`${s2}+`, 'g');\n    const matches = s1.repeat(n1).match(regex);\n    return matches ? Math.floor(matches.length / n2) : 0;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/count-the-repetitions/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var getMaxRepetitions = function(s1, n1, s2, n2) {\n    const dfs = (i, j, count1, count2) => {\n        if (count1 === n1) return count2 / n2;\n        if (s1[i] === s2[j]) {\n            j++;\n            if (j === s2.length) {\n                j = 0;\n                count2++;\n            }\n        }\n        i++;\n        if (i === s1.length) {\n            i = 0;\n            count1++;\n        }\n        return dfs(i, j, count1, count2);\n    };\n\n    return Math.floor(dfs(0, 0, 0, 0));\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

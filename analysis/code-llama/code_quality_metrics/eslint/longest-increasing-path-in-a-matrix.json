@@ -1,0 +1,103 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 31
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function longestIncreasingPath(matrix) {\n   let longestPath = 0;\n   for (let i = 0; i < matrix.length; i++) {\n       for (let j = 0; j < matrix[i].length; j++) {\n           longestPath = Math.max(longestPath, findLongestPath(matrix, i, j));\n       }\n   }\n   return longestPath;\n}\n\nfunction findLongestPath(matrix, i, j) {\n   let longestPath = 0;\n   if (i < 0 || j < 0 || i >= matrix.length || j >= matrix[i].length) {\n       return longestPath;\n   }\n   longestPath = Math.max(longestPath, findLongestPath(matrix, i - 1, j));\n   longestPath = Math.max(longestPath, findLongestPath(matrix, i, j - 1));\n   longestPath = Math.max(longestPath, findLongestPath(matrix, i + 1, j));\n   longestPath = Math.max(longestPath, findLongestPath(matrix, i, j + 1));\n   return longestPath;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 31
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function longestIncreasingPath(matrix) {\n   let longestPath = 0;\n   for (let i = 0; i < matrix.length; i++) {\n       for (let j = 0; j < matrix[i].length; j++) {\n           longestPath = Math.max(longestPath, findLongestPath(matrix, i, j));\n       }\n   }\n   return longestPath;\n}\n\nfunction findLongestPath(matrix, i, j) {\n   let longestPath = 0;\n   if (i < 0 || j < 0 || i >= matrix.length || j >= matrix[i].length) {\n       return longestPath;\n   }\n   let queue = [];\n   queue.push([i, j]);\n   while (queue.length > 0) {\n       let [x, y] = queue.shift();\n       longestPath = Math.max(longestPath, findLongestPath(matrix, x - 1, y));\n       longestPath = Math.max(longestPath, findLongestPath(matrix, x, y - 1));\n       longestPath = Math.max(longestPath, findLongestPath(matrix, x + 1, y));\n       longestPath = Math.max(longestPath, findLongestPath(matrix, x, y + 1));\n   }\n   return longestPath;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 31
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function longestIncreasingPath(matrix) {\n   let longestPath = 0;\n   for (let i = 0; i < matrix.length; i++) {\n       for (let j = 0; j < matrix[i].length; j++) {\n           longestPath = Math.max(longestPath, findLongestPath(matrix, i, j));\n       }\n   }\n   return longestPath;\n}\n\nfunction findLongestPath(matrix, i, j) {\n   let longestPath = 0;\n   if (i < 0 || j < 0 || i >= matrix.length || j >= matrix[i].length) {\n       return longestPath;\n   }\n   let stack = [];\n   stack.push([i, j]);\n   while (stack.length > 0) {\n       let [x, y] = stack.pop();\n       longestPath = Math.max(longestPath, findLongestPath(matrix, x - 1, y));\n       longestPath = Math.max(longestPath, findLongestPath(matrix, x, y - 1));\n       longestPath = Math.max(longestPath, findLongestPath(matrix, x + 1, y));\n       longestPath = Math.max(longestPath, findLongestPath(matrix, x, y + 1));\n   }\n   return longestPath;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

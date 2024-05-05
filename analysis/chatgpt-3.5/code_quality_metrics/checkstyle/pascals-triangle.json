@@ -1,0 +1,316 @@
+{
+    "Java": {
+        "solution2": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/Java/solution2.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "30",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "43",
+                            "@severity": "error",
+                            "@message": "Parameter triangle should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution3": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/Java/solution3.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution4": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/Java/solution4.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution8": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/Java/solution8.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution9": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/Java/solution9.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution5": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/Java/solution5.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution6": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/Java/solution6.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution10": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/Java/solution10.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution7": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/Java/solution7.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/scripts/code_quality_metrics/../../model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter numRows should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 90).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

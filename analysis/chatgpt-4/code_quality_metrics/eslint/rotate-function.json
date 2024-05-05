@@ -1,0 +1,37 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/rotate-function/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxRotateFunction = function(nums) {\n    let n = nums.length;\n    let sum = 0;\n    let f = 0;\n    // Step 1: Calculate F(0) and sum of all elements\n    for (let i = 0; i < n; i++) {\n        sum += nums[i];\n        f += i * nums[i];\n    }\n    let maxF = f;\n    // Step 2 & 3: Calculate F(k) based on F(k-1) and keep track of the maximum\n    for (let i = 1; i < n; i++) {\n        f = f + sum - n * nums[n - i];\n        maxF = Math.max(maxF, f);\n    }\n    // Step 4: Return the maximum F(k) value\n    return maxF;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

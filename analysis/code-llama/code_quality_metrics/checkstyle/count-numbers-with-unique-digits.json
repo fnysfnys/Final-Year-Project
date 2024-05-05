@@ -1,0 +1,970 @@
+{
+    "Java": {
+        "solution2": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/count-numbers-with-unique-digits/Java/solution2.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 108).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "55",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "65",
+                            "@severity": "error",
+                            "@message": "'5' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "75",
+                            "@severity": "error",
+                            "@message": "'6' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "85",
+                            "@severity": "error",
+                            "@message": "'7' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "95",
+                            "@severity": "error",
+                            "@message": "'8' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "105",
+                            "@severity": "error",
+                            "@message": "'9' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "15",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution3": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/count-numbers-with-unique-digits/Java/solution3.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 104).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "61",
+                            "@severity": "error",
+                            "@message": "'5' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "71",
+                            "@severity": "error",
+                            "@message": "'6' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "81",
+                            "@severity": "error",
+                            "@message": "'7' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "91",
+                            "@severity": "error",
+                            "@message": "'8' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "101",
+                            "@severity": "error",
+                            "@message": "'9' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution4": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/count-numbers-with-unique-digits/Java/solution4.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 104).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "61",
+                            "@severity": "error",
+                            "@message": "'5' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "71",
+                            "@severity": "error",
+                            "@message": "'6' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "81",
+                            "@severity": "error",
+                            "@message": "'7' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "91",
+                            "@severity": "error",
+                            "@message": "'8' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "101",
+                            "@severity": "error",
+                            "@message": "'9' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution8": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/count-numbers-with-unique-digits/Java/solution8.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 104).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "61",
+                            "@severity": "error",
+                            "@message": "'5' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "71",
+                            "@severity": "error",
+                            "@message": "'6' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "81",
+                            "@severity": "error",
+                            "@message": "'7' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "91",
+                            "@severity": "error",
+                            "@message": "'8' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "101",
+                            "@severity": "error",
+                            "@message": "'9' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution9": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/count-numbers-with-unique-digits/Java/solution9.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 104).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "61",
+                            "@severity": "error",
+                            "@message": "'5' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "71",
+                            "@severity": "error",
+                            "@message": "'6' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "81",
+                            "@severity": "error",
+                            "@message": "'7' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "91",
+                            "@severity": "error",
+                            "@message": "'8' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "101",
+                            "@severity": "error",
+                            "@message": "'9' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution5": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/count-numbers-with-unique-digits/Java/solution5.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 104).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "61",
+                            "@severity": "error",
+                            "@message": "'5' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "71",
+                            "@severity": "error",
+                            "@message": "'6' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "81",
+                            "@severity": "error",
+                            "@message": "'7' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "91",
+                            "@severity": "error",
+                            "@message": "'8' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "101",
+                            "@severity": "error",
+                            "@message": "'9' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution6": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/count-numbers-with-unique-digits/Java/solution6.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "37",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 104).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "61",
+                            "@severity": "error",
+                            "@message": "'5' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "71",
+                            "@severity": "error",
+                            "@message": "'6' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "81",
+                            "@severity": "error",
+                            "@message": "'7' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "91",
+                            "@severity": "error",
+                            "@message": "'8' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "101",
+                            "@severity": "error",
+                            "@message": "'9' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution10": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/count-numbers-with-unique-digits/Java/solution10.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 104).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "61",
+                            "@severity": "error",
+                            "@message": "'5' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "71",
+                            "@severity": "error",
+                            "@message": "'6' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "81",
+                            "@severity": "error",
+                            "@message": "'7' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "91",
+                            "@severity": "error",
+                            "@message": "'8' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "101",
+                            "@severity": "error",
+                            "@message": "'9' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution7": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/count-numbers-with-unique-digits/Java/solution7.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 104).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "61",
+                            "@severity": "error",
+                            "@message": "'5' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "71",
+                            "@severity": "error",
+                            "@message": "'6' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "81",
+                            "@severity": "error",
+                            "@message": "'7' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "91",
+                            "@severity": "error",
+                            "@message": "'8' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "101",
+                            "@severity": "error",
+                            "@message": "'9' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/code-llama/parsed_outputs/count-numbers-with-unique-digits/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "'10' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 104).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "'3' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "'4' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "61",
+                            "@severity": "error",
+                            "@message": "'5' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "71",
+                            "@severity": "error",
+                            "@message": "'6' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "81",
+                            "@severity": "error",
+                            "@message": "'7' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "91",
+                            "@severity": "error",
+                            "@message": "'8' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "101",
+                            "@severity": "error",
+                            "@message": "'9' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

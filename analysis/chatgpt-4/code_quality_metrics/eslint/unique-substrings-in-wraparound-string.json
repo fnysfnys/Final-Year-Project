@@ -1,0 +1,334 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findSubstringInWraproundString = function(s) {\n    const visited = new Array(26).fill(false);\n    let count = 0, len = 0;\n\n    for (let i = 0; i < s.length; i++) {\n        const current = s.charCodeAt(i) - 'a'.charCodeAt(0);\n        if (i > 0 && (s.charCodeAt(i) - s.charCodeAt(i - 1) === 1 || s.charCodeAt(i - 1) - s.charCodeAt(i) === 25)) {\n            len++;\n        } else {\n            len = 1;\n        }\n        if (!visited[current]) {\n            count += len;\n            visited[current] = true;\n        }\n    }\n\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findSubstringInWraproundString = function(s) {\n    const set = new Set();\n    const base = 'abcdefghijklmnopqrstuvwxyz';\n\n    for (let i = 0; i < s.length; i++) {\n        for (let j = i; j < s.length; j++) {\n            const substr = s.substring(i, j + 1);\n            if (base.includes(substr)) {\n                set.add(substr);\n            }\n        }\n    }\n\n    return set.size;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findSubstringInWraproundString = function(s) {\n    const set = new Set();\n    let len = 0;\n\n    for (let i = 0; i < s.length; i++) {\n        if (i > 0 && (s.charCodeAt(i) - s.charCodeAt(i - 1) === 1 || s.charCodeAt(i - 1) - s.charCodeAt(i) === 25)) {\n            len++;\n        } else {\n            len = 1;\n        }\n        for (let j = 0; j < len; j++) {\n            set.add(s.substring(i - j, i + 1));\n        }\n    }\n\n    return set.size;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findSubstringInWraproundString = function(s) {\n    const base = 'abcdefghijklmnopqrstuvwxyz';\n    const helper = (index, prev) => {\n        if (index === s.length) return 0;\n        let count = 0;\n        const pos = base.indexOf(s[index]);\n        if (pos === -1 || (prev !== -1 && (pos !== (prev + 1) % 26))) {\n            count += helper(index + 1, -1);\n        } else {\n            count += 1 + helper(index + 1, pos);\n        }\n        return count;\n    };\n\n    return helper(0, -1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findSubstringInWraproundString = function(s) {\n    const map = new Map();\n    let k = 0;\n\n    for (let i = 0; i < s.length; i++) {\n        if (i > 0 && (s.charCodeAt(i) - s.charCodeAt(i - 1) !== 1 && s.charCodeAt(i) - s.charCodeAt(i - 1) !== -25)) {\n            k = 0;\n        }\n        map.set(s[i], Math.max(map.get(s[i]) || 0, ++k));\n    }\n\n    return Array.from(map.values()).reduce((a, b) => a + b, 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findSubstringInWraproundString = function(s) {\n    let count = 0;\n    const base = 'abcdefghijklmnopqrstuvwxyz';\n\n\n\n    for (let i = 0; i < s.length; i++) {\n        for (let j = i; j < s.length; j++) {\n            if (base.indexOf(s.substring(i, j + 1)) !== -1) {\n                count++;\n            }\n        }\n    }\n\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findSubstringInWraproundString = function(s) {\n    const set = new Set();\n    let k = 0;\n\n    for (let i = 0; i < s.length; i++) {\n        k = (i > 0 && (s.charCodeAt(i) - s.charCodeAt(i - 1) === 1 || s.charCodeAt(i - 1) - s.charCodeAt(i) === 25)) ? k + 1 : 1;\n        for (let j = 0; j < k; j++) {\n            set.add(s.substring(i - j, i + 1));\n        }\n    }\n\n    return set.size;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findSubstringInWraproundString = function(s) {\n    const dp = new Array(26).fill(0);\n    let maxLengthCur = 0;\n\n    for (let i = 0; i < s.length; i++) {\n        if (i > 0 && (s.charCodeAt(i) - s.charCodeAt(i - 1) === 1 || s.charCodeAt(i - 1) - s.charCodeAt(i) === 25)) {\n            maxLengthCur++;\n        } else {\n            maxLengthCur = 1;\n        }\n        dp[s.charCodeAt(i) - 'a'.charCodeAt(0)] = Math.max(dp[s.charCodeAt(i) - 'a'.charCodeAt(0)], maxLengthCur);\n    }\n\n    return dp.reduce((a, b) => a + b);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findSubstringInWraproundString = function(s) {\n    const set = new Set();\n    let count = 0;\n\n    for (let i = 0; i < s.length; i++) {\n        if (i > 0 && (s.charCodeAt(i) - s.charCodeAt(i - 1) !== 1 && s.charCodeAt(i - 1) - s.charCodeAt(i) !== 25)) {\n            count = 0;\n        }\n        for (let j = i; j < s.length && j - i < 26; j++) {\n            if (set.has(s.substring(i, j + 1))) continue;\n            set.add(s.substring(i, j + 1));\n            count++;\n        }\n    }\n\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findSubstringInWraproundString = function(s) {\n    const hash = {};\n    let maxLen = 0;\n\n    for (let i = 0; i < s.length; i++) {\n        if (i > 0 && (s.charCodeAt(i) - s.charCodeAt(i - 1) === 1 || s.charCodeAt(i - 1) - s.charCodeAt(i) === 25)) {\n            maxLen++;\n        } else {\n            maxLen = 1;\n        }\n        hash[s[i]] = Math.max(hash[s[i]] || 0, maxLen);\n    }\n\n    return Object.values(hash).reduce((a, b) => a + b, 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,698 @@
+{
+    "Python": {
+        "solution1": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00517582893371582,
+                "n_files": 1,
+                "n_lines": 19,
+                "files_per_second": 193.20576719333,
+                "lines_per_second": 3670.90957667327
+            },
+            "Python": {
+                "nFiles": 1,
+                "blank": 2,
+                "comment": 0,
+                "code": 17
+            },
+            "SUM": {
+                "blank": 2,
+                "comment": 0,
+                "code": 17,
+                "nFiles": 1
+            }
+        },
+        "solution5": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00500988960266113,
+                "n_files": 1,
+                "n_lines": 14,
+                "files_per_second": 199.605196782944,
+                "lines_per_second": 2794.47275496121
+            },
+            "Python": {
+                "nFiles": 1,
+                "blank": 1,
+                "comment": 0,
+                "code": 13
+            },
+            "SUM": {
+                "blank": 1,
+                "comment": 0,
+                "code": 13,
+                "nFiles": 1
+            }
+        },
+        "solution10": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00538420677185059,
+                "n_files": 1,
+                "n_lines": 22,
+                "files_per_second": 185.728379754683,
+                "lines_per_second": 4086.02435460302
+            },
+            "Python": {
+                "nFiles": 1,
+                "blank": 2,
+                "comment": 0,
+                "code": 20
+            },
+            "SUM": {
+                "blank": 2,
+                "comment": 0,
+                "code": 20,
+                "nFiles": 1
+            }
+        },
+        "solution4": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.0050048828125,
+                "n_files": 1,
+                "n_lines": 18,
+                "files_per_second": 199.80487804878,
+                "lines_per_second": 3596.48780487805
+            },
+            "Python": {
+                "nFiles": 1,
+                "blank": 2,
+                "comment": 0,
+                "code": 16
+            },
+            "SUM": {
+                "blank": 2,
+                "comment": 0,
+                "code": 16,
+                "nFiles": 1
+            }
+        },
+        "solution9": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00484013557434082,
+                "n_files": 1,
+                "n_lines": 15,
+                "files_per_second": 206.605782966356,
+                "lines_per_second": 3099.08674449535
+            },
+            "Python": {
+                "nFiles": 1,
+                "blank": 2,
+                "comment": 0,
+                "code": 13
+            },
+            "SUM": {
+                "blank": 2,
+                "comment": 0,
+                "code": 13,
+                "nFiles": 1
+            }
+        },
+        "solution8": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00496912002563477,
+                "n_files": 1,
+                "n_lines": 25,
+                "files_per_second": 201.242874964015,
+                "lines_per_second": 5031.07187410037
+            },
+            "Python": {
+                "nFiles": 1,
+                "blank": 5,
+                "comment": 0,
+                "code": 20
+            },
+            "SUM": {
+                "blank": 5,
+                "comment": 0,
+                "code": 20,
+                "nFiles": 1
+            }
+        },
+        "solution7": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.0048520565032959,
+                "n_files": 1,
+                "n_lines": 14,
+                "files_per_second": 206.09817699376,
+                "lines_per_second": 2885.37447791263
+            },
+            "Python": {
+                "nFiles": 1,
+                "blank": 2,
+                "comment": 0,
+                "code": 12
+            },
+            "SUM": {
+                "blank": 2,
+                "comment": 0,
+                "code": 12,
+                "nFiles": 1
+            }
+        },
+        "solution3": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00486493110656738,
+                "n_files": 1,
+                "n_lines": 19,
+                "files_per_second": 205.552756677285,
+                "lines_per_second": 3905.50237686841
+            },
+            "Python": {
+                "nFiles": 1,
+                "blank": 3,
+                "comment": 0,
+                "code": 16
+            },
+            "SUM": {
+                "blank": 3,
+                "comment": 0,
+                "code": 16,
+                "nFiles": 1
+            }
+        },
+        "solution2": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00475382804870605,
+                "n_files": 1,
+                "n_lines": 17,
+                "files_per_second": 210.356788204022,
+                "lines_per_second": 3576.06539946838
+            },
+            "Python": {
+                "nFiles": 1,
+                "blank": 2,
+                "comment": 0,
+                "code": 15
+            },
+            "SUM": {
+                "blank": 2,
+                "comment": 0,
+                "code": 15,
+                "nFiles": 1
+            }
+        },
+        "solution6": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.0049130916595459,
+                "n_files": 1,
+                "n_lines": 21,
+                "files_per_second": 203.537826952007,
+                "lines_per_second": 4274.29436599214
+            },
+            "Python": {
+                "nFiles": 1,
+                "blank": 4,
+                "comment": 0,
+                "code": 17
+            },
+            "SUM": {
+                "blank": 4,
+                "comment": 0,
+                "code": 17,
+                "nFiles": 1
+            }
+        }
+    },
+    "Java": {
+        "solution2": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.0050508975982666,
+                "n_files": 1,
+                "n_lines": 31,
+                "files_per_second": 197.984611753599,
+                "lines_per_second": 6137.52296436158
+            },
+            "Java": {
+                "nFiles": 1,
+                "blank": 0,
+                "comment": 0,
+                "code": 31
+            },
+            "SUM": {
+                "blank": 0,
+                "comment": 0,
+                "code": 31,
+                "nFiles": 1
+            }
+        },
+        "solution3": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00500392913818359,
+                "n_files": 1,
+                "n_lines": 33,
+                "files_per_second": 199.842957880694,
+                "lines_per_second": 6594.81761006289
+            },
+            "Java": {
+                "nFiles": 1,
+                "blank": 5,
+                "comment": 0,
+                "code": 28
+            },
+            "SUM": {
+                "blank": 5,
+                "comment": 0,
+                "code": 28,
+                "nFiles": 1
+            }
+        },
+        "solution4": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00482487678527832,
+                "n_files": 1,
+                "n_lines": 28,
+                "files_per_second": 207.259178732026,
+                "lines_per_second": 5803.25700449671
+            },
+            "Java": {
+                "nFiles": 1,
+                "blank": 5,
+                "comment": 0,
+                "code": 23
+            },
+            "SUM": {
+                "blank": 5,
+                "comment": 0,
+                "code": 23,
+                "nFiles": 1
+            }
+        },
+        "solution8": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00489282608032227,
+                "n_files": 1,
+                "n_lines": 27,
+                "files_per_second": 204.380859565345,
+                "lines_per_second": 5518.2832082643
+            },
+            "Java": {
+                "nFiles": 1,
+                "blank": 4,
+                "comment": 0,
+                "code": 23
+            },
+            "SUM": {
+                "blank": 4,
+                "comment": 0,
+                "code": 23,
+                "nFiles": 1
+            }
+        },
+        "solution9": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00550293922424316,
+                "n_files": 1,
+                "n_lines": 25,
+                "files_per_second": 181.721069277761,
+                "lines_per_second": 4543.02673194402
+            },
+            "Java": {
+                "nFiles": 1,
+                "blank": 4,
+                "comment": 0,
+                "code": 21
+            },
+            "SUM": {
+                "blank": 4,
+                "comment": 0,
+                "code": 21,
+                "nFiles": 1
+            }
+        },
+        "solution5": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00502610206604004,
+                "n_files": 1,
+                "n_lines": 19,
+                "files_per_second": 198.961339594896,
+                "lines_per_second": 3780.26545230302
+            },
+            "Java": {
+                "nFiles": 1,
+                "blank": 1,
+                "comment": 0,
+                "code": 18
+            },
+            "SUM": {
+                "blank": 1,
+                "comment": 0,
+                "code": 18,
+                "nFiles": 1
+            }
+        },
+        "solution6": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00497198104858398,
+                "n_files": 1,
+                "n_lines": 25,
+                "files_per_second": 201.127073942649,
+                "lines_per_second": 5028.17684856622
+            },
+            "Java": {
+                "nFiles": 1,
+                "blank": 4,
+                "comment": 0,
+                "code": 21
+            },
+            "SUM": {
+                "blank": 4,
+                "comment": 0,
+                "code": 21,
+                "nFiles": 1
+            }
+        },
+        "solution10": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00568985939025879,
+                "n_files": 1,
+                "n_lines": 25,
+                "files_per_second": 175.751267546616,
+                "lines_per_second": 4393.78168866541
+            },
+            "Java": {
+                "nFiles": 1,
+                "blank": 1,
+                "comment": 0,
+                "code": 24
+            },
+            "SUM": {
+                "blank": 1,
+                "comment": 0,
+                "code": 24,
+                "nFiles": 1
+            }
+        },
+        "solution7": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00500392913818359,
+                "n_files": 1,
+                "n_lines": 27,
+                "files_per_second": 199.842957880694,
+                "lines_per_second": 5395.75986277873
+            },
+            "Java": {
+                "nFiles": 1,
+                "blank": 4,
+                "comment": 0,
+                "code": 23
+            },
+            "SUM": {
+                "blank": 4,
+                "comment": 0,
+                "code": 23,
+                "nFiles": 1
+            }
+        },
+        "solution1": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00535392761230469,
+                "n_files": 1,
+                "n_lines": 28,
+                "files_per_second": 186.778767367296,
+                "lines_per_second": 5229.80548628429
+            },
+            "Java": {
+                "nFiles": 1,
+                "blank": 1,
+                "comment": 0,
+                "code": 27
+            },
+            "SUM": {
+                "blank": 1,
+                "comment": 0,
+                "code": 27,
+                "nFiles": 1
+            }
+        }
+    },
+    "JavaScript": {
+        "solution5": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00533199310302734,
+                "n_files": 1,
+                "n_lines": 18,
+                "files_per_second": 187.54712931497,
+                "lines_per_second": 3375.84832766947
+            },
+            "JavaScript": {
+                "nFiles": 1,
+                "blank": 2,
+                "comment": 0,
+                "code": 16
+            },
+            "SUM": {
+                "blank": 2,
+                "comment": 0,
+                "code": 16,
+                "nFiles": 1
+            }
+        },
+        "solution1": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00504398345947266,
+                "n_files": 1,
+                "n_lines": 25,
+                "files_per_second": 198.256003025147,
+                "lines_per_second": 4956.40007562866
+            },
+            "JavaScript": {
+                "nFiles": 1,
+                "blank": 5,
+                "comment": 0,
+                "code": 20
+            },
+            "SUM": {
+                "blank": 5,
+                "comment": 0,
+                "code": 20,
+                "nFiles": 1
+            }
+        },
+        "solution10": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00505208969116211,
+                "n_files": 1,
+                "n_lines": 26,
+                "files_per_second": 197.937895233601,
+                "lines_per_second": 5146.38527607362
+            },
+            "JavaScript": {
+                "nFiles": 1,
+                "blank": 3,
+                "comment": 0,
+                "code": 23
+            },
+            "SUM": {
+                "blank": 3,
+                "comment": 0,
+                "code": 23,
+                "nFiles": 1
+            }
+        },
+        "solution4": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00525307655334473,
+                "n_files": 1,
+                "n_lines": 28,
+                "files_per_second": 190.364634865883,
+                "lines_per_second": 5330.20977624472
+            },
+            "JavaScript": {
+                "nFiles": 1,
+                "blank": 7,
+                "comment": 0,
+                "code": 21
+            },
+            "SUM": {
+                "blank": 7,
+                "comment": 0,
+                "code": 21,
+                "nFiles": 1
+            }
+        },
+        "solution3": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00551509857177734,
+                "n_files": 1,
+                "n_lines": 29,
+                "files_per_second": 181.320421926336,
+                "lines_per_second": 5258.29223586374
+            },
+            "JavaScript": {
+                "nFiles": 1,
+                "blank": 4,
+                "comment": 0,
+                "code": 25
+            },
+            "SUM": {
+                "blank": 4,
+                "comment": 0,
+                "code": 25,
+                "nFiles": 1
+            }
+        },
+        "solution7": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.0047910213470459,
+                "n_files": 1,
+                "n_lines": 26,
+                "files_per_second": 208.723762129883,
+                "lines_per_second": 5426.81781537696
+            },
+            "JavaScript": {
+                "nFiles": 1,
+                "blank": 5,
+                "comment": 0,
+                "code": 21
+            },
+            "SUM": {
+                "blank": 5,
+                "comment": 0,
+                "code": 21,
+                "nFiles": 1
+            }
+        },
+        "solution6": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00487995147705078,
+                "n_files": 1,
+                "n_lines": 27,
+                "files_per_second": 204.920070353723,
+                "lines_per_second": 5532.84189955052
+            },
+            "JavaScript": {
+                "nFiles": 1,
+                "blank": 3,
+                "comment": 0,
+                "code": 24
+            },
+            "SUM": {
+                "blank": 3,
+                "comment": 0,
+                "code": 24,
+                "nFiles": 1
+            }
+        },
+        "solution2": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.0048069953918457,
+                "n_files": 1,
+                "n_lines": 24,
+                "files_per_second": 208.030155738518,
+                "lines_per_second": 4992.72373772443
+            },
+            "JavaScript": {
+                "nFiles": 1,
+                "blank": 3,
+                "comment": 0,
+                "code": 21
+            },
+            "SUM": {
+                "blank": 3,
+                "comment": 0,
+                "code": 21,
+                "nFiles": 1
+            }
+        },
+        "solution9": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.00485682487487793,
+                "n_files": 1,
+                "n_lines": 27,
+                "files_per_second": 205.895832310638,
+                "lines_per_second": 5559.18747238722
+            },
+            "JavaScript": {
+                "nFiles": 1,
+                "blank": 6,
+                "comment": 0,
+                "code": 21
+            },
+            "SUM": {
+                "blank": 6,
+                "comment": 0,
+                "code": 21,
+                "nFiles": 1
+            }
+        },
+        "solution8": {
+            "header": {
+                "cloc_url": "github.com/AlDanial/cloc",
+                "cloc_version": "1.98",
+                "elapsed_seconds": 0.0053870677947998,
+                "n_files": 1,
+                "n_lines": 25,
+                "files_per_second": 185.629741093162,
+                "lines_per_second": 4640.74352732905
+            },
+            "JavaScript": {
+                "nFiles": 1,
+                "blank": 2,
+                "comment": 0,
+                "code": 23
+            },
+            "SUM": {
+                "blank": 2,
+                "comment": 0,
+                "code": 23,
+                "nFiles": 1
+            }
+        }
+    }
+}

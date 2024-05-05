@@ -1,0 +1,345 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n    return nums.reduce((acc, _, i, arr) => {\n        if (i > 1 && arr[i] - arr[i - 1] == arr[i - 1] - arr[i - 2]) {\n            acc.count += ++acc.window;\n        } else {\n            acc.window = 0;\n        }\n        return acc;\n    }, { count: 0, window: 0 }).count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n    let count = 0;\n    for (let i = 0; i < nums.length - 2; i++) {\n        for (let j = i + 1; j < nums.length - 1; j++) {\n            if (nums[j] - nums[j - 1] == nums[j + 1] - nums[j]) {\n                count++;\n            } else {\n                break;\n            }\n        }\n    }\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'self' is defined but never used.",
+                    "line": 5,
+                    "column": 29,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 33
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n    return nums\n        .map((_, i, arr) => i > 1 && arr[i] - arr[i - 1] === arr[i - 1] - arr[i - 2])\n        .filter(Boolean)\n        .reduce((acc, _, i, self) => acc + (i + 1), 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums, index = 2, count = 0) {\n    if (index >= nums.length) return count;\n    if (nums[index] - nums[index - 1] == nums[index - 1] - nums[index - 2]) {\n        return numberOfArithmeticSlices(nums, index + 1, count + index - 1);\n    }\n    return numberOfArithmeticSlices(nums, index + 1, count);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n    let count = 0, window = 0;\n    for (let i = 2; i < nums.length; i++) {\n        if (nums[i] - nums[i - 1] == nums[i - 1] - nums[i - 2]) {\n            window += 1;\n            count += window;\n        } else {\n            window = 0;\n        }\n    }\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n    let count = 0;\n    for (let i = 0; i < nums.length - 2; i++) {\n        let diff = nums[i + 1] - nums[i];\n        for (let j = i + 2; j < nums.length && nums[j] - nums[j - 1] == diff; j++) {\n            count++;\n        }\n    }\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n    let count = 0;\n    for (let i = 0; i < nums.length - 2; i++) {\n        let diff = nums[i + 1] - nums[i];\n        for (let j = i + 2; j < nums.length; j++) {\n            if (nums[j] - nums[j - 1] == diff) {\n                count++;\n            } else {\n                break;\n            }\n        }\n    }\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n    let count = 0;\n    const dp = new Array(nums.length).fill(0);\n    for (let i = 2; i < nums.length; i++) {\n        if (nums[i] - nums[i - 1] == nums[i - 1] - nums[i - 2]) {\n            dp[i] = 1 + dp[i - 1];\n            count += dp[i];\n        }\n    }\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n    let count = 0;\n    let sliceCount = 0;\n    for (let i = 1; i < nums.length - 1; i++) {\n        if (nums[i] - nums[i - 1] == nums[i + 1] - nums[i]) {\n            sliceCount++;\n            count += sliceCount;\n        } else {\n            sliceCount = 0;\n        }\n    }\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/arithmetic-slices/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n    let count = 0;\n    let i = 0;\n    while (i < nums.length - 2) {\n        let j = i + 2;\n        while (j < nums.length && nums[j] - nums[j - 1] == nums[j - 1] - nums[j - 2]) {\n            count++;\n\n\n            j++;\n        }\n        i++;\n    }\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

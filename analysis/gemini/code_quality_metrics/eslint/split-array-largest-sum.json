@@ -1,0 +1,191 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/split-array-largest-sum/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'MinPriorityQueue' is not defined.",
+                    "line": 2,
+                    "column": 23,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 2,
+                    "endColumn": 39
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function splitArray(nums, k) {\n  const minHeap = new MinPriorityQueue({ priority: (e) => e[1] });\n  const sorted = nums.sort((a, b) => b - a);\n\n  minHeap.enqueue([0, 0]); // Initial subarray\n\n  while (minHeap.size() < k) {\n    const [i, curSum] = minHeap.dequeue();\n    minHeap.enqueue([i + 1, curSum]);\n    minHeap.enqueue([i + 1, curSum + sorted[i]]);\n  }\n\n  return minHeap.peek()[1];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/split-array-largest-sum/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function splitArray(nums, k) {\n  const max = Math.max(...nums);\n  const sum = nums.reduce((acc, n) => acc + n, 0);\n  let left = max, right = sum;\n\n  while (left < right) {\n    const mid = Math.floor((left + right) / 2);\n    if (isPossible(nums, k, mid)) {\n      right = mid;\n    } else {\n      left = mid + 1;\n    }\n  }\n  return left;\n}\n\nfunction isPossible(nums, k, maxSum) {\n  let count = 1, currentSum = 0;\n  for (const num of nums) {\n    if (currentSum + num > maxSum) {\n      count++;\n      currentSum = 0;\n    }\n    if (count > k) {\n      return false;\n    }\n    currentSum += num;\n  }\n  return true;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/split-array-largest-sum/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function splitArray(nums, k) {\n  let minSum = Number.MAX_VALUE;\n\n  function backtrack(i, count, currentSum) {\n    if (count === k && currentSum < minSum) {\n      minSum = currentSum;\n      return;\n    }\n    if (i === nums.length || count > k) {\n      return;\n    }\n\n    backtrack(i + 1, count, currentSum); // Skip element\n    backtrack(i + 1, count + 1, currentSum + nums[i]); // Include element\n  }\n\n  backtrack(0, 0, 0);\n  return minSum;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/split-array-largest-sum/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                },
+                {
+                    "ruleId": "no-const-assign",
+                    "severity": 2,
+                    "message": "'res' is constant.",
+                    "line": 12,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "const",
+                    "endLine": 12,
+                    "endColumn": 8
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function splitArray(nums, k) {\n  const targetSum = Math.floor(nums.reduce((acc, n) => acc + n, 0) / k);\n  let currentSum = 0, count = 0;\n  const res = Math.max(...nums);\n\n  for (const num of nums) {\n    if (currentSum + num > targetSum) {\n      count++;\n      currentSum = 0;\n    }\n    currentSum += num;\n    res = Math.max(res, currentSum);\n  }\n\n  return count < k ? res : Math.max(...nums);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/split-array-largest-sum/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function splitArray(nums, k) {\n  const dp = Array(nums.length + 1).fill(Number.MAX_VALUE, 0, k + 1);\n  dp[0] = 0;\n\n  for (let i = 1; i <= nums.length; i++) {\n    let minSum = Number.MAX_VALUE;\n    for (let j = 1; j <= k && i >= j; j++) {\n      minSum = Math.min(minSum, dp[j - 1] + Math.max(...nums.slice(i - j, i)));\n    }\n    dp[i] = minSum;\n  }\n\n  return dp[nums.length];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

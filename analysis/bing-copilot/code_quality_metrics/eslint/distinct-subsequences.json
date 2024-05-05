@@ -1,0 +1,202 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/distinct-subsequences/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const counts = Array.from({ length: s.length + 1 }, () => Array(t.length + 1).fill(0));\n    for (let i = 0; i <= s.length; i++) counts[i][0] = 1;\n    for (let i = 1; i <= s.length; i++) {\n        for (let j = 1; j <= t.length; j++) {\n            counts[i][j] = counts[i - 1][j];\n            if (s[i - 1] === t[j - 1]) counts[i][j] += counts[i - 1][j - 1];\n        }\n    }\n    return counts[s.length][t.length];\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/distinct-subsequences/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const memo = new Map();\n    const helper = (i, j) => {\n        if (j === t.length) return 1;\n        if (i === s.length) return 0;\n        const key = `${i}-${j}`;\n        if (memo.has(key)) return memo.get(key);\n        let count = 0;\n        if (s[i] === t[j]) count += helper(i + 1, j + 1);\n        count += helper(i + 1, j);\n        memo.set(key, count);\n        return count;\n    };\n    return helper(0, 0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/distinct-subsequences/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const charCount = Array(26).fill(0);\n    for (const char of s) charCount[char.charCodeAt(0) - 97]++;\n    let result = 1;\n    for (const char of t) {\n        const count = charCount[char.charCodeAt(0) - 97];\n        if (count === 0) return 0;\n        result *= count;\n    }\n    return result;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/distinct-subsequences/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const dp = Array(t.length + 1).fill(0);\n    dp[0] = 1;\n    for (let i = 1; i <= s.length; i++) {\n        for (let j = t.length; j >= 1; j--) {\n            if (s[i - 1] === t[j - 1]) dp[j] += dp[j - 1];\n        }\n    }\n    return dp[t.length];\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/distinct-subsequences/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const counts = Array(t.length + 1).fill(0);\n    counts[0] = 1;\n    for (let i = 1; i <= s.length; i++) {\n        for (let j = t.length; j >= 1; j--) {\n            if (s[i - 1] === t[j - 1]) counts[j] += counts[j - 1];\n        }\n    }\n    return counts[t.length];\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/distinct-subsequences/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const dp = Array.from({ length: s.length + 1 }, () => Array(t.length + 1).fill(0));\n    for (let i = 0; i <= s.length; i++) dp[i][0] = 1;\n    for (let i = 1; i <= s.length; i++) {\n        for (let j = 1; j <= t.length; j++) {\n            dp[i][j] = dp[i - 1][j];\n            if (s[i - 1] === t[j - 1]) dp[i][j] += dp[i - 1][j - 1];\n        }\n    }\n    return dp[s.length][t.length];\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

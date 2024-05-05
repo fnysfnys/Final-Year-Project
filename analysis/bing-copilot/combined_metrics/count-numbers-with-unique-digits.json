@@ -1,0 +1,199 @@
+{
+    "Python": {
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "111111111",
+            "runtime": "16 ms",
+            "memory": "11.6 MB",
+            "complexity": 3,
+            "normalised_warnings": 0.1
+        },
+        "solution5": {
+            "status_display": "Wrong Answer",
+            "compare_result": "010000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "normalised_warnings": 0.14285714285714285
+        },
+        "solution4": {
+            "status_display": "Wrong Answer",
+            "compare_result": "011000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 3,
+            "normalised_warnings": 0.16666666666666666
+        },
+        "solution8": {
+            "status_display": "Wrong Answer",
+            "compare_result": "011000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 4,
+            "normalised_warnings": 0.08333333333333333
+        },
+        "solution7": {
+            "status_display": "Wrong Answer",
+            "compare_result": "010000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 9,
+            "normalised_warnings": 0.05
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "010000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 8,
+            "normalised_warnings": 0.058823529411764705
+        },
+        "solution2": {
+            "status_display": "Wrong Answer",
+            "compare_result": "011000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 3,
+            "normalised_warnings": 0.2
+        },
+        "solution6": {
+            "status_display": "Accepted",
+            "compare_result": "111111111",
+            "runtime": "11 ms",
+            "memory": "11.7 MB",
+            "complexity": 4,
+            "normalised_warnings": 0.09090909090909091
+        }
+    },
+    "Java": {
+        "solution2": {
+            "status_display": "Accepted",
+            "compare_result": "111111111",
+            "runtime": "0 ms",
+            "memory": "39.8 MB",
+            "complexity": 4,
+            "readability": 0.6804214119911194,
+            "normalised_warnings": 0.35294117647058826
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "011000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 2,
+            "readability": 0.5602548718452454,
+            "normalised_warnings": 0.625
+        },
+        "solution4": {
+            "status_display": "Accepted",
+            "compare_result": "111111111",
+            "runtime": "0 ms",
+            "memory": "40 MB",
+            "complexity": 3,
+            "readability": 0.6559150815010071,
+            "normalised_warnings": 0.42857142857142855
+        },
+        "solution5": {
+            "status_display": "Accepted",
+            "compare_result": "111111111",
+            "runtime": "0 ms",
+            "memory": "40.3 MB",
+            "complexity": 3,
+            "readability": 0.7396401762962341,
+            "normalised_warnings": 0.5
+        },
+        "solution6": {
+            "status_display": "Wrong Answer",
+            "compare_result": "011000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "readability": 0.7914333343505859,
+            "normalised_warnings": 0.3684210526315789
+        },
+        "solution7": {
+            "status_display": "Wrong Answer",
+            "compare_result": "110000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 6,
+            "readability": 0.8026812076568604,
+            "normalised_warnings": 0.375
+        },
+        "solution1": {
+            "status_display": "Wrong Answer",
+            "compare_result": "010000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 4,
+            "readability": 0.6168955564498901,
+            "normalised_warnings": 0.29411764705882354
+        }
+    },
+    "JavaScript": {
+        "solution5": {
+            "status_display": "Accepted",
+            "compare_result": "111111111",
+            "runtime": "50 ms",
+            "memory": "49.1 MB",
+            "complexity": 4,
+            "normalised_warnings": 0.0
+        },
+        "solution1": {
+            "status_display": "Wrong Answer",
+            "compare_result": "011000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 2,
+            "normalised_warnings": 0.0
+        },
+        "solution4": {
+            "status_display": "Wrong Answer",
+            "compare_result": "010000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 6,
+            "normalised_warnings": 0.0
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 2,
+            "normalised_warnings": 0.0
+        },
+        "solution6": {
+            "status_display": "Accepted",
+            "compare_result": "111111111",
+            "runtime": "47 ms",
+            "memory": "48.5 MB",
+            "complexity": 3,
+            "normalised_warnings": 0.0
+        },
+        "solution2": {
+            "status_display": "Wrong Answer",
+            "compare_result": "011000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 3,
+            "normalised_warnings": 0.0
+        },
+        "solution9": {
+            "status_display": "Wrong Answer",
+            "compare_result": "111000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 2,
+            "normalised_warnings": 0.0
+        },
+        "solution8": {
+            "status_display": "Runtime Error",
+            "compare_result": "000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 4,
+            "normalised_warnings": 0.0
+        }
+    }
+}

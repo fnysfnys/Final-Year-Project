@@ -1,0 +1,46 @@
+{
+    "Java": {
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/rotate-function/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "34",
+                            "@severity": "error",
+                            "@message": "Parameter nums should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "Name 'F' must match pattern '^[a-z][a-zA-Z0-9]*$'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

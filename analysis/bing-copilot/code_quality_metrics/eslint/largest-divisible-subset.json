@@ -1,0 +1,136 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 30
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var largestDivisibleSubset = function(nums) {\n       nums.sort((a, b) => a - b);\n       const n = nums.length;\n       const dp = new Array(n).fill(1);\n       let maxSize = 1;\n       let maxIndex = 0;\n\n       for (let i = 1; i < n; i++) {\n           for (let j = 0; j < i; j++) {\n               if (nums[i] % nums[j] === 0) {\n                   dp[i] = Math.max(dp[i], dp[j] + 1);\n                   if (dp[i] > maxSize) {\n                       maxSize = dp[i];\n                       maxIndex = i;\n                   }\n               }\n           }\n       }\n\n       const result = [];\n       while (maxSize > 0) {\n           result.unshift(nums[maxIndex]);\n           maxSize--;\n           for (let i = maxIndex - 1; i >= 0; i--) {\n               if (dp[i] === maxSize && nums[maxIndex] % nums[i] === 0) {\n                   maxIndex = i;\n                   break;\n               }\n           }\n       }\n\n       return result;\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 30
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var largestDivisibleSubset = function(nums) {\n       nums.sort(() => Math.random() - 0.5);\n       // Rest of the code same as the greedy approach\n       // ...\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 14,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 14,
+                    "endColumn": 30
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   // Helper function to find prime factors\n   function primeFactors(num) {\n       const factors = new Set();\n       for (let i = 2; i * i <= num; i++) {\n           while (num % i === 0) {\n               factors.add(i);\n               num /= i;\n           }\n       }\n       if (num > 1) factors.add(num);\n       return factors;\n   }\n\n   var largestDivisibleSubset = function(nums) {\n       const factorMap = new Map();\n       for (const num of nums) {\n           const factors = Array.from(primeFactors(num));\n           const key = factors.join(',');\n           if (!factorMap.has(key)) factorMap.set(key, []);\n           factorMap.get(key).push(num);\n       }\n\n       let maxSize = 0;\n       let maxGroup = [];\n\n       for (const group of factorMap.values()) {\n           if (group.length > maxSize) {\n               maxSize = group.length;\n               maxGroup = group;\n           }\n       }\n\n       return maxGroup;\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 30
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var largestDivisibleSubset = function(nums) {\n       nums.sort((a, b) => b - a);\n       const result = [];\n\n       for (const num of nums) {\n           if (result.length === 0 || num % result[result.length - 1] === 0) {\n               result.push(num);\n           }\n       }\n\n       return result;\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

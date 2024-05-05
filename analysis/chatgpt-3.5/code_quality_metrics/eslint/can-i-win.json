@@ -1,0 +1,301 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/can-i-win/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (desiredTotal <= 0) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const memo = {};\n    \n    function canWin(remaining, used) {\n        const state = used.join(',');\n        if (memo[state] !== undefined) return memo[state];\n        \n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            if (!used[i]) {\n                used[i] = true;\n                if (!canWin(remaining - i, used)) {\n                    memo[state] = true;\n                    used[i] = false;\n                    return true;\n                }\n                used[i] = false;\n            }\n        }\n        \n        memo[state] = false;\n        return false;\n    }\n    \n    return canWin(desiredTotal, new Array(maxChoosableInteger + 1).fill(false));\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/can-i-win/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (desiredTotal <= 0) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const memo = new Map();\n    \n    function canWin(mask, total) {\n        if (total >= desiredTotal) return false;\n        if (memo.has(mask)) return memo.get(mask);\n        \n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            if ((mask & (1 << i)) === 0) {\n                if (!canWin(mask | (1 << i), total + i)) {\n                    memo.set(mask, true);\n                    return true;\n                }\n            }\n        }\n        \n        memo.set(mask, false);\n        return false;\n    }\n    \n    return canWin(0, 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/can-i-win/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (desiredTotal <= 0) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const used = new Array(maxChoosableInteger + 1).fill(false);\n    \n    function canWin(mask, total) {\n        if (total >= desiredTotal) return false;\n        \n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            if (!used[i]) {\n                used[i] = true;\n                if (!canWin(mask | (1 << i), total + i)) {\n                    used[i] = false;\n                    return true;\n                }\n                used[i] = false;\n            }\n        }\n        \n        return false;\n    }\n    \n    return canWin(0, 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/can-i-win/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (desiredTotal <= 0) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const dp = new Array(desiredTotal + 1).fill(false);\n    \n    for (let i = 1; i <= maxChoosableInteger; i++) {\n        if (i >= desiredTotal) return true;\n        dp[i] = true;\n    }\n    \n    for (let total = maxChoosableInteger + 1; total <= desiredTotal; total++) {\n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            if (total - i <= 0) break;\n            if (!dp[total - i]) {\n                dp[total] = true;\n                break;\n            }\n        }\n    }\n    \n    return dp[desiredTotal];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/can-i-win/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (desiredTotal <= 0) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const used = new Array(maxChoosableInteger + 1).fill(false);\n    \n    function canWin(total) {\n        if (total <= 0) return false;\n        \n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            if (!used[i]) {\n                used[i] = true;\n                if (!canWin(total - i)) {\n                    used[i] = false;\n                    return true;\n                }\n                used[i] = false;\n            }\n        }\n        \n        return false;\n    }\n    \n    return canWin(desiredTotal);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/can-i-win/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (desiredTotal <= 0) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const dp = new Array(desiredTotal + 1).fill(false).map(() => new Array(1 << maxChoosableInteger).fill(false));\n    \n    for (let i = 1; i <= maxChoosableInteger; i++) {\n        if (i >= desiredTotal) return true;\n        dp[i] = dp[i] || [];\n        dp[i][1 << (i - 1)] = true;\n    }\n    \n    for (let total = maxChoosableInteger + 1; total <= desiredTotal; total++) {\n        for (let mask = 1; mask < (1 << maxChoosableInteger); mask++) {\n            for (let i = 1; i <= maxChoosableInteger; i++) {\n                if ((mask & (1 << (i - 1))) !== 0) {\n                    if (!dp[total - i][mask ^ (1 << (i - 1))]) {\n                        dp[total][mask] = true;\n\n\n                        break;\n                    }\n                }\n            }\n        }\n    }\n    \n    return dp[desiredTotal][(1 << maxChoosableInteger) - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/can-i-win/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (desiredTotal <= 0) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const used = new Set();\n    \n    function canWin(total) {\n        if (total <= 0) return false;\n        \n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            if (!used.has(i)) {\n                used.add(i);\n                if (!canWin(total - i)) {\n                    used.delete(i);\n                    return true;\n                }\n                used.delete(i);\n            }\n        }\n        \n        return false;\n    }\n    \n    return canWin(desiredTotal);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/can-i-win/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (desiredTotal <= 0) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const dp = new Array(1 << maxChoosableInteger).fill(false);\n    \n    for (let mask = 0; mask < (1 << maxChoosableInteger); mask++) {\n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            const bit = 1 << (i - 1);\n            if ((mask & bit) === 0) {\n                if (!dp[mask | bit]) {\n                    dp[mask] = true;\n                    break;\n                }\n            }\n        }\n    }\n    \n    return dp[0];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/can-i-win/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (desiredTotal <= 0) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const dp = new Array(1 << maxChoosableInteger).fill(false);\n    \n    for (let i = 1; i <= maxChoosableInteger; i++) {\n        if (i >= desiredTotal) return true;\n        dp[1 << (i - 1)] = true;\n    }\n    \n    for (let mask = 0; mask < (1 << maxChoosableInteger); mask++) {\n        if (dp[mask]) continue;\n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            if ((mask & (1 << (i - 1))) === 0) {\n                if (!dp[mask | (1 << (i - 1))]) {\n                    dp[mask] = true;\n                    break;\n                }\n            }\n        }\n    }\n    \n    return dp[0];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

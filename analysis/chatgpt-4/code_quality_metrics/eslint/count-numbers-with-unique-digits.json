@@ -1,0 +1,424 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 33
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    if (n === 0) return 1;\n    let count = 1; // for 0\n    let used = new Array(10).fill(false);\n\n    const backtrack = (length) => {\n        if (length === n) return;\n        for (let i = 0; i < 10; i++) {\n            if (!used[i]) {\n                used[i] = true;\n                count++;\n                backtrack(length + 1);\n                used[i] = false;\n            }\n        }\n    };\n\n    backtrack(0);\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 33
+                },
+                {
+                    "ruleId": "no-extra-semi",
+                    "severity": 2,
+                    "message": "Unnecessary semicolon.",
+                    "line": 13,
+                    "column": 2,
+                    "nodeType": "EmptyStatement",
+                    "messageId": "unexpected",
+                    "endLine": 13,
+                    "endColumn": 3,
+                    "fix": {
+                        "range": [
+                            445,
+                            447
+                        ],
+                        "text": "}"
+                    }
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 1,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    if (n === 0) return 1;\n    if (n === 1) return 10;\n    return 9 * countUniqueDigits(9, n - 1) + countNumbersWithUniqueDigits(n - 1);\n};\n\nfunction countUniqueDigits(start, digitsLeft) {\n    if (digitsLeft === 0) return 1;\n    return start * countUniqueDigits(start - 1, digitsLeft - 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 33
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    let end = Math.pow(10, n);\n    let count = 0;\n\n    for (let i = 0; i < end; i++) {\n        if (new Set(i.toString()).size === i.toString().length) count++;\n    }\n\n    return count;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 33
+                },
+                {
+                    "ruleId": "no-extra-semi",
+                    "severity": 2,
+                    "message": "Unnecessary semicolon.",
+                    "line": 19,
+                    "column": 2,
+                    "nodeType": "EmptyStatement",
+                    "messageId": "unexpected",
+                    "endLine": 19,
+                    "endColumn": 3,
+                    "fix": {
+                        "range": [
+                            457,
+                            459
+                        ],
+                        "text": "}"
+                    }
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 1,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    let end = Math.pow(10, n);\n    let count = 0;\n\n    for (let i = 0; i < end; i++) {\n        if (areDigitsUnique(i)) count++;\n    }\n\n    return count;\n};\n\nfunction areDigitsUnique(num) {\n    let numStr = num.toString();\n    let digitSet = new Set(numStr);\n    return digitSet.size === numStr.length;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 33
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    if (n === 0) return 1;\n    let total = 10, uniqueDigits = 9;\n\n    for (let i = 2; i <= n; i++) {\n        uniqueDigits *= (11 - i);\n        total += uniqueDigits;\n    }\n\n    return total;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 6,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 6,
+                    "endColumn": 33
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Given an integer n, return the count of all numbers with unique digits, x\n\n, where 0 <= x < 10n.\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    if (n === 0) return 1;\n    if (n === 1) return 10;\n    let total = 10, perm = 9;\n\n    for (let i = 2; i <= n; i++) {\n        perm *= (11 - i);\n        total += perm;\n    }\n\n    return total;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 33
+                },
+                {
+                    "ruleId": "no-extra-semi",
+                    "severity": 2,
+                    "message": "Unnecessary semicolon.",
+                    "line": 20,
+                    "column": 2,
+                    "nodeType": "EmptyStatement",
+                    "messageId": "unexpected",
+                    "endLine": 20,
+                    "endColumn": 3,
+                    "fix": {
+                        "range": [
+                            479,
+                            481
+                        ],
+                        "text": "}"
+                    }
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 1,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    if (n === 0) return 1;\n    let count = 10, availableDigits = 9;\n\n    for (let i = 2; i <= n; i++) {\n        availableDigits -= 1;\n        count += 9 * factorial(availableDigits, i - 1);\n    }\n\n    return count;\n};\n\nfunction factorial(n, times) {\n    let result = 1;\n    while (times--) result *= n--;\n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 33
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    if (n === 0) return 1;\n    let dp = new Array(n + 1).fill(0);\n    dp[0] = 1;\n    dp[1] = 10;\n\n    for (let i = 2; i <= n; i++) {\n        dp[i] = 9;\n        for (let j = 9; j >= 9 - i + 2; j--) {\n            dp[i] *= j;\n        }\n        dp[i] += dp[i - 1];\n    }\n\n    return dp[n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 33
+                },
+                {
+                    "ruleId": "no-extra-semi",
+                    "severity": 2,
+                    "message": "Unnecessary semicolon.",
+                    "line": 24,
+                    "column": 2,
+                    "nodeType": "EmptyStatement",
+                    "messageId": "unexpected",
+                    "endLine": 24,
+                    "endColumn": 3,
+                    "fix": {
+                        "range": [
+                            557,
+                            559
+                        ],
+                        "text": "}"
+                    }
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 1,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    let end = Math.pow(10, n);\n    let count = 0;\n\n    for (let i = 0; i < end; i++) {\n        if (isUnique(i)) count++;\n    }\n\n    return count;\n};\n\nfunction isUnique(number) {\n    let seen = 0;\n    while (number > 0) {\n        let digit = number % 10;\n        if ((seen & (1 << digit)) > 0) return false;\n        seen |= (1 << digit);\n        number = Math.floor(number / 10);\n    }\n    return true;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 33
+                },
+                {
+                    "ruleId": "no-extra-semi",
+                    "severity": 2,
+                    "message": "Unnecessary semicolon.",
+                    "line": 13,
+                    "column": 2,
+                    "nodeType": "EmptyStatement",
+                    "messageId": "unexpected",
+                    "endLine": 13,
+                    "endColumn": 3,
+                    "fix": {
+                        "range": [
+                            409,
+                            411
+                        ],
+                        "text": "}"
+                    }
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 1,
+            "fixableWarningCount": 0,
+            "source": "/**\n * Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    if (n === 0) return 1;\n    if (n === 1) return 10;\n    return 9 * countUnique(9, n - 1) + countNumbersWithUniqueDigits(n - 1);\n};\n\nfunction countUnique(start, left) {\n    if (left === 0) return 1;\n    return start * countUnique(start - 1, left - 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

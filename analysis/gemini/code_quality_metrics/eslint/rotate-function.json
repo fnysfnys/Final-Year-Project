@@ -1,0 +1,213 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/rotate-function/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'prevIndex' is assigned a value but never used.",
+                    "line": 20,
+                    "column": 11,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 20,
+                    "endColumn": 20
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'n' is not defined.",
+                    "line": 21,
+                    "column": 30,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 21,
+                    "endColumn": 31
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n  let n = nums.length;\n  let sum = 0;\n  let maxF = 0;\n  const indexMap = new Map();\n  \n  for (let i = 0; i < n; i++) {\n    sum += nums[i];\n    indexMap.set(nums[i], i);\n    maxF = Math.max(maxF, F(i, nums, sum, indexMap));\n  }\n  \n  return maxF;\n};\n\nfunction F(k, nums, sum, indexMap) {\n  let f = 0;\n  for (let i = 0; i < nums.length; i++) {\n    const num = nums[i];\n    const prevIndex = indexMap.get(num);\n    const diff = i * num - ((n - k - 1) * num);\n    indexMap.set(num, i);\n    f += diff;\n  }\n  return f + (k * sum);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/rotate-function/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'n' is not defined.",
+                    "line": 17,
+                    "column": 28,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 17,
+                    "endColumn": 29
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'n' is not defined.",
+                    "line": 17,
+                    "column": 56,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 17,
+                    "endColumn": 57
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n  let n = nums.length;\n  let sum = 0;\n  let maxF = 0;\n  \n  for (let i = 0; i < n; i++) {\n    sum += nums[i];\n    maxF = Math.max(maxF, F(i, nums, sum));\n  }\n  \n  return maxF;\n};\n\nfunction F(k, nums, sum) {\n  let f = 0;\n  for (let i = 0; i < nums.length; i++) {\n    f += (i * nums[i]) - ((n - k - 1) * nums[(i + k) % n]);\n  }\n  return f + (k * sum);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/rotate-function/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n  let n = nums.length;\n  let maxCurrent = 0, maxSoFar = 0;\n  let sum = 0;\n  \n  for (let i = 0; i < n; i++) {\n    maxCurrent = Math.max(0, maxCurrent + nums[i] - (n - 1 - i) * nums[i]);\n    maxSoFar = Math.max(maxSoFar, maxCurrent);\n    sum += nums[i];\n  }\n  \n  return sum - maxSoFar;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/rotate-function/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n  function F(k, n, sum, fPrev) {\n    if (k === n) return fPrev;\n    const f = fPrev + sum - n * nums[k] + k * nums[(k + 1) % n];\n    return F(k + 1, n, sum, f);\n  }\n  \n  const n = nums.length;\n  const sum = nums.reduce((acc, num) => acc + num, 0);\n  return F(0, n, sum, 0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/rotate-function/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n  let n = nums.length;\n  let sum = nums.reduce((acc, num) => acc + num, 0);\n  let fPrev = 0;\n  let maxF = 0;\n  \n  for (let i = 1; i < n; i++) {\n    fPrev = fPrev + sum - n * nums[i - 1] + i * nums[i];\n    maxF = Math.max(maxF, fPrev);\n  }\n  \n  return maxF;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

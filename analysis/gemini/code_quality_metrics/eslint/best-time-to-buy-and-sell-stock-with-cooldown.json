@@ -1,0 +1,202 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 20,
+                    "column": 1,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 20,
+                    "endColumn": 10
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "const memo = {};\n\nvar maxProfit = function(prices, i, canBuy) {\n  const key = `${i}-${canBuy}`;\n  if (key in memo) return memo[key];\n  \n  if (i >= prices.length) return 0;\n  \n  let profit = 0;\n  if (canBuy) {\n    profit = Math.max(maxProfit(prices, i + 1, false) - prices[i], maxProfit(prices, i + 1, true));\n  } else {\n    profit = Math.max(maxProfit(prices, i + 1, true) + prices[i], maxProfit(prices, i + 2, false));\n  }\n  \n  memo[key] = profit;\n  return profit;\n};\n\nmaxProfit = function(prices) {\n  return maxProfit(prices, 0, true);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n  if (prices.length < 2) return 0;\n  \n  const buy = [prices[0], Number.POSITIVE_INFINITY];\n  const sell = [0, 0];\n  \n  for (let i = 1; i < prices.length; i++) {\n    buy[0] = Math.min(buy[0], prices[i] - sell[1]);\n    sell[0] = Math.max(sell[0], prices[i] - buy[1]);\n    buy[1] = buy[0];\n    sell[1] = sell[0];\n  }\n  \n  return Math.max(...sell);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n  let maxProfit = 0;\n  let minPrice = prices[0];\n  \n  for (let i = 1; i < prices.length; i++) {\n    const profit = prices[i] - minPrice;\n    maxProfit = Math.max(maxProfit, profit);\n    minPrice = Math.min(minPrice, prices[i]);\n  }\n  \n  return maxProfit;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n  let maxProfit = 0;\n  \n  for (let i = 0; i < prices.length - 1; i++) {\n    for (let j = i + 2; j < prices.length; j++) {\n      const profit = prices[j] - prices[i];\n      maxProfit = Math.max(maxProfit, profit);\n    }\n  }\n  \n  return maxProfit;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n  const stack = [];\n  let profit = 0;\n  \n  for (const price of prices) {\n    if (stack.length === 0 || price > stack[stack.length - 1]) {\n      stack.push(price);\n    } else if (price < stack[stack.length - 1]) {\n      const minPrice = stack.pop();\n      profit += stack[stack.length - 1] - minPrice;\n    }\n  }\n  \n  return profit;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n  if (prices.length < 2) return 0;\n  \n  const buy = new Array(prices.length).fill(Number.POSITIVE_INFINITY);\n  const sell = new Array(prices.length).fill(0);\n  \n  buy[0] = prices[0];\n  \n  for (let i = 1; i < prices.length; i++) {\n    sell[i] = Math.max(sell[i - 1], prices[i] - buy[i - 1]);\n    buy[i] = Math.min(buy[i - 1], prices[i] - sell[i - 2]);\n  }\n  \n  return Math.max(...sell);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

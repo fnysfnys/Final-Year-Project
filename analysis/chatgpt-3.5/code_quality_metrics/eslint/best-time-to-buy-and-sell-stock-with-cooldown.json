@@ -1,0 +1,301 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n    const stack = [];\n    let profit = 0;\n    \n    for (let i = 0; i < prices.length; i++) {\n        while (stack.length > 0 && prices[i] > stack[stack.length - 1]) {\n            profit += prices[i] - stack.pop();\n        }\n        stack.push(prices[i]);\n    }\n    \n    return profit;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n    const n = prices.length;\n    if (n <= 1) return 0;\n    \n    const buy = new Array(n);\n    const sell = new Array(n);\n    \n    buy[0] = -prices[0];\n    sell[0] = 0;\n    \n    for (let i = 1; i < n; i++) {\n        buy[i] = Math.max(buy[i - 1], (i >= 2 ? sell[i - 2] : 0) - prices[i]);\n        sell[i] = Math.max(sell[i - 1], buy[i - 1] + prices[i]);\n    }\n    \n    return sell[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n    const n = prices.length;\n    const buy = new Array(n).fill(0);\n    const sell = new Array(n).fill(0);\n    \n    buy[0] = -prices[0];\n    sell[0] = 0;\n    \n    for (let i = 1; i < n; i++) {\n        buy[i] = Math.max(buy[i - 1], sell[i - 1] - prices[i]);\n        sell[i] = Math.max(sell[i - 1], buy[i - 1] + prices[i]);\n    }\n    \n    return sell[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n    let profit = 0;\n    \n    for (let i = 1; i < prices.length; i++) {\n        if (prices[i] > prices[i - 1]) {\n            profit += prices[i] - prices[i - 1];\n        }\n    }\n    \n    return profit;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n    return calculateMaxProfit(prices, 0, false, 0);\n};\n\nfunction calculateMaxProfit(prices, day, hasStock, cooldown) {\n    if (day >= prices.length) return 0;\n    \n    let maxProfit = 0;\n    \n    if (hasStock) {\n        maxProfit = Math.max(\n            calculateMaxProfit(prices, day + 1, false, cooldown),\n            calculateMaxProfit(prices, day + 2, false, cooldown + prices[day])\n        );\n    } else {\n        maxProfit = Math.max(\n            calculateMaxProfit(prices, day + 1, true, cooldown - prices[day]),\n            calculateMaxProfit(prices, day + 1, false, cooldown)\n        );\n    }\n    \n    return maxProfit;\n}",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n    return prices.reduce((profit, price, i) => {\n        return i > 0 && price > prices[i - 1] ? profit + price - prices[i - 1] : profit;\n    }, 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n    let minPrice = prices[0];\n    let maxProfit = 0;\n    \n    for (let i = 1; i < prices.length; i++) {\n        if (prices[i] > minPrice) {\n            maxProfit += prices[i] - minPrice;\n            minPrice = prices[i];\n        } else {\n            minPrice = Math.min(minPrice, prices[i]);\n        }\n    }\n    \n    return maxProfit;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n    let prevBuy = -prices[0];\n    let prevSell = 0;\n    let prevCooldown = 0;\n    \n    for (let i = 1; i < prices.length; i++) {\n        const buy = Math.max(prevBuy, prevCooldown - prices[i]);\n        const sell = Math.max(prevSell, prevBuy + prices[i]);\n        const cooldown = Math.max(prevCooldown, prevSell);\n        \n        prevBuy = buy;\n        prevSell = sell;\n        prevCooldown = cooldown;\n    }\n    \n    return Math.max(prevSell, prevCooldown);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/best-time-to-buy-and-sell-stock-with-cooldown/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxProfit' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxProfit = function(prices) {\n    const memo = new Map();\n    \n    function calculateMaxProfit(day, hasStock, cooldown) {\n        if (day >= prices.length) return 0;\n        const key = `${day}-${hasStock}-${cooldown}`;\n        \n        if (memo.has(key)) return memo.get(key);\n        \n        let maxProfit = 0;\n        \n        if (hasStock) {\n            maxProfit = Math.max(\n                calculateMaxProfit(day + 1, false, cooldown),\n                calculateMaxProfit(day + 2, false, cooldown + prices[day])\n            );\n        } else {\n            maxProfit = Math.max(\n                calculateMaxProfit(day + 1, true, cooldown - prices[day]),\n                calculateMaxProfit(day + 1, false, cooldown)\n            );\n        }\n        \n        memo.set(key, maxProfit);\n        return maxProfit;\n    }\n    \n    return calculateMaxProfit(0, false, 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,158 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/frog-jump/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'lastStone' is assigned a value but never used.",
+                    "line": 2,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 2,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canCross(stones) {\n  const lastStone = stones[stones.length - 1];\n\n  function canJumpFrom(index, prevJump) {\n    if (index === stones.length - 1) return true;\n    for (let jump = prevJump - 1; jump <= prevJump + 1; jump++) {\n      if (jump > 0 && stones[index] + jump < stones[stones.length - 1] && stones.indexOf(stones[index] + jump) !== -1) {\n        if (canJumpFrom(stones.indexOf(stones[index] + jump), jump)) {\n          return true;\n        }\n      }\n    }\n    return false;\n  }\n\n  return canJumpFrom(1, 1);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/frog-jump/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canCross(stones) {\n  const n = stones.length;\n  const dp = new Array(n).fill(null);\n\n  function canJumpFrom(index) {\n    if (dp[index] !== null) return dp[index];\n    if (index === n - 1) return true;\n    for (let j = 0; j < index; j++) {\n      const jump = stones[index] - stones[j];\n      if (jump > 0 && jump <= j + 1 && canJumpFrom(j)) {\n        dp[index] = true;\n        return true;\n      }\n    }\n    dp[index] = false;\n    return false;\n  }\n\n  return canJumpFrom(0);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/frog-jump/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canCross(stones) {\n  const n = stones.length;\n  const dp = new Array(n + 1).fill(false);\n  dp[0] = true;\n\n  for (let i = 1; i < n; i++) {\n    for (let j = 0; j < i; j++) {\n      const jump = stones[i] - stones[j];\n      if (jump > 0 && jump <= j + 1 && dp[j]) {\n        dp[i] = true;\n        break;\n      }\n    }\n  }\n\n  return dp[n - 1];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/frog-jump/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'lastStone' is assigned a value but never used.",
+                    "line": 2,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 2,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canCross(stones) {\n  const lastStone = stones[stones.length - 1];\n  const cache = {};\n\n  function canJumpFrom(index, prevJump) {\n    if (index === stones.length - 1) return true;\n    if (cache[`${index}/${prevJump}`] !== undefined) {\n      return cache[`${index}/${prevJump}`];\n    }\n    for (let jump = prevJump - 1; jump <= prevJump + 1; jump++) {\n      if (jump > 0 && stones[index] + jump < stones[stones.length - 1] && stones.indexOf(stones[index] + jump) !== -1) {\n        cache[`${index}/${prevJump}`] = canJumpFrom(stones.indexOf(stones[index] + jump), jump);\n        if (cache[`${index}/${prevJump}`]) {\n          return true;\n        }\n      }\n    }\n    cache[`${index}/${prevJump}`] = false;\n    return false;\n  }\n\n  return canJumpFrom(1, 1);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

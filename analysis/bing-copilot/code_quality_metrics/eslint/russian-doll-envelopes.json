@@ -1,0 +1,158 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/russian-doll-envelopes/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "    var maxEnvelopes = function(envelopes) {\n        envelopes.sort((a, b) => a[0] - b[0] || b[1] - a[1]);\n        const dp = new Array(envelopes.length).fill(1);\n        let maxEnvelope = 1;\n        for (let i = 1; i < envelopes.length; i++) {\n            for (let j = 0; j < i; j++) {\n                if (envelopes[i][0] > envelopes[j][0] && envelopes[i][1] > envelopes[j][1]) {\n                    dp[i] = Math.max(dp[i], dp[j] + 1);\n                }\n            }\n            maxEnvelope = Math.max(maxEnvelope, dp[i]);\n        }\n        return maxEnvelope;\n    };\n    ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/russian-doll-envelopes/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "    var maxEnvelopes = function(envelopes) {\n        const map = new Map();\n        envelopes.sort((a, b) => a[0] - b[0]);\n        for (const [width, height] of envelopes) {\n            let maxNested = 1;\n            for (const [w, h] of map) {\n                if (width > w && height > h) {\n                    maxNested = Math.max(maxNested, map.get(w) + 1);\n                }\n            }\n            map.set(width, maxNested);\n        }\n        return Math.max(...map.values());\n    };\n    ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/russian-doll-envelopes/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'width' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 21,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "    var maxEnvelopes = function(envelopes) {\n        envelopes.sort((a, b) => a[0] - b[0] || b[1] - a[1]);\n        const stack = [];\n        for (const [width, height] of envelopes) {\n            const idx = binarySearch(stack, height);\n            if (idx === stack.length) {\n                stack.push(height);\n            } else {\n                stack[idx] = height;\n            }\n        }\n        return stack.length;\n    };\n\n    function binarySearch(arr, target) {\n        let left = 0;\n        let right = arr.length;\n        while (left < right) {\n            const mid = Math.floor((left + right) / 2);\n            if (arr[mid] < target) {\n                left = mid + 1;\n            } else {\n                right = mid;\n            }\n        }\n        return left;\n    }\n    ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/russian-doll-envelopes/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'width' is assigned a value but never used.",
+                    "line": 4,
+                    "column": 21,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 4,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "    var maxEnvelopes = function(envelopes) {\n        envelopes.sort((a, b) => a[0] - b[0] || b[1] - a[1]);\n        const tails = [];\n        for (const [width, height] of envelopes) {\n            const idx = binarySearch(tails, height);\n            if (idx === tails.length) {\n                tails.push(height);\n            } else {\n                tails[idx] = height;\n            }\n        }\n        return tails.length;\n    };\n\n    function binarySearch(arr, target) {\n        let left = 0;\n        let right = arr.length;\n        while (left < right) {\n            const mid = Math.floor((left + right) / 2);\n            if (arr[mid] < target) {\n                left = mid + 1;\n            } else {\n                right = mid;\n            }\n        }\n        return left;\n    }\n    ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

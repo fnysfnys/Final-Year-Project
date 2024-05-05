@@ -1,0 +1,136 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/can-i-win/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (maxChoosableInteger >= desiredTotal) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    return desiredTotal % (maxChoosableInteger + 1) !== 0;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/can-i-win/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    const memo = new Map();\n    \n    function canWin(mask, total) {\n        if (total >= desiredTotal) return false;\n        if (memo.has(mask)) return memo.get(mask);\n        \n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            if ((mask & (1 << i)) === 0) {\n                if (!canWin(mask | (1 << i), total + i)) {\n                    memo.set(mask, true);\n                    return true;\n                }\n            }\n        }\n        \n        memo.set(mask, false);\n        return false;\n    }\n    \n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    return canWin(0, 0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/can-i-win/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (maxChoosableInteger >= desiredTotal) return true;\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const visited = new Set();\n    \n    function dfs(total) {\n        if (total >= desiredTotal) return false;\n        const key = Array.from(visited).join(',');\n        if (visited.has(key)) return false;\n        \n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            if (!visited.has(i)) {\n                visited.add(i);\n                if (!dfs(total + i)) {\n                    visited.delete(i);\n                    return true;\n                }\n                visited.delete(i);\n            }\n        }\n        \n        visited.add(key);\n        return false;\n    }\n    \n    return dfs(0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/can-i-win/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canIWin = function(maxChoosableInteger, desiredTotal) {\n    if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;\n    \n    const dp = new Array(1 << maxChoosableInteger).fill(false);\n    dp[0] = true;\n    \n    for (let mask = 0; mask < (1 << maxChoosableInteger); mask++) {\n        for (let i = 1; i <= maxChoosableInteger; i++) {\n            if ((mask & (1 << (i - 1))) === 0) {\n                if (!dp[mask | (1 << (i - 1))]) {\n                    dp[mask] = true;\n                    break;\n                }\n            }\n        }\n    }\n    \n    return dp[0];\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

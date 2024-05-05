@@ -1,0 +1,74 @@
+{
+    "Python": {
+        "solution1": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "111111111111111111111110000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 8,
+            "normalised_warnings": 1.0625
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "110111101011111000100000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 6,
+            "normalised_warnings": 1.0
+        },
+        "solution2": {
+            "status_display": "Wrong Answer",
+            "compare_result": "010100001000000010010000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 9,
+            "normalised_warnings": 1.0
+        }
+    },
+    "Java": {
+        "solution2": {
+            "status_display": "Runtime Error",
+            "compare_result": "000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 6,
+            "readability": 0.5087910890579224,
+            "normalised_warnings": 0.2857142857142857
+        },
+        "solution1": {
+            "status_display": "Wrong Answer",
+            "compare_result": "110111101011111000100010011000001000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 6,
+            "readability": 0.6439766883850098,
+            "normalised_warnings": 0.23809523809523808
+        }
+    },
+    "JavaScript": {
+        "solution1": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "111111111111111111111111000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 9,
+            "normalised_warnings": 0.0
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "110111101011111000100010011000001000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 7,
+            "normalised_warnings": 0.0
+        },
+        "solution2": {
+            "status_display": "Runtime Error",
+            "compare_result": "000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 10,
+            "normalised_warnings": 0.0
+        }
+    }
+}

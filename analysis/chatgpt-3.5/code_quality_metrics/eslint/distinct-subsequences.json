@@ -1,0 +1,301 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const m = s.length;\n    const n = t.length;\n    \n    const dp = new Array(m + 1).fill(0).map(() => new Array(n + 1).fill(0));\n    \n    for (let i = 0; i <= m; i++) {\n        dp[i][0] = 1;\n    }\n    \n    for (let i = 1; i <= m; i++) {\n        for (let j = 1; j <= n; j++) {\n            dp[i][j] = dp[i - 1][j] + (s[i - 1] === t[j - 1] ? dp[i - 1][j - 1] : 0);\n        }\n    }\n    \n    return dp[m][n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const m = s.length;\n    const n = t.length;\n    \n    const dp = Array(m + 1).fill(0).map(() => Array(n + 1).fill(0));\n    \n    for (let i = 0; i <= m; i++) {\n        dp[i][0] = 1;\n    }\n    \n    for (let i = 1; i <= m; i++) {\n        for (let j = 1; j <= n; j++) {\n            if (s[i - 1] === t[j - 1]) {\n                dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];\n            } else {\n                dp[i][j] = dp[i - 1][j];\n            }\n        }\n    }\n    \n    return dp[m][n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const m = s.length;\n    const n = t.length;\n    \n    const dp = Array(n + 1).fill(0);\n    dp[0] = 1;\n    \n    for (let i = 1; i <=\n\n m; i++) {\n        for (let j = n; j >= 1; j--) {\n            dp[j] += s[i - 1] === t[j - 1] ? dp[j - 1] : 0;\n        }\n    }\n    \n    return dp[n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    function dfs(i, j) {\n        if (j === t.length) return 1;\n        if (i === s.length) return 0;\n        \n        let ways = 0;\n        if (s[i] === t[j]) {\n            ways += dfs(i + 1, j + 1);\n        }\n        ways += dfs(i + 1, j);\n        \n        return ways;\n    }\n    \n    return dfs(0, 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const m = s.length;\n    const n = t.length;\n    \n    const dp = Array(n + 1).fill(0);\n    dp[0] = 1;\n    \n    for (let i = 1; i <= m; i++) {\n        for (let j = n; j >= 1; j--) {\n            if (s[i - 1] === t[j - 1]) {\n                dp[j] += dp[j - 1];\n            }\n        }\n    }\n    \n    return dp[n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const memo = new Map();\n    \n    function dfs(i, j) {\n        if (j === t.length) return 1;\n        if (i === s.length) return 0;\n        \n        const key = i + '-' + j;\n        if (memo.has(key)) return memo.get(key);\n        \n        let ways = 0;\n        if (s[i] === t[j]) {\n            ways += dfs(i + 1, j + 1);\n        }\n        ways += dfs(i + 1, j);\n        \n        memo.set(key, ways);\n        return ways;\n    }\n    \n    return dfs(0, 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const m = s.length;\n    const n = t.length;\n    \n    const dp = new Array(n + 1).fill(0);\n    dp[0] = 1;\n    \n    for (let i = 1; i <= m; i++) {\n        for (let j = n; j >= 1; j--) {\n            dp[j] += s[i - 1] === t[j - 1] ? dp[j - 1] : 0;\n        }\n    }\n    \n    return dp[n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const m = s.length;\n    const n = t.length;\n    \n    const memo = {};\n    \n    function dfs(i, j) {\n        if (j === n) return 1;\n        if (i === m) return 0;\n        \n        const key = i + '-' + j;\n        if (memo[key] !== undefined) return memo[key];\n        \n        let ways = 0;\n        if (s[i] === t[j]) {\n            ways += dfs(i + 1, j + 1);\n        }\n        ways += dfs(i + 1, j);\n        \n        memo[key] = ways;\n        return ways;\n    }\n    \n    return dfs(0, 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/distinct-subsequences/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    const m = s.length;\n    const n = t.length;\n    \n    const dp = Array(n + 1).fill(0);\n    dp[0] = 1;\n    \n    for (let i = 1; i <= m; i++) {\n        for (let j = n; j >= 1; j--) {\n            dp[j] += s[i - 1] === t[j - 1] ? dp[j - 1] : 0;\n        }\n    }\n    \n    return dp[n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

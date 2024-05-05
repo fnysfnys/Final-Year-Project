@@ -1,0 +1,372 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/rotate-function/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    let sum = 0;\n    let maxSum = 0;\n\n    for (let i = 0; i < n; i++) {\n        sum += i * nums[i];\n    }\n\n    maxSum = sum;\n\n    for (let k = 1; k < n; k++) {\n        const [last] = nums.splice(-1, 1);\n        sum = sum + (n - 1) * last - nums.reduce((acc, val) => acc + val, 0);\n        maxSum = Math.max(maxSum, sum);\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/rotate-function/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    let maxSum = -Infinity;\n\n    for (let k = 0; k < n; k++) {\n        let sum = 0;\n        for (let i = 0; i < n; i++) {\n            sum += i * nums[(i + k) % n];\n        }\n        maxSum = Math.max(maxSum, sum);\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/rotate-function/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    const f = nums.map((val, i) => i * val);\n    return Math.max(...f.map((_, k) => f.reduce((acc, val, i) => acc + val * ((i + k) % n), 0)));\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/rotate-function/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    let sum = 0;\n    let maxSum = 0;\n    let numsSum = 0;\n    let k = 0;\n\n    for (let i = 0; i < n; i++) {\n        sum += i * nums[i];\n        numsSum += nums[i];\n    }\n\n    maxSum = sum;\n\n    while (k < n - 1) {\n        sum = sum + numsSum - n * nums[n - 1 - k];\n        maxSum = Math.max(maxSum, sum);\n        k++;\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/rotate-function/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    let sum = 0;\n    let maxSum = 0;\n    let numsSum = 0;\n\n    for (let i = 0; i < n; i++) {\n        sum += i * nums[i];\n        numsSum += nums[i];\n    }\n\n    maxSum = sum;\n\n    for (let k = 1; k < n; k++) {\n        sum = sum + numsSum - n * nums[n - k];\n        maxSum = Math.max(maxSum, sum);\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/rotate-function/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    const f = Array(n);\n\n    for (let i = 0; i < n; i++) {\n        f[i] = i * nums[i];\n    }\n\n    let sum = f.reduce((acc, val) => acc + val, 0);\n    let maxSum = sum;\n\n    for (let k = 1; k < n; k++) {\n        sum = sum + f[n - k] - (n * nums[n - k]);\n        maxSum = Math.max(maxSum, sum);\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/rotate-function/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    let sum = 0;\n    let maxSum = 0;\n\n    for (let i = 0; i < n; i++) {\n        sum += i * nums[i];\n        maxSum += nums[i];\n    }\n\n    let currentSum = sum;\n\n    for (let k = 1; k < n; k++) {\n        currentSum = currentSum + maxSum - n * nums[n - k];\n        maxSum = Math.max(maxSum, currentSum);\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/rotate-function/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                },
+                {
+                    "ruleId": "no-const-assign",
+                    "severity": 2,
+                    "message": "'sum' is constant.",
+                    "line": 8,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "const",
+                    "endLine": 8,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    const sum = nums.reduce((acc, val, i) => acc + val * i, 0);\n    let maxSum = sum;\n\n    for (let k = 1; k < n; k++) {\n        const prev = nums[n - k] * (n - 1);\n        sum = sum - prev + sum - nums[n - k];\n        maxSum = Math.max(maxSum, sum);\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/rotate-function/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                },
+                {
+                    "ruleId": "no-empty",
+                    "severity": 2,
+                    "message": "Empty block statement.",
+                    "line": 23,
+                    "column": 36,
+                    "nodeType": "BlockStatement",
+                    "messageId": "unexpected",
+                    "endLine": 23,
+                    "endColumn": 38,
+                    "suggestions": [
+                        {
+                            "messageId": "suggestComment",
+                            "data": {
+                                "type": "block"
+                            },
+                            "fix": {
+                                "range": [
+                                    547,
+                                    547
+                                ],
+                                "text": " /* empty */ "
+                            },
+                            "desc": "Add comment inside empty block statement."
+                        }
+                    ]
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    const f = new Array(n);\n\n    for (let i = 0; i < n; i++) {\n        f[i] = i * nums[i];\n    }\n\n    let sum = f.reduce((acc, val) => acc + val, 0);\n    let maxSum = sum;\n\n    function* rotations() {\n        for (let k = 1; k < n; k++) {\n            const last = f.pop();\n            sum = sum + last - (n * nums[n - k]);\n            maxSum = Math.max(maxSum, sum);\n            yield sum;\n        }\n    }\n\n    const generator = rotations();\n\n    while (!generator.next().done) {}\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/rotate-function/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    const f = new Array(n);\n\n    for (let i = 0; i < n; i++) {\n        f[i] = i * nums[i];\n    }\n\n    let sum = f.reduce((acc, val) => acc + val, 0);\n    let maxSum = sum;\n\n    for (let k = 1; k < n; k++) {\n        const last = f.pop();\n        sum = sum + last - (n * nums[n - k]);\n        maxSum = Math.max(maxSum, sum);\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

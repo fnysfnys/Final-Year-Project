@@ -1,0 +1,169 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/largest-divisible-subset/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 32
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function largestDivisibleSubset(nums) {\n  nums.sort((a, b) => a - b);\n  const result = [];\n  for (const num of nums) {\n    if (result.length === 0 || (num % result[result.length - 1] === 0)) {\n      result.push(num);\n    }\n  }\n  return result;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/largest-divisible-subset/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 32
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function largestDivisibleSubset(nums) {\n  nums.sort((a, b) => a - b);\n  const n = nums.length;\n  const dp = Array(n).fill(1);\n  const prev = Array(n).fill(-1);\n  let maxIndex = 0;\n  for (let i = 1; i < n; i++) {\n    for (let j = 0; j < i; j++) {\n      if (nums[i] % nums[j] === 0 && dp[i] < dp[j] + 1) {\n        dp[i] = dp[j] + 1;\n        prev[i] = j;\n        if (dp[maxIndex] < dp[i]) {\n          maxIndex = i;\n        }\n      }\n    }\n  }\n  const result = [];\n  let i = maxIndex;\n  while (i >= 0) {\n    result.push(nums[i]);\n    i = prev[i];\n  }\n  return result.reverse();\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/largest-divisible-subset/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 32
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function largestDivisibleSubset(nums) {\n  nums.sort((a, b) => a - b);\n  const memo = {};\n  const helper = (i) => {\n    if (i in memo) {\n      return memo[i];\n    }\n    const res = [];\n    for (let j = i; j < nums.length; j++) {\n      if (i === 0 || (nums[i] % nums[j] === 0 && helper(j + 1).length > res.length)) {\n        const cand = helper(j + 1).concat(nums[i]);\n        res.push(...cand);\n      }\n    }\n    return memo[i] = res;\n  };\n  return helper(0);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/largest-divisible-subset/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 32
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function largestDivisibleSubset(nums) {\n  nums.sort((a, b) => a - b);\n  const result = [];\n  const helper = (i) => {\n    if (i === nums.length) {\n      return result.length > 0;\n    }\n    for (let j = i; j < nums.length; j++) {\n      if (i === 0 || (nums[i] % nums[j] === 0 && helper(j + 1))) {\n        result.push(nums[i]);\n        if (helper(j + 1)) {\n          return true;\n        }\n        result.pop();\n      }\n    }\n    return false;\n  };\n  helper(0);\n  return result;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/largest-divisible-subset/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 32
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function largestDivisibleSubset(nums) {\n  nums.sort((a, b) => a - b);\n  const n = nums.length;\n  const dp = Array(n).fill(1);\n  let maxLen = 1;\n  for (let i = 1; i < n; i++) {\n    for (let j = 0; j < i; j++) {\n      if (nums[i] % nums[j] === 0 && dp[i] < dp[j] + 1) {\n        dp[i] = dp[j] + 1;\n        maxLen = Math.max(maxLen, dp[i]);\n      }\n    }\n  }\n  const result = [];\n  for (let i = n - 1; i >= 0; i--) {\n    if (dp[i] === maxLen) {\n      result.push(nums[i]);\n      maxLen--;\n    }\n  }\n  return result.reverse();\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,345 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/distinct-subsequences/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numDistinct = function(s, t) {\n    // Initialize DP table\n    let dp = Array(s.length + 1).fill(0).map(() => Array(t.length + 1).fill(0));\n\n    // Base case: if t is an empty string, there's 1 subsequence of s that matches it (empty subsequence)\n    for (let i = 0; i <= s.length; i++) {\n        dp[i][0] = 1;\n    }\n\n    // Fill DP table\n    for (let i = 1; i <= s.length; i++) {\n        for (let j = 1; j <= t.length; j++) {\n            if (s[i - 1] === t[j - 1]) {\n                // If characters match, add the number of distinct subsequences by including and excluding the current char\n                dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];\n            } else {\n                // If characters don't match, carry forward the value from the previous substring of s\n                dp[i][j] = dp[i - 1][j];\n            }\n        }\n    }\n\n    // Return the result\n    return dp[s.length][t.length];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/distinct-subsequences/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct5' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct5(s, t) {\n    const memo = new Map();\n\n    function dfs(i, j) {\n        if (j == t.length) return 1;\n        if (i == s.length) return 0;\n        const key = `${i}-${j}`;\n        if (memo.has(key)) return memo.get(key);\n\n        let res = dfs(i + 1, j);\n        if (s[i] == t[j]) {\n            res += dfs(i + 1, j + 1);\n        }\n        memo.set(key, res);\n        return res;\n    }\n    return dfs(0, 0);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/distinct-subsequences/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n    const countTable = {};\n    for (let char of s) {\n        countTable[char] = (countTable[char] || 0) + 1;\n    }\n\n    let totalCount = 1;\n    for (let char of t) {\n        if (!countTable[char]) return 0;\n        totalCount *= countTable[char];\n        countTable[char] -= 1;\n    }\n    return totalCount;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/distinct-subsequences/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n    const dp = Array(t.length + 1).fill(0);\n    dp[0] = 1;\n\n    for (let i = 1; i <= s.length; i++) {\n        for (let j = t.length; j >= 1; j--) {\n            if (s[i - 1] == t[j - 1]) {\n                dp[j] += dp[j - 1];\n            }\n        }\n    }\n    return dp[t.length];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/distinct-subsequences/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n    const dp = Array.from({ length: s.length + 1 }, () => Array(t.length + 1).fill(0));\n    for (let i = 0; i <= s.length; i++) dp[i][0] = 1;\n\n    for (let i = 1; i <= s.length; i++) {\n        for (let j = 1; j <= t.length; j++) {\n            if (s[i - 1] == t[j - 1]) {\n                dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];\n            } else {\n                dp[i][j] = dp[i - 1][j];\n            }\n        }\n    }\n    return dp[s.length][t.length];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/distinct-subsequences/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                },
+                {
+                    "ruleId": "no-unexpected-multiline",
+                    "severity": 2,
+                    "message": "Unexpected newline between function and ( of function call.",
+                    "line": 9,
+                    "column": 1,
+                    "nodeType": "MemberExpression",
+                    "messageId": "function",
+                    "endLine": 9,
+                    "endColumn": 2
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n    if (t.length == 0) return 1;\n    if (s.length == 0) return 0;\n\n    let count = numDistinct(s.slice(1), t);\n    if (s[0] == t[0]) {\n        count += numDistinct(s.slice(1), t.slice\n\n(1));\n    }\n    return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/distinct-subsequences/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n    let queue = [[0, 0]];\n    let count = 0;\n\n    while (queue.length > 0) {\n        const [i, j] = queue.shift();\n        if (j == t.length) {\n            count++;\n            continue;\n        }\n        if (i == s.length) continue;\n\n        if (s[i] == t[j]) {\n            queue.push([i + 1, j + 1]);\n        }\n        queue.push([i + 1, j]);\n    }\n    return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/distinct-subsequences/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct2' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct2(s, t) {\n    const memo = Array.from({ length: s.length }, () => Array(t.length).fill(-1));\n\n    function dfs(i, j) {\n        if (j == t.length) return 1;\n        if (i == s.length) return 0;\n        if (memo[i][j] != -1) return memo[i][j];\n\n        if (s[i] == t[j]) {\n            memo[i][j] = dfs(i + 1, j + 1) + dfs(i + 1, j);\n        } else {\n            memo[i][j] = dfs(i + 1, j);\n        }\n        return memo[i][j];\n    }\n    return dfs(0, 0);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/distinct-subsequences/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t, i = 0, j = 0) {\n    if (j == t.length) return 1;\n    if (i == s.length) return 0;\n\n    let count = numDistinct(s, t, i + 1, j);\n    if (s[i] == t[j]) {\n        count += numDistinct(s, t, i + 1, j + 1);\n    }\n    return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/distinct-subsequences/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n    let subsequences = [\"\"];\n    for (let char of s) {\n        subsequences = subsequences.concat(subsequences.map(sub => sub + char));\n    }\n    return subsequences.filter(sub => sub === t).length;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

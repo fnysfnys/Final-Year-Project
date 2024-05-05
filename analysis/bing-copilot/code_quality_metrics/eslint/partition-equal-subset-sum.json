@@ -1,0 +1,136 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/partition-equal-subset-sum/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canPartition = function(nums) {\n    const sum = nums.reduce((acc, num) => acc + num, 0);\n    if (sum % 2 !== 0) return false; // If total sum is odd, cannot partition equally\n    const target = sum / 2;\n    \n    const dfs = (index, currentSum) => {\n        if (currentSum === target) return true;\n        if (index >= nums.length || currentSum > target) return false;\n        return dfs(index + 1, currentSum + nums[index]) || dfs(index + 1, currentSum);\n    };\n    \n    return dfs(0, 0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/partition-equal-subset-sum/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canPartition = function(nums) {\n    const sum = nums.reduce((acc, num) => acc + num, 0);\n    if (sum % 2 !== 0) return false;\n    const target = sum / 2;\n    \n    const dp = Array(1 << nums.length).fill(false);\n    dp[0] = true;\n    \n    for (let mask = 1; mask < (1 << nums.length); mask++) {\n        let currentSum = 0;\n        for (let i = 0; i < nums.length; i++) {\n            if (mask & (1 << i)) {\n                currentSum += nums[i];\n            }\n        }\n        dp[mask] = dp[mask] || (currentSum === target);\n    }\n    \n    return dp[(1 << nums.length) - 1];\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/partition-equal-subset-sum/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canPartition = function(nums) {\n    const sum = nums.reduce((acc, num) => acc + num, 0);\n    if (sum % 2 !== 0) return false;\n    const target = sum / 2;\n    \n    const dp = Array(target + 1).fill(false);\n    dp[0] = true;\n    \n    for (const num of nums) {\n        for (let i = target; i >= num; i--) {\n            dp[i] = dp[i] || dp[i - num];\n        }\n    }\n    \n    return dp[target];\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/partition-equal-subset-sum/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canPartition = function(nums) {\n    const sum = nums.reduce((acc, num) => acc + num, 0);\n    if (sum % 2 !== 0) return false;\n    const target = sum / 2;\n    \n    const memo = new Map();\n    const dp = (index, currentSum) => {\n        if (currentSum === target) return true;\n        if (index >= nums.length || currentSum > target) return false;\n        const key = `${index}-${currentSum}`;\n        if (memo.has(key)) return memo.get(key);\n        const result = dp(index + 1, currentSum + nums[index]) || dp(index + 1, currentSum);\n        memo.set(key, result);\n        return result;\n    };\n    \n    return dp(0, 0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

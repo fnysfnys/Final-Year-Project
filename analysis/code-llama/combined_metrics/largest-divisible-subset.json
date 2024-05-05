@@ -1,0 +1,94 @@
+{
+    "Python": {
+        "solution1": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0111111111111001100110000000000000000000000000001",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "normalised_warnings": 1.0
+        }
+    },
+    "Java": {
+        "solution2": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0010011010000000000010000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 6,
+            "readability": 0.26966235041618347,
+            "normalised_warnings": 0.08695652173913043
+        },
+        "solution3": {
+            "status_display": "Runtime Error",
+            "compare_result": "0000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 3,
+            "readability": 0.5380552411079407,
+            "normalised_warnings": 0.16666666666666666
+        },
+        "solution4": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0010011010000001000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 4,
+            "readability": 0.3936166763305664,
+            "normalised_warnings": 0.10526315789473684
+        },
+        "solution5": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 3,
+            "readability": 0.4527791738510132,
+            "normalised_warnings": 0.16666666666666666
+        },
+        "solution7": {
+            "status_display": "Runtime Error",
+            "compare_result": "0000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 3,
+            "readability": 0.5602676868438721,
+            "normalised_warnings": 0.18181818181818182
+        },
+        "solution1": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 4,
+            "readability": 0.5310125946998596,
+            "normalised_warnings": 0.15384615384615385
+        }
+    },
+    "JavaScript": {
+        "solution1": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "normalised_warnings": 0.0
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 4,
+            "normalised_warnings": 0.0
+        },
+        "solution2": {
+            "status_display": "Wrong Answer",
+            "compare_result": "0000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "normalised_warnings": 0.0
+        }
+    }
+}

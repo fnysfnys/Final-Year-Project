@@ -1,0 +1,312 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/non-overlapping-intervals/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    const m = matrix.length;\n    const n = matrix[0].length;\n    let maxSum = -Infinity;\n\n    for (let left = 0; left < n; left++) {\n        const rowSum = new Array(m).fill(0);\n        for (let right = left; right < n; right++) {\n            for (let i = 0; i < m; i++) {\n                rowSum[i] += matrix[i][right];\n            }\n            let currentSum = 0;\n            let maxCurrentSum = -Infinity;\n            for (let i = 0; i < m; i++) {\n                currentSum = Math.max(rowSum[i], currentSum + rowSum[i]);\n                maxCurrentSum = Math.max(maxCurrentSum, currentSum);\n            }\n            if (maxCurrentSum <= k) {\n                maxSum = Math.max(maxSum, maxCurrentSum);\n            }\n        }\n    }\n    \n    return maxSum;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/non-overlapping-intervals/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar eraseOverlapIntervals = function(intervals) {\n    if (intervals.length === 0) return 0;\n    \n    intervals.sort((a, b) => {\n        if (a[1] !== b[1]) {\n            return a[1] - b[1];\n        }\n        return a[0] - b[0];\n    });\n    \n    let count = 1;\n    let end = intervals[0][1];\n    \n    for (let i = 1; i < intervals.length; i++) {\n        if (intervals[i][0] >= end) {\n            count++;\n            end = intervals[i][1];\n        }\n    }\n    \n    return intervals.length - count;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/non-overlapping-intervals/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar eraseOverlapIntervals = function(intervals) {\n    if (intervals.length === 0) return 0;\n    \n    intervals.sort((a, b) => a[1] - b[1]);\n    let count = 1;\n    let end = intervals[0][1];\n    \n    for (let i = 1; i < intervals.length; i++) {\n        if (intervals[i][0] >= end) {\n            count++;\n            end = intervals[i][1];\n        }\n    }\n    \n    return intervals.length - count;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/non-overlapping-intervals/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar eraseOverlapIntervals = function(intervals) {\n    if (intervals.length === 0) return 0;\n    \n    intervals.sort((a, b) => a[1] - b[1]);\n    let count = 0;\n    let end = intervals[0][1];\n    \n    for (let i = 1; i < intervals.length; i++) {\n        if (intervals[i][0] < end) {\n            count++;\n        } else {\n            end = intervals[i][1];\n        }\n    }\n    \n    return count;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/non-overlapping-intervals/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar eraseOverlapIntervals = function(intervals) {\n    if (intervals.length === 0) return 0;\n    \n    intervals.sort((a, b) => a[1] - b[1]);\n    let count = 0;\n    let endMap = new Map();\n    \n    for (let i = 0; i < intervals.length; i++) {\n        if (intervals[i][0] < endMap.get(endMap.size - 1) || i === 0) {\n            count++;\n        } else {\n            endMap.set(i, intervals[i][1]);\n        }\n    }\n    \n    return count;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/non-overlapping-intervals/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar eraseOverlapIntervals = function(intervals) {\n    if (intervals.length === 0) return 0;\n    \n    intervals.sort((a, b) => a[1] - b[1]);\n    \n    function eraseOverlapHelper(index, prevEnd) {\n        if (index === intervals.length) return 0;\n        \n        let chooseCurrent = 0;\n        if (intervals[index][0] >= prevEnd) {\n            chooseCurrent = 1 + eraseOverlapHelper(index + 1, intervals[index][1]);\n        }\n        \n        const skipCurrent = eraseOverlapHelper(index + 1, prevEnd);\n        \n        return Math.max(chooseCurrent, skipCurrent);\n    }\n    \n    return intervals.length - eraseOverlapHelper(0, -Infinity);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/non-overlapping-intervals/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar eraseOverlapIntervals = function(intervals) {\n    if (intervals.length === 0) return 0;\n    \n    intervals.sort((a, b) => a[0] - b[0]);\n    const dp = new Array(intervals.length).fill(1);\n    \n    for (let i = 1; i < intervals.length; i++) {\n        for (let j = 0; j < i; j++) {\n            if (intervals[i][0] >= intervals[j][1]) {\n                dp[i] = Math.max(dp[i], dp[j] + 1);\n            }\n        }\n    }\n    \n    return intervals.length - Math.max(...dp);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/non-overlapping-intervals/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 26
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'count' is assigned a value but never used.",
+                    "line": 9,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 9,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar eraseOverlapIntervals = function(intervals) {\n    if (intervals.length === 0) return 0;\n    \n    intervals.sort((a, b) => a[0] - b[0]);\n    let count = 0;\n    let nonOverlappingSet = new Set();\n    \n    for (let i = 0; i < intervals.length; i++) {\n        if (nonOverlappingSet.size === 0) {\n            nonOverlappingSet.add(i);\n        } else {\n            let lastNonOverlap = nonOverlappingSet.values().next().value;\n            if (intervals[i][0] >= intervals[lastNonOverlap][1]) {\n                nonOverlappingSet.add(i);\n            } else if (intervals[i][1] < intervals[lastNonOverlap][1]) {\n                nonOverlappingSet.delete(lastNonOverlap);\n                nonOverlappingSet.add(i);\n            }\n        }\n    }\n    \n    return intervals.length - nonOverlappingSet.size;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/non-overlapping-intervals/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is assigned a value but never used.",
+                    "line": 5,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 5,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar eraseOverlapIntervals = function(intervals) {\n    if (intervals.length === 0) return 0;\n    \n    intervals.sort((a, b) => a[0] - b[0]);\n    let count = 0;\n    let left = 0;\n    let right = 1;\n    \n    while (right < intervals.length) {\n        if (intervals[right][0] < intervals[left][1]) {\n            count++;\n            if (intervals[right][1] < intervals[left][1]) {\n                left = right;\n            }\n        } else {\n            left = right;\n        }\n        right++;\n    }\n    \n    return count;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

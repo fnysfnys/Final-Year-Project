@@ -1,0 +1,34 @@
+{
+    "Python": {
+        "solution1": 1,
+        "solution5": 2,
+        "solution10": 4,
+        "solution4": 3,
+        "solution9": 1,
+        "solution8": 1,
+        "solution7": 3,
+        "solution3": 3,
+        "solution2": 2,
+        "solution6": 1
+    },
+    "Java": {
+        "solution2": 1,
+        "solution3": 2,
+        "solution4": 2,
+        "solution9": 2,
+        "solution5": 2,
+        "solution7": 2,
+        "solution1": 2
+    },
+    "JavaScript": {
+        "solution5": 1,
+        "solution1": 1,
+        "solution10": 3,
+        "solution4": 1,
+        "solution3": 2,
+        "solution7": 3,
+        "solution6": 1,
+        "solution2": 2,
+        "solution9": 2
+    }
+}

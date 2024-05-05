@@ -1,0 +1,37 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n       if (!matrix.length || !matrix[0].length) return 0;\n\n       let m = matrix.length, n = matrix[0].length;\n       let memo = Array.from({length: m}, () => Array(n).fill(0));\n       let dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]];\n       let maxPath = 0;\n\n       function dfs(x, y) {\n           if (memo[x][y] !== 0) return memo[x][y];\n           let max = 1;\n           for (let [dx, dy] of dirs) {\n               let nx = x + dx, ny = y + dy;\n               if (nx >= 0 && nx < m && ny >= 0 && ny < n && matrix[nx][ny] > matrix[x][y]) {\n                   max = Math.max(max, 1 + dfs(nx, ny));\n               }\n           }\n           memo[x][y] = max;\n           return max;\n       }\n\n       for (let i = 0; i < m; i++) {\n           for (let j = 0; j < n; j++) {\n               maxPath = Math.max(maxPath, dfs(i, j));\n           }\n       }\n       return maxPath;\n   };",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

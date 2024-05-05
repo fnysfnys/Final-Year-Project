@@ -1,0 +1,1071 @@
+{
+    "Java": {
+        "solution2": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/Java/solution2.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Variable 'postIndex' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "27",
+                            "@severity": "error",
+                            "@message": "Variable 'inorderMap' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "11",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 84).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "43",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "60",
+                            "@severity": "error",
+                            "@message": "Parameter inStart should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@column": "73",
+                            "@severity": "error",
+                            "@message": "Parameter inEnd should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution3": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/Java/solution3.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 87).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution4": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/Java/solution4.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Variable 'postIndex' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "11",
+                            "@severity": "error",
+                            "@message": "Variable 'inorderIndex' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 87).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "'6001' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "39",
+                            "@severity": "error",
+                            "@message": "'3000' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 84).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@column": "43",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@column": "60",
+                            "@severity": "error",
+                            "@message": "Parameter inStart should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "16",
+                            "@column": "73",
+                            "@severity": "error",
+                            "@message": "Parameter inEnd should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "17",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "22",
+                            "@column": "47",
+                            "@severity": "error",
+                            "@message": "'3000' is a magic number.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution8": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/Java/solution8.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "1",
+                            "@severity": "error",
+                            "@message": "',' is preceded with whitespace.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "3",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "20",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 82).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution9": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/Java/solution9.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Each variable declaration must be in its own statement.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MultipleVariableDeclarationsCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Each variable declaration must be in its own statement.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MultipleVariableDeclarationsCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "37",
+                            "@severity": "error",
+                            "@message": "'inorder' hides a field.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "52",
+                            "@severity": "error",
+                            "@message": "'postorder' hides a field.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"
+                        },
+                        {
+                            "@line": "13",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter start should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "13",
+                            "@column": "39",
+                            "@severity": "error",
+                            "@message": "Parameter end should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "28",
+                            "@column": "34",
+                            "@severity": "error",
+                            "@message": "Parameter val should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution5": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/Java/solution5.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Variable 'postIndex' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 94).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "53",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "70",
+                            "@severity": "error",
+                            "@message": "Parameter inStart should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "83",
+                            "@severity": "error",
+                            "@message": "Parameter inEnd should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@column": "27",
+                            "@severity": "error",
+                            "@message": "Parameter arr should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@column": "38",
+                            "@severity": "error",
+                            "@message": "Parameter value should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@column": "49",
+                            "@severity": "error",
+                            "@message": "Parameter start should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@column": "60",
+                            "@severity": "error",
+                            "@message": "Parameter end should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "23",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution6": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/Java/solution6.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'while' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 106).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 143).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution10": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/Java/solution10.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Variable 'postIndex' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 93).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "56",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "73",
+                            "@severity": "error",
+                            "@message": "Parameter start should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "84",
+                            "@severity": "error",
+                            "@message": "Parameter end should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "24",
+                            "@severity": "error",
+                            "@message": "Parameter arr should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "35",
+                            "@severity": "error",
+                            "@message": "Parameter start should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter end should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "55",
+                            "@severity": "error",
+                            "@message": "Parameter value should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "26",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution7": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/Java/solution7.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 97).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 120).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "36",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "51",
+                            "@severity": "error",
+                            "@message": "Parameter inStart should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "64",
+                            "@severity": "error",
+                            "@message": "Parameter inEnd should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "75",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "92",
+                            "@severity": "error",
+                            "@message": "Parameter postStart should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@column": "107",
+                            "@severity": "error",
+                            "@message": "Parameter postEnd should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "21",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "22",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 121).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "23",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 118).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "5",
+                            "@severity": "error",
+                            "@message": "Missing a Javadoc comment.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "Variable 'postIndex' must be private and have accessor methods.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"
+                        },
+                        {
+                            "@line": "3",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "31",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "4",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "8",
+                            "@severity": "error",
+                            "@message": "Line has trailing spaces.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 99).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "43",
+                            "@severity": "error",
+                            "@message": "Parameter inorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "58",
+                            "@severity": "error",
+                            "@message": "Parameter postorder should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "75",
+                            "@severity": "error",
+                            "@message": "Parameter inStart should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "88",
+                            "@severity": "error",
+                            "@message": "Parameter inEnd should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "10",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "14",
+                            "@column": "9",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        },
+                        {
+                            "@line": "18",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 82).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "19",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 83).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "24",
+                            "@severity": "error",
+                            "@message": "Parameter arr should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "35",
+                            "@severity": "error",
+                            "@message": "Parameter start should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Parameter end should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "24",
+                            "@column": "55",
+                            "@severity": "error",
+                            "@message": "Parameter value should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "26",
+                            "@column": "13",
+                            "@severity": "error",
+                            "@message": "'if' construct must use '{}'s.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

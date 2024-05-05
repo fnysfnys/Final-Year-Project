@@ -1,0 +1,180 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/russian-doll-envelopes/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'height' is assigned a value but never used.",
+                    "line": 8,
+                    "column": 22,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 8,
+                    "endColumn": 28
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function maxEnvelopes(envelopes) {\n  // Sort envelopes by width ascending, height descending\n  envelopes.sort((a, b) => a[0] === b[0] ? b[1] - a[1] : a[0] - b[0]);\n  \n  let count = 0;\n  let lastWidth = Number.NEGATIVE_INFINITY;\n  \n  for (const [width, height] of envelopes) {\n    if (width > lastWidth) {\n      count++;\n      lastWidth = width;\n    }\n  }\n  \n  return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/russian-doll-envelopes/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'width' is assigned a value but never used.",
+                    "line": 7,
+                    "column": 15,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 7,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function maxEnvelopes(envelopes) {\n  // Sort envelopes by width ascending, height descending\n  envelopes.sort((a, b) => a[0] === b[0] ? b[1] - a[1] : a[0] - b[0]);\n  \n  let dp = [];\n  \n  for (const [width, height] of envelopes) {\n    const index = lowerBound(dp, height);\n    if (index === dp.length) {\n      dp.push(height);\n    } else {\n      dp[index] = height;\n    }\n  }\n  \n  return dp.length;\n}\n\nfunction lowerBound(arr, target) {\n  let left = 0;\n  let right = arr.length - 1;\n  \n  while (left < right) {\n    const mid = Math.floor((left + right) / 2);\n    if (arr[mid] >= target) {\n      right = mid;\n    } else {\n      left = mid + 1;\n    }\n  }\n  \n  return left;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/russian-doll-envelopes/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'prev2' is not defined.",
+                    "line": 5,
+                    "column": 15,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 5,
+                    "endColumn": 20
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'prev2' is not defined.",
+                    "line": 16,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 16,
+                    "endColumn": 10
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function maxEnvelopes(envelopes) {\n  // Sort envelopes by width ascending, height descending\n  envelopes.sort((a, b) => a[0] === b[0] ? b[1] - a[1] : a[0] - b[0]);\n  \n  let prev1 = prev2 = 1;\n  let max = 1;\n  \n  for (let i = 1; i < envelopes.length; i++) {\n    let temp = 1;\n    for (let j = 0; j < i; j++) {\n      if (envelopes[i][0] > envelopes[j][0] && envelopes[i][1] > envelopes[j][1]) {\n        temp = Math.max(temp, prev1 + 1);\n      }\n    }\n    max = Math.max(max, temp);\n    prev2 = prev1;\n    prev1 = temp;\n  }\n  \n  return max;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/russian-doll-envelopes/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxEnvelopes' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function maxEnvelopes(envelopes) {\n  // Sort envelopes by width ascending, height descending\n  envelopes.sort((a, b) => a[0] === b[0] ? b[1] - a[1] : a[0] - b[0]);\n  \n  const dp = new Array(envelopes.length).fill(1);\n  let max = 1;\n  \n  for (let i = 1; i < envelopes.length; i++) {\n    for (let j = 0; j < i; j++) {\n      if (envelopes[i][0] > envelopes[j][0] && envelopes[i][1] > envelopes[j][1]) {\n        dp[i] = Math.max(dp[i], dp[j] + 1);\n        max = Math.max(max, dp[i]);\n      }\n    }\n  }\n  \n  return max;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,334 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/pascals-triangle-ii/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getRow' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getRow(rowIndex) {\n   let n = rowIndex + 1;\n   let result = [];\n   for (let i = 0; i < n; i++) {\n       result.push(Math.pow(-1, i) * Math.pow(n - i, i) / factorial(i));\n   }\n   return result;\n}\n\nfunction factorial(n) {\n   if (n === 0) {\n       return 1;\n   }\n   return n * factorial(n - 1);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/pascals-triangle-ii/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getRow' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getRow(rowIndex) {\n   let row = [];\n   for (let i = 0; i <= rowIndex; i++) {\n       let currentRow = [];\n       for (let j = 0; j <= i; j++) {\n           if (j === 0 || j === i) {\n               currentRow.push(1);\n           } else {\n               currentRow.push(row[i - 1][j - 1] + row[i - 1][j]);\n           }\n       }\n       row.push(currentRow);\n   }\n   return row[rowIndex];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/pascals-triangle-ii/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getRow' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getRow(rowIndex) {\n   let n = rowIndex + 1;\n   let result = [];\n   for (let i = 0; i < n; i++) {\n       result.push(0);\n   }\n   let graph = [];\n   for (let i = 0; i < n; i++) {\n       graph.push([]);\n       for (let j = 0; j < n; j++) {\n           graph[i].push(0);\n       }\n   }\n   for (let i = 0; i < n; i++) {\n       for (let j = 0; j < n; j++) {\n           if (i === j) {\n               graph[i][j] = 1;\n           } else {\n               graph[i][j] = graph[i - 1][j - 1] + graph[i - 1][j];\n           }\n       }\n   }\n   for (let i = 0; i < n; i++) {\n       for (let j = 0; j < n; j++) {\n           result[i] += graph[i][j];\n       }\n   }\n   return result;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/pascals-triangle-ii/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getRow' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getRow(rowIndex) {\n   let dp = [];\n   for (let i = 0; i <= rowIndex; i++) {\n       dp[i] = [];\n       for (let j = 0; j <= i; j++) {\n           if (j === 0 || j === i) {\n               dp[i][j] = 1;\n           } else {\n               dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];\n           }\n       }\n   }\n   return dp[rowIndex];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/pascals-triangle-ii/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getRow' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getRow(rowIndex) {\n   let memo = [];\n   function helper(rowIndex) {\n       if (rowIndex === 0) {\n           return [1];\n       }\n       if (memo[rowIndex]) {\n           return memo[rowIndex];\n       }\n       let previousRow = helper(rowIndex - 1);\n       let currentRow = [];\n       for (let i = 0; i <= rowIndex; i++) {\n           if (i === 0 || i === rowIndex) {\n               currentRow.push(1);\n           } else {\n               currentRow.push(previousRow[i - 1] + previousRow[i]);\n           }\n       }\n       memo[rowIndex] = currentRow;\n       return currentRow;\n   }\n   return helper(rowIndex);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/pascals-triangle-ii/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getRow' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getRow(rowIndex) {\n   let n = rowIndex + 1;\n   let result = [];\n   for (let i = 0; i < n; i++) {\n       result.push(0);\n   }\n   for (let i = 0; i < n; i++) {\n       let left = 0;\n       let right = n - 1;\n       while (left <= right) {\n           let mid = Math.floor((left + right) / 2);\n           if (i === mid) {\n               result[i] = 1;\n               break;\n           } else if (i < mid) {\n               right = mid - 1;\n           } else {\n               left = mid + 1;\n           }\n       }\n   }\n   return result;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/pascals-triangle-ii/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getRow' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getRow(rowIndex) {\n   let n = rowIndex + 1;\n   let identityMatrix = [];\n   for (let i = 0; i < n; i++) {\n       identityMatrix.push([]);\n       for (let j = 0; j < n; j++) {\n           if (i === j) {\n               identityMatrix[i].push(1);\n           } else {\n               identityMatrix[i].push(0);\n           }\n       }\n   }\n   let result = [];\n   for (let i = 0; i < n; i++) {\n       result.push([]);\n       for (let j = 0; j < n; j++) {\n           result[i].push(0);\n       }\n   }\n   for (let i = 0; i < n; i++) {\n       for (let j = 0; j < n; j++) {\n           for (let k = 0; k < n; k++) {\n               result[i][j] += identityMatrix[i][k] * identityMatrix[k][j];\n           }\n       }\n   }\n   return result;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/pascals-triangle-ii/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getRow' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getRow(rowIndex) {\n   if (rowIndex === 0) {\n       return [1];\n   }\n   let previousRow = getRow(rowIndex - 1);\n   let currentRow = [];\n   for (let i = 0; i <= rowIndex; i++) {\n       if (i === 0 || i === rowIndex) {\n           currentRow.push(1);\n       } else {\n           currentRow.push(previousRow[i - 1] + previousRow[i]);\n       }\n   }\n   return currentRow;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/pascals-triangle-ii/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getRow' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getRow(rowIndex) {\n   let n = rowIndex + 1;\n   let result = [];\n   for (let i = 0; i < n; i++) {\n       result.push(0);\n   }\n   let tree = [];\n   for (let i = 0; i < n; i++) {\n       tree.push([]);\n       for (let j = 0; j < n; j++) {\n           tree[i].push(0);\n       }\n   }\n   for (let i = 0; i < n; i++) {\n       for (let j = 0; j < n; j++) {\n           if (i === j) {\n               tree[i][j] = 1;\n           } else {\n               tree[i][j] = tree[i - 1][j - 1] + tree[i - 1][j];\n           }\n       }\n   }\n   for (let i = 0; i < n; i++) {\n       for (let j = 0; j < n; j++) {\n           result[i] += tree[i][j];\n       }\n   }\n   return result;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/pascals-triangle-ii/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getRow' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getRow(rowIndex) {\n   let n = rowIndex + 1;\n   let result = [];\n   for (let i = 0; i < n; i++) {\n       result.push(0);\n   }\n   let hash = {};\n   for (let i = 0; i < n; i++) {\n       hash[i] = 0;\n   }\n   for (let i = 0; i < n; i++) {\n       for (let j = 0; j < n; j++) {\n           if (i === j) {\n               hash[i] = 1;\n           } else {\n               hash[i] += hash[j];\n           }\n       }\n   }\n   for (let i = 0; i < n; i++) {\n       result[i] = hash[i];\n   }\n   return result;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

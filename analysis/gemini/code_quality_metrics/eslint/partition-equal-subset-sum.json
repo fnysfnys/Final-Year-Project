@@ -1,0 +1,202 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/partition-equal-subset-sum/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canPartition = function(nums) {\n  const sortedNums = nums.sort((a, b) => b - a);\n  let sum1 = 0, sum2 = 0;\n\n  for (const num of sortedNums) {\n    if (sum1 <= sum2) {\n      sum1 += num;\n    } else {\n      sum2 += num;\n    }\n  }\n\n  return Math.abs(sum1 - sum2) <= 1;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/partition-equal-subset-sum/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canPartition = function(nums) {\n  const totalSum = nums.reduce((a, b) => a + b, 0);\n  if (totalSum % 2 !== 0) return false; // Impossible to split into equal halves\n\n  function backtrack(index, currentSum) {\n    if (currentSum === totalSum / 2) return true;\n    if (index >= nums.length || currentSum > totalSum / 2) return false;\n\n    return backtrack(index + 1, currentSum + nums[index]) || backtrack(index + 1, currentSum);\n  }\n\n  return backtrack(0, 0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/partition-equal-subset-sum/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canPartition = function(nums) {\n  const totalSum = nums.reduce((a, b) => a + b, 0);\n  if (totalSum % 2 !== 0) return false;\n\n  const subsetSum = (1 << totalSum) - 1;\n  let currentSum = 0;\n\n  for (const num of nums) {\n    currentSum |= currentSum << num;\n  }\n\n  return (currentSum & subsetSum) === subsetSum;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/partition-equal-subset-sum/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is assigned a value but never used.",
+                    "line": 2,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 2,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "const memo = {};\nvar canPartition = function(nums) {\n  const totalSum = nums.reduce((a, b) => a + b, 0);\n  if (totalSum % 2 !== 0) return false;\n\n  function dp(index, currentSum) {\n    if (currentSum === totalSum / 2) return true;\n    if (index >= nums.length || currentSum > totalSum / 2) return false;\n\n    const key = `${index}-${currentSum}`;\n    if (memo[key] !== undefined) return memo[key];\n\n    memo[key] = dp(index + 1, currentSum + nums[index]) || dp(index + 1, currentSum);\n    return memo[key];\n  }\n\n  return dp(0, 0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/partition-equal-subset-sum/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canPartition = function(nums) {\n  const totalSum = nums.reduce((a, b) => a + b, 0);\n  if (totalSum % 2 !== 0) return false;\n\n  let bestFound = null;\n\n  function explore(index, currentSum, subset) {\n    if (currentSum === totalSum / 2) {\n      bestFound = subset;\n      return;\n    }\n\n    if (index >= nums.length || currentSum > totalSum / 2) return;\n\n    explore(index + 1, currentSum + nums[index], [...subset, nums[index]]);\n    explore(index + 1, currentSum, subset);\n  }\n\n  explore(0, 0, []);\n  return bestFound !== null;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/partition-equal-subset-sum/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canPartition = function(nums) {\n  const totalSum = nums.reduce((a, b) => a + b, 0);\n  if (totalSum % 2 !== 0) return false;\n\n  const dp = new Array(totalSum / 2 + 1).fill(false);\n  dp[0] = true;\n\n  for (const num of nums) {\n    for (let i = totalSum / 2; i >= num; i--) {\n      dp[i] = dp[i] || dp[i - num];\n    }\n  }\n\n  return dp[totalSum / 2];\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

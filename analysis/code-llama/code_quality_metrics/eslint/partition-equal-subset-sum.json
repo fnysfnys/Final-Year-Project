@@ -1,0 +1,334 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/partition-equal-subset-sum/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canPartition(nums) {\n   const sum = nums.reduce((a, b) => a + b, 0);\n   if (sum % 2 !== 0) return false;\n   const halfSum = sum / 2;\n   nums.sort((a, b) => b - a);\n   let currentSum = 0;\n   for (const num of nums) {\n       if (currentSum + num <= halfSum) {\n           currentSum += num;\n       } else {\n           break;\n       }\n   }\n   return currentSum === halfSum;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/partition-equal-subset-sum/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canPartition(nums) {\n   const sum = nums.reduce((a, b) => a + b, 0);\n   if (sum % 2 !== 0) return false;\n   const halfSum = sum / 2;\n   const map = new Map();\n   for (const num of nums) {\n       if (map.has(num)) return false;\n       map.set(num, true);\n   }\n   for (const num of nums) {\n       if (map.has(halfSum - num)) return true;\n   }\n   return false;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/partition-equal-subset-sum/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canPartition(nums) {\n   const sum = nums.reduce((a, b) => a + b, 0);\n   if (sum % 2 !== 0) return false;\n   const halfSum = sum / 2;\n   const map = new Map();\n   for (const num of nums) {\n       if (map.has(num)) return false;\n       map.set(num, true);\n   }\n   const set = new Set();\n   for (const num of nums) {\n       if (set.has(num)) return false;\n       set.add(num);\n   }\n   const dp = new Array(nums.length + 1).fill(false);\n   dp[0] = true;\n   for (let i = 1; i <= nums.length; i++) {\n       for (let j = 0; j < i; j++) {\n           if (dp[j] && nums[j] <= halfSum - nums[i]) {\n               dp[i] = true;\n               break;\n           }\n       }\n   }\n   return dp[nums.length];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/partition-equal-subset-sum/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canPartition(nums) {\n   const sum = nums.reduce((a, b) => a + b, 0);\n   if (sum % 2 !== 0) return false;\n   const halfSum = sum / 2;\n   const dp = new Array(nums.length + 1).fill(false);\n   dp[0] = true;\n   for (let i = 1; i <= nums.length; i++) {\n       for (let j = 0; j < i; j++) {\n           if (dp[j] && nums[j] <= halfSum - nums[i]) {\n               dp[i] = true;\n               break;\n           }\n       }\n   }\n   return dp[nums.length];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/partition-equal-subset-sum/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canPartition(nums) {\n   const sum = nums.reduce((a, b) => a + b, 0);\n   if (sum % 2 !== 0) return false;\n   const halfSum = sum / 2;\n   return canPartitionHelper(nums, 0, halfSum);\n}\n\nfunction canPartitionHelper(nums, start, target) {\n   if (target === 0) return true;\n   if (start >= nums.length) return false;\n   for (let i = start; i < nums.length; i++) {\n       if (nums[i] <= target) {\n           const newTarget = target - nums[i];\n           if (canPartitionHelper(nums, i + 1, newTarget)) return true;\n       }\n   }\n   return false;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/partition-equal-subset-sum/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canPartition(nums) {\n   const sum = nums.reduce((a, b) => a + b, 0);\n   if (sum % 2 !== 0) return false;\n   const halfSum = sum / 2;\n   const set = new Set();\n   for (const num of nums) {\n       if (set.has(num)) return false;\n       set.add(num);\n   }\n   nums.sort((a, b) => b - a);\n   let currentSum = 0;\n   for (const num of nums) {\n       if (currentSum + num <= halfSum) {\n           currentSum += num;\n       } else {\n           break;\n       }\n   }\n   return currentSum === halfSum;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/partition-equal-subset-sum/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canPartition(nums) {\n   const sum = nums.reduce((a, b) => a + b, 0);\n   if (sum % 2 !== 0) return false;\n   const halfSum = sum / 2;\n   const map = new Map();\n   for (const num of nums) {\n       if (map.has(num)) return false;\n       map.set(num, true);\n   }\n   nums.sort((a, b) => b - a);\n   let currentSum = 0;\n   for (const num of nums) {\n       if (currentSum + num <= halfSum) {\n           currentSum += num;\n       } else {\n           break;\n       }\n   }\n   return currentSum === halfSum;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/partition-equal-subset-sum/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canPartition(nums) {\n   const sum = nums.reduce((a, b) => a + b, 0);\n   if (sum % 2 !== 0) return false;\n   const halfSum = sum / 2;\n   const set = new Set();\n   for (const num of nums) {\n       if (set.has(num)) return false;\n       set.add(num);\n   }\n   for (const num of nums) {\n       if (set.has(halfSum - num)) return true;\n   }\n   return false;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/partition-equal-subset-sum/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canPartition(nums) {\n   const sum = nums.reduce((a, b) => a + b, 0);\n   if (sum % 2 !== 0) return false;\n   const halfSum = sum / 2;\n   const set = new Set();\n   for (const num of nums) {\n       if (set.has(num)) return false;\n       set.add(num);\n   }\n   const dp = new Array(nums.length + 1).fill(false);\n   dp[0] = true;\n   for (let i = 1; i <= nums.length; i++) {\n       for (let j = 0; j < i; j++) {\n           if (dp[j] && nums[j] <= halfSum - nums[i]) {\n               dp[i] = true;\n               break;\n           }\n       }\n   }\n   return dp[nums.length];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/partition-equal-subset-sum/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canPartition' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canPartition(nums) {\n   const sum = nums.reduce((a, b) => a + b, 0);\n   if (sum % 2 !== 0) return false;\n   const halfSum = sum / 2;\n   const map = new Map();\n   for (const num of nums) {\n       if (map.has(num)) return false;\n       map.set(num, true);\n   }\n   const dp = new Array(nums.length + 1).fill(false);\n   dp[0] = true;\n   for (let i = 1; i <= nums.length; i++) {\n       for (let j = 0; j < i; j++) {\n           if (dp[j] && nums[j] <= halfSum - nums[i]) {\n               dp[i] = true;\n               break;\n           }\n       }\n   }\n   return dp[nums.length];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

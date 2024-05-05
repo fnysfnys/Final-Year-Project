@@ -1,0 +1,70 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 7,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 28
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "const longestIncreasingPath = (matrix) => {\n  const m = matrix.length, n = matrix[0].length;\n  const dp = new Array(m).fill(null).map(() => new Array(n).fill(0));\n\n  const dfs = (i, j) => {\n    if (dp[i][j] !== 0) return dp[i][j];\n    const dirs = [[0, 1], [0, -1], [1, 0], [-1, 0]];\n    let maxLen = 0;\n    for (const [dx, dy] of dirs) {\n      const x = i + dx, y = j + dy;\n      if (x >= 0 && x < m && y >= 0 && y < n && matrix[x][y] > matrix[i][j]) {\n        maxLen = Math.max(maxLen, dfs(x, y));\n      }\n    }\n    dp[i][j] = maxLen + 1;\n    return dp[i][j];\n  };\n\n  for (let i = 0; i < m; i++) {\n    for (let j = 0; j < n; j++) {\n      dfs(i, j);\n    }\n  }\n\n  return Math.max(...dp.flat());\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 7,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 28
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "const longestIncreasingPath = (matrix) => {\n  const m = matrix.length, n = matrix[0].length;\n\n  const dfs = (i, j, prev) => {\n    if (i < 0 || i >= m || j < 0 || j >= n || matrix[i][j] <= prev) return 0;\n    const dirs = [[0, 1], [0, -1], [1, 0], [-1, 0]];\n    let maxLen = 0;\n    for (const [dx, dy] of dirs) {\n      maxLen = Math.max(maxLen, dfs(i + dx, j + dy, matrix[i][j]));\n    }\n    return maxLen + 1;\n  };\n\n  let maxLen = 0;\n  for (let i = 0; i < m; i++) {\n    for (let j = 0; j < n; j++) {\n      maxLen = Math.max(maxLen, dfs(i, j, -Infinity));\n    }\n  }\n\n  return maxLen;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,136 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/concatenated-words/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 41
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function findAllConcatenatedWordsInADict(words) {\n  const trie = {};\n\n  for (const word of words) {\n    let node = trie;\n    for (const char of word) {\n      node[char] = node[char] || {};\n      node = node[char];\n    }\n    node.isWord = true;\n  }\n\n  const result = [];\n  for (const word of words) {\n    if (canFormWord(trie, word, 0)) {\n      result.push(word);\n    }\n  }\n\n  return result;\n}\n\nfunction canFormWord(trie, word, index) {\n  if (index === word.length) {\n    return true;\n  }\n\n  const node = trie[word[index]];\n  if (!node) {\n    return false;\n  }\n\n  return node.isWord && (canFormWord(trie, word, index + 1) || canFormWord(trie, word, index + 1));\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/concatenated-words/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 41
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function findAllConcatenatedWordsInADict(words) {\n  const dp = new Array(words.length).fill(false);\n  const wordSet = new Set(words);\n\n  for (let i = 0; i < words.length; i++) {\n    const word = words[i];\n    for (let j = 0; j < word.length; j++) {\n      const prefix = word.substring(0, j + 1);\n      if (wordSet.has(prefix) && (j === 0 || dp[i - j])) {\n        dp[i] = true;\n        break;\n      }\n    }\n  }\n\n  const result = [];\n  for (let i = 0; i < words.length; i++) {\n    if (dp[i]) {\n      result.push(words[i]);\n    }\n  }\n\n  return result;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/concatenated-words/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 41
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function findAllConcatenatedWordsInADict(words) {\n  const wordSet = new Set(words);\n  const result = [];\n\n  function backtrack(word, start, used) {\n    if (start === word.length) {\n      result.push(word);\n      return;\n    }\n\n    for (let i = start; i < word.length; i++) {\n      const prefix = word.substring(start, i + 1);\n      if (wordSet.has(prefix) && !used[i]) {\n        used[i] = true;\n        backtrack(word, i + 1, used);\n        used[i] = false;\n      }\n    }\n  }\n\n  for (const word of words) {\n    backtrack(word, 0, new Array(word.length).fill(false));\n  }\n\n  return result;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/concatenated-words/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 41
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function findAllConcatenatedWordsInADict(words) {\n  const wordSet = new Set(words);\n  const result = [];\n\n  for (const word of words) {\n    let isConcatenated = true;\n    for (let i = 1; i < word.length; i++) {\n      if (!wordSet.has(word.substring(0, i)) || !wordSet.has(word.substring(i))) {\n        isConcatenated = false;\n        break;\n      }\n    }\n    if (isConcatenated) {\n      result.push(word);\n    }\n  }\n\n  return result;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,15 @@
+var numberOfArithmeticSlices = function(nums) {
+  if (nums.length < 3) return 0;
+
+  const dp = Array(nums.length).fill(0);
+  let res = 0;
+
+  for (let i = 2; i < nums.length; i++) {
+    if (nums[i] - nums[i - 1] === nums[i - 1] - nums[i - 2]) {
+      dp[i] = dp[i - 1] + 1;
+    }
+    res += dp[i];
+  }
+
+  return res;
+};

@@ -1,0 +1,177 @@
+{
+    "Python": {
+        "solution1": [
+            {
+                "type": "convention",
+                "module": "solution1",
+                "obj": "",
+                "line": 1,
+                "column": 0,
+                "endLine": null,
+                "endColumn": null,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution1.py",
+                "symbol": "missing-module-docstring",
+                "message": "Missing module docstring",
+                "message-id": "C0114"
+            },
+            {
+                "type": "convention",
+                "module": "solution1",
+                "obj": "Solution",
+                "line": 1,
+                "column": 0,
+                "endLine": 1,
+                "endColumn": 14,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution1.py",
+                "symbol": "missing-class-docstring",
+                "message": "Missing class docstring",
+                "message-id": "C0115"
+            },
+            {
+                "type": "refactor",
+                "module": "solution1",
+                "obj": "Solution",
+                "line": 1,
+                "column": 0,
+                "endLine": 1,
+                "endColumn": 14,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution1.py",
+                "symbol": "useless-object-inheritance",
+                "message": "Class 'Solution' inherits from object, can be safely removed from bases in python3",
+                "message-id": "R0205"
+            },
+            {
+                "type": "convention",
+                "module": "solution1",
+                "obj": "Solution.largestDivisibleSubset",
+                "line": 2,
+                "column": 4,
+                "endLine": 2,
+                "endColumn": 30,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution1.py",
+                "symbol": "missing-function-docstring",
+                "message": "Missing function or method docstring",
+                "message-id": "C0116"
+            },
+            {
+                "type": "convention",
+                "module": "solution1",
+                "obj": "Solution.largestDivisibleSubset",
+                "line": 2,
+                "column": 4,
+                "endLine": 2,
+                "endColumn": 30,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution1.py",
+                "symbol": "invalid-name",
+                "message": "Method name \"largestDivisibleSubset\" doesn't conform to snake_case naming style",
+                "message-id": "C0103"
+            },
+            {
+                "type": "convention",
+                "module": "solution1",
+                "obj": "Solution.largestDivisibleSubset.is_valid_subset",
+                "line": 4,
+                "column": 12,
+                "endLine": 7,
+                "endColumn": 36,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution1.py",
+                "symbol": "consider-using-enumerate",
+                "message": "Consider using enumerate instead of iterating with range and len",
+                "message-id": "C0200"
+            },
+            {
+                "type": "refactor",
+                "module": "solution1",
+                "obj": "Solution",
+                "line": 1,
+                "column": 0,
+                "endLine": 1,
+                "endColumn": 14,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution1.py",
+                "symbol": "too-few-public-methods",
+                "message": "Too few public methods (1/2)",
+                "message-id": "R0903"
+            }
+        ],
+        "solution2": [
+            {
+                "type": "convention",
+                "module": "solution2",
+                "obj": "",
+                "line": 1,
+                "column": 0,
+                "endLine": null,
+                "endColumn": null,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution2.py",
+                "symbol": "missing-module-docstring",
+                "message": "Missing module docstring",
+                "message-id": "C0114"
+            },
+            {
+                "type": "convention",
+                "module": "solution2",
+                "obj": "Solution",
+                "line": 1,
+                "column": 0,
+                "endLine": 1,
+                "endColumn": 14,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution2.py",
+                "symbol": "missing-class-docstring",
+                "message": "Missing class docstring",
+                "message-id": "C0115"
+            },
+            {
+                "type": "refactor",
+                "module": "solution2",
+                "obj": "Solution",
+                "line": 1,
+                "column": 0,
+                "endLine": 1,
+                "endColumn": 14,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution2.py",
+                "symbol": "useless-object-inheritance",
+                "message": "Class 'Solution' inherits from object, can be safely removed from bases in python3",
+                "message-id": "R0205"
+            },
+            {
+                "type": "convention",
+                "module": "solution2",
+                "obj": "Solution.largestDivisibleSubset",
+                "line": 2,
+                "column": 4,
+                "endLine": 2,
+                "endColumn": 30,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution2.py",
+                "symbol": "missing-function-docstring",
+                "message": "Missing function or method docstring",
+                "message-id": "C0116"
+            },
+            {
+                "type": "convention",
+                "module": "solution2",
+                "obj": "Solution.largestDivisibleSubset",
+                "line": 2,
+                "column": 4,
+                "endLine": 2,
+                "endColumn": 30,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution2.py",
+                "symbol": "invalid-name",
+                "message": "Method name \"largestDivisibleSubset\" doesn't conform to snake_case naming style",
+                "message-id": "C0103"
+            },
+            {
+                "type": "refactor",
+                "module": "solution2",
+                "obj": "Solution",
+                "line": 1,
+                "column": 0,
+                "endLine": 1,
+                "endColumn": 14,
+                "path": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/largest-divisible-subset/Python/solution2.py",
+                "symbol": "too-few-public-methods",
+                "message": "Too few public methods (1/2)",
+                "message-id": "R0903"
+            }
+        ]
+    }
+}

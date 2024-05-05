@@ -1,0 +1,334 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    let maxSum = Number.MIN_SAFE_INTEGER;\n    let rows = matrix.length, cols = matrix[0].length;\n\n    for (let left = 0; left < cols; left++) {\n        let rowSum = new Array(rows).fill(0);\n        for (let right = left; right < cols; right++) {\n            for (let i = 0; i < rows; i++) {\n                rowSum[i] += matrix[i][right];\n            }\n\n            maxSum = Math.max(maxSum, getMaxSumCloseToK(rowSum, k));\n        }\n    }\n\n    function getMaxSumCloseToK(arr, k) {\n        let sum = 0, max = Number.MIN_SAFE_INTEGER;\n        for (let i = 0; i < arr.length; i++) {\n            sum = 0;\n            for (let j = i; j < arr.length; j++) {\n                sum += arr[j];\n                if (sum <= k) max = Math.max(max, sum);\n            }\n        }\n        return max;\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    let maxSum = Number.MIN_SAFE_INTEGER;\n    let rows = matrix.length, cols = matrix[0].length;\n\n    for (let row1 = 0; row1 < rows; row1++) {\n        let sums = new Array(cols).fill(0);\n        for (let row2 = row1; row2 < rows; row2++) {\n            for (let col = 0; col < cols; col++) {\n                sums[col] += matrix[row2][col];\n            }\n\n            for (let col1 = 0; col1 < cols; col1++) {\n                let sum = 0;\n                for (let col2 = col1; col2 < cols; col2++) {\n                    sum += sums[col2];\n                    if (sum <= k) maxSum = Math.max(maxSum, sum);\n                }\n            }\n        }\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    // This approach minimizes memory usage for very large matrices\n    let maxSum = Number.MIN_SAFE_INTEGER;\n    let rows = matrix.length, cols = matrix[0].length;\n\n    for (let left = 0; left < cols; left++) {\n        let rowSum = new Array(rows).fill(0);\n        for (let right = left; right < cols; right++) {\n            for (let i = 0; i < rows; i++) {\n                rowSum[i] += matrix[i][right];\n            }\n\n            for (let top = 0; top < rows; top++) {\n                let sum = 0;\n                for (let bottom = top; bottom < rows; bottom++) {\n                    sum += rowSum[bottom];\n                    if (sum <= k) maxSum = Math.max(maxSum, sum);\n                }\n            }\n        }\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    let maxSum = Number.MIN_SAFE_INTEGER;\n    let rows = matrix.length, cols = matrix[0].length;\n\n    for (let row1 = 0; row1 < rows; row1++) {\n        let sums = new Array(cols).fill(0);\n        for (let row2 = row1; row2 < rows; row2++) {\n            for (let col = 0; col < cols; col++) {\n                sums[col] += matrix[row2][col];\n            }\n\n            let set = new Set([0]);\n            let currSum = 0;\n            for (let sum of sums) {\n                currSum += sum;\n                let target = currSum - k;\n                for (let s of set) {\n                    if (s >= target) {\n                        maxSum = Math.max(maxSum, currSum - s);\n                        break;\n                    }\n                }\n                set.add(currSum);\n            }\n        }\n    }\n\n    return maxSum\n\n;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    let maxSum = Number.MIN_SAFE_INTEGER;\n    let rows = matrix.length, cols = matrix[0].length;\n\n    for (let row1 = 0; row1 < rows; row1++) {\n        let sums = new Array(cols).fill(0);\n        for (let row2 = row1; row2 < rows; row2++) {\n            for (let col = 0; col < cols; col++) {\n                sums[col] += matrix[row2][col];\n            }\n\n            for (let col1 = 0; col1 < cols; col1++) {\n                let sum = 0;\n                for (let col2 = col1; col2 < cols; col2++) {\n                    sum += sums[col2];\n                    if (sum <= k) maxSum = Math.max(maxSum, sum);\n                    if (maxSum === k) return k; // Early stopping\n                }\n            }\n        }\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    let maxSum = Number.MIN_SAFE_INTEGER;\n    let rows = matrix.length, cols = matrix[0].length;\n\n    for (let left = 0; left < cols; left++) {\n        let rowSum = new Array(rows).fill(0);\n        for (let right = left; right < cols; right++) {\n            for (let i = 0; i < rows; i++) {\n                rowSum[i] += matrix[i][right];\n            }\n\n            maxSum = Math.max(maxSum, kadane(rowSum, k));\n        }\n    }\n\n    function kadane(arr, k) {\n        let max = Number.MIN_SAFE_INTEGER, sum = 0;\n        for (let i = 0; i < arr.length; i++) {\n            sum = Math.max(arr[i], sum + arr[i]);\n            if (sum <= k) max = Math.max(max, sum);\n        }\n        return max;\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    let maxSum = Number.MIN_SAFE_INTEGER;\n    let rows = matrix.length, cols = matrix[0].length;\n\n    for (let left = 0; left < cols; left++) {\n        let rowSum = new Array(rows).fill(0);\n        for (let right = left; right < cols; right++) {\n            for (let i = 0; i < rows; i++) {\n                rowSum[i] += matrix[i][right];\n            }\n\n            maxSum = Math.max(maxSum, getMaxSumCloseToK(rowSum, k));\n        }\n    }\n\n    function getMaxSumCloseToK(arr, k) {\n        let sum = 0, max = Number.MIN_SAFE_INTEGER, cumSum = [0];\n        for (let num of arr) {\n            sum += num;\n            let target = sum - k;\n            let i = lowerBound(cumSum, target);\n            if (i < cumSum.length) max = Math.max(max, sum - cumSum[i]);\n            insertSorted(cumSum, sum);\n        }\n        return max;\n    }\n\n    function insertSorted(arr, value) {\n        let idx = arr.findIndex(i => i > value);\n        if (idx === -1) arr.push(value);\n        else arr.splice(idx, 0, value);\n    }\n\n    function lowerBound(arr, value) {\n        let low = 0, high = arr.length;\n        while (low < high) {\n            let mid = Math.floor((low + high) / 2);\n            if (arr[mid] < value) low = mid + 1;\n            else high = mid;\n        }\n        return low;\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    let maxSum = Number.MIN_SAFE_INTEGER;\n    let rows = matrix.length, cols = matrix[0].length;\n    let dp = Array.from({ length: rows + 1 }, () => new Array(cols + 1).fill(0));\n\n    for (let i = 1; i <= rows; i++) {\n        for (let j = 1; j <= cols; j++) {\n            dp[i][j] = matrix[i - 1][j - 1] + dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1];\n            for (let x = 0; x < i; x++) {\n                for (let y = 0; y < j; y++) {\n                    let sum = dp[i][j] - dp[x][j] - dp[i][y] + dp[x][y];\n                    if (sum <= k) maxSum = Math.max(maxSum, sum);\n                }\n            }\n        }\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    // This approach is more efficient when the number of rows is much larger than the number of columns\n    let maxSum = Number.MIN_SAFE_INTEGER;\n    let rows = matrix.length, cols = matrix[0].length;\n\n    for (let top = 0; top < rows; top++) {\n        let colSum = new Array(cols).fill(0);\n        for (let bottom = top; bottom < rows; bottom++) {\n            for (let col = 0; col < cols; col++) {\n                colSum[col] += matrix[bottom][col];\n            }\n\n            maxSum = Math.max(maxSum, getMaxSumCloseToK(colSum, k));\n        }\n    }\n\n    function getMaxSumCloseToK(arr, k) {\n        let sum = 0, max = Number.MIN_SAFE_INTEGER;\n        for (let left = 0; left < arr.length; left++) {\n            sum = 0;\n            for (let right = left; right < arr.length; right++) {\n                sum += arr[right];\n                if (sum <= k) max = Math.max(max, sum);\n            }\n        }\n        return max;\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    let maxSum = Number.MIN_SAFE_INTEGER;\n    let rows = matrix.length, cols = matrix[0].length;\n\n    for (let left = 0; left < cols; left++) {\n        let rowSum = new Array(rows).fill(0);\n        for (let right = left; right < cols; right++) {\n            for (let i = 0; i < rows; i++) {\n                rowSum[i] += matrix[i][right];\n            }\n\n            let sumSet = new Set\n\n([0]);\n            let currSum = 0;\n            for (let sum of rowSum) {\n                currSum += sum;\n                let it = [...sumSet].find(x => x >= currSum - k);\n                if (it !== undefined) maxSum = Math.max(maxSum, currSum - it);\n                sumSet.add(currSum);\n            }\n        }\n    }\n\n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

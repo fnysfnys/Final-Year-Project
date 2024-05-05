@@ -1,0 +1,334 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    if (matrix.length === 0) return 0;\n    \n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];\n    const memo = new Array(rows).fill(null).map(() => new Array(cols).fill(0));\n    \n    const dfs = (row, col) => {\n        if (memo[row][col] !== 0) return memo[row][col];\n        \n        let maxPath = 1;\n\n        for (const [dx, dy] of directions) {\n            const newRow = row + dx;\n            const newCol = col + dy;\n            \n            if (newRow >= 0 && newCol >= 0 && newRow < rows && newCol < cols && matrix[newRow][newCol] > matrix[row][col]) {\n                maxPath = Math.max(maxPath, 1 + dfs(newRow, newCol));\n            }\n        }\n        \n        memo[row][col] = maxPath;\n        return maxPath;\n    };\n    \n    let maxPathLength = 0;\n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            maxPathLength = Math.max(maxPathLength, dfs(i, j));\n        }\n    }\n    \n    return maxPathLength;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    if (matrix.length === 0) return 0;\n    \n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const memo = new Array(rows).fill(null).map(() => new Array(cols).fill(0));\n    \n    let maxPathLength = 0;\n    \n    const dfs = (row, col, prev) => {\n        if (row < 0 || col < 0 || row >= rows || col >= cols || matrix[row][col] <= prev) {\n            return 0;\n        }\n        if (memo[row][col] > 0) return memo[row][col];\n        \n        const current = matrix[row][col];\n        const length = 1 + Math.max(\n            dfs(row + 1, col, current),\n            dfs(row - 1, col, current),\n            dfs(row, col + 1, current),\n            dfs(row, col - 1, current)\n        );\n        \n        memo[row][col] = length;\n        maxPathLength = Math.max(maxPathLength, length);\n        return length;\n    };\n    \n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            maxPathLength = Math.max(maxPathLength, dfs(i, j, -Infinity));\n        }\n    }\n    \n    return maxPathLength;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    if (matrix.length === 0) return\n\n 0;\n    \n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];\n    const memo = Array.from({ length: rows }, () => Array(cols).fill(0));\n    \n    const isValidMove = (row, col, prev) => {\n        return row >= 0 && col >= 0 && row < rows && col < cols && matrix[row][col] > prev;\n    };\n    \n    const bfs = (row, col) => {\n        let maxPath = 1;\n        const queue = [[row, col, 1]];\n        \n        while (queue.length) {\n            const [r, c, length] = queue.shift();\n            maxPath = Math.max(maxPath, length);\n            \n            for (const [dx, dy] of directions) {\n                const newRow = r + dx;\n                const newCol = c + dy;\n                \n                if (isValidMove(newRow, newCol, matrix[r][c])) {\n                    queue.push([newRow, newCol, length + 1]);\n                }\n            }\n        }\n        \n        return maxPath;\n    };\n    \n    let maxPathLength = 0;\n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            if (memo[i][j] === 0) {\n                memo[i][j] = bfs(i, j);\n                maxPathLength = Math.max(maxPathLength, memo[i][j]);\n            }\n        }\n    }\n    \n    return maxPathLength;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    if (matrix.length === 0) return 0;\n    \n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];\n    \n    const topologicalSort = () => {\n        const indegrees = new Array(rows).fill(null).map(() => new Array(cols).fill(0));\n        \n        for (let i = 0; i < rows; i++) {\n            for (let j = 0; j < cols; j++) {\n                for (const [dx, dy] of directions) {\n                    const newRow = i + dx;\n                    const newCol = j + dy;\n                    if (newRow >= 0 && newCol >= 0 && newRow < rows && newCol < cols && matrix[newRow][newCol] > matrix[i][j]) {\n                        indegrees[newRow][newCol]++;\n                    }\n                }\n            }\n        }\n        \n        const queue = [];\n        for (let i = 0; i < rows; i++) {\n            for (let j = 0; j < cols; j++) {\n                if (indegrees[i][j] === 0) {\n                    queue.push([i, j]);\n                }\n            }\n        }\n        \n        let length = 0;\n        while (queue.length) {\n            length++;\n            const size = queue.length;\n            \n            for (let i = 0; i < size; i++) {\n                const [row, col] = queue.shift();\n                \n                for (const [dx, dy] of directions) {\n                    const newRow = row + dx;\n                    const newCol = col + dy;\n                    \n                    if (newRow >= 0 && newCol >= 0 && newRow < rows && newCol < cols && matrix[newRow][newCol] < matrix[row][col]) {\n                        indegrees[newRow][newCol]--;\n                        \n                        if (indegrees[newRow][newCol] === 0) {\n                            queue.push([newRow, newCol]);\n                        }\n                    }\n                }\n            }\n        }\n        \n        return length;\n    };\n    \n    return topologicalSort();\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    if (matrix.length === 0) return 0;\n    \n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];\n    \n    const isValidMove = (row, col, prev) => {\n        return row >= 0 && col >= 0 && row < rows && col < cols && matrix[row][col] > prev;\n    };\n    \n    let maxPathLength = 0;\n    \n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            const queue = [[i, j, 1]];\n            \n            while (queue.length) {\n                const [row, col, length] = queue.shift();\n                maxPathLength = Math.max(maxPathLength, length);\n                \n                for (const [dx, dy] of directions) {\n                    const newRow = row + dx;\n                    const newCol = col + dy;\n                    \n                    if (isValidMove(newRow, newCol, matrix[row][col])) {\n                        queue.push([newRow, newCol, length + 1]);\n                    }\n                }\n            }\n        }\n    }\n    \n    return maxPathLength;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    if (matrix.length === 0) return 0;\n    \n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const memo = Array.from({ length: rows }, () => Array(cols).fill(0));\n    const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];\n    \n    const dfs = (row, col) => {\n        if (memo[row][col] !== 0) return memo[row][col];\n        \n        let maxPath = 1;\n        for (const [dx, dy] of directions) {\n            const newRow = row + dx;\n            const newCol = col + dy;\n            \n            if (newRow >= 0 && newCol >= 0 && newRow < rows && newCol < cols && matrix[newRow][newCol] > matrix[row][col]) {\n                maxPath = Math.max(maxPath, 1 + dfs(newRow, newCol));\n            }\n        }\n        \n        memo[row][col] = maxPath;\n        return maxPath;\n    };\n    \n    let maxPathLength = 0;\n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            maxPathLength = Math.max(maxPathLength, dfs(i, j));\n        }\n    }\n    \n    return maxPathLength;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    if (matrix.length === 0) return 0;\n    \n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];\n    \n    const dfs = (row, col, prev) => {\n        let maxPath = 1;\n        for (const [dx, dy] of directions) {\n            const newRow = row + dx;\n            const newCol = col + dy;\n            \n            if (newRow >= 0 && newCol >= 0 && newRow < rows && newCol < cols && matrix[newRow][newCol] > prev) {\n                maxPath = Math.max(maxPath, 1 + dfs(newRow, newCol, matrix[row][col]));\n            }\n        }\n        \n        return maxPath;\n    };\n    \n    let maxPathLength = 0;\n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            maxPathLength = Math.max(maxPathLength, dfs(i, j, -Infinity));\n        }\n    }\n    \n    return maxPathLength;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    if (matrix.length === 0) return 0;\n    \n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    \n    const dfs = (row, col, prev) => {\n        if (row < 0 || col < 0 || row >= rows || col >= cols || matrix[row][col] <= prev) {\n            return 0;\n        }\n        \n        const current = matrix[row][col];\n        const length = 1 + Math.max(\n            dfs(row + 1, col, current),\n            dfs(row - 1, col, current),\n            dfs(row, col + 1, current),\n            dfs(row, col - 1, current)\n        );\n        \n        return length;\n    };\n    \n    let maxPathLength = 0;\n    \n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            maxPathLength = Math.max(maxPathLength, dfs(i, j, -Infinity));\n        }\n    }\n    \n    return maxPathLength;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    if (matrix.length === 0) return 0;\n    \n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];\n    \n    const isValidMove = (row, col, prev) => {\n        return row >= 0 && col >= 0 && row < rows && col < cols && matrix[row][col] > prev;\n    };\n    \n    let maxPathLength = 0;\n    const queue = [];\n    \n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            queue.push([i, j, 1]);\n            \n            while (queue.length) {\n                const [row, col, length] = queue.shift();\n                maxPathLength = Math.max(maxPathLength, length);\n                \n                for (const [dx, dy] of directions) {\n                    const newRow = row + dx;\n                    const newCol = col + dy;\n                    \n                    if (isValidMove(newRow, newCol, matrix[row][col])) {\n                        queue.push([newRow, newCol, length + 1]);\n                    }\n                }\n            }\n        }\n    }\n    \n    return maxPathLength;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    if (matrix.length === 0) return 0;\n    \n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const memo = Array.from({ length: rows }, () => Array(cols).fill(0));\n    const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];\n    \n    const isValidMove = (row, col, prev) => {\n        return row >= 0 && col >= 0 && row < rows && col < cols && matrix[row][col] > prev;\n    };\n    \n    const bfs = (row, col) => {\n        let maxPath = 1;\n        const queue = [[row, col, 1]];\n        \n        while (queue.length) {\n            const [r, c, length] = queue.shift();\n            maxPath = Math.max(maxPath, length);\n            \n            for (const [dx, dy] of directions) {\n                const newRow = r + dx;\n                const newCol = c + dy;\n                \n                if (isValidMove(newRow, newCol, matrix[r][c])) {\n                    queue.push([newRow, newCol, length + 1]);\n                }\n            }\n        }\n        \n        return maxPath;\n    };\n    \n    let maxPathLength = 0;\n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            if (memo[i][j] === 0) {\n                memo[i][j] = bfs(i, j);\n                maxPathLength = Math.max(maxPathLength, memo[i][j]);\n            }\n        }\n    }\n    \n    return maxPathLength;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

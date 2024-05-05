@@ -1,0 +1,345 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/concatenated-words/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findAllConcatenatedWordsInADict = function(words) {\n    const wordSet = new Set(words);\n    \n    const canFormWord = (word) => {\n        for (let i = 1; i < word.length; i++) {\n            const prefix = word.substring(0, i);\n            const suffix = word.substring(i);\n            if (wordSet.has(prefix) && (wordSet.has(suffix) || canFormWord(suffix))) {\n                return true;\n            }\n        }\n        return false;\n    };\n    \n    return words.filter(word => {\n        wordSet.delete(word);\n        return canFormWord(word);\n    });\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/concatenated-words/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findAllConcatenatedWordsInADict = function(words) {\n    const isConcatenated = (word, dict) => {\n        if (dict.has(word)) return true;\n        for (let i = 1; i < word.length; i++) {\n            const prefix = word.slice(0, i);\n            if (dict.has(prefix) && isConcatenated(word.slice(i), dict)) {\n                return true;\n            }\n        }\n        return false;\n    };\n    \n    const dict = new Set(words);\n    return words.filter(word => {\n        dict.delete(word);\n        return isConcatenated(word, dict);\n    });\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/concatenated-words/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 8,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 8,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "class TrieNode {\n    constructor() {\n        this.children = new Map();\n        this.isEnd = false;\n    }\n}\n\nvar findAllConcatenatedWordsInADict = function(words) {\n    const root = new TrieNode();\n    \n    const isConcatenated = (word, root, count) => {\n        let node = root;\n        for (let i = 0; i < word.length; i++) {\n            const char = word[i];\n            if (!node.children.has(char)) return false;\n            node = node.children.get(char);\n            if (node.isEnd) {\n                if (i === word.length - 1) return count >= 1;\n                if (isConcatenated(word.slice(i + 1), root, count + 1)) return true;\n            }\n        }\n        return false;\n    };\n    \n    for (const word of words) {\n        let node = root;\n        for (const char of word) {\n            if (!node.children.has(char)) {\n                node.children.set(char, new TrieNode());\n            }\n            node = node.children.get(char);\n        }\n        node.isEnd = true;\n    }\n    \n    return words.filter(word => {\n        return isConcatenated(word, root, 0);\n    });\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/concatenated-words/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findAllConcatenatedWordsInADict = function(words) {\n    const wordSet = new Set(words);\n    \n    const canFormWord = (word, wordSet) => {\n        if (wordSet.has(word)) return true;\n        \n        for (let i = 1; i < word.length; i++) {\n            const prefix = word.substring(0, i);\n            const suffix = word.substring(i);\n            if (wordSet.has(prefix) && canFormWord(suffix, wordSet)) {\n                return true;\n            }\n        }\n        \n        return false;\n    };\n    \n    return words.filter(word => {\n        wordSet.delete(word);\n        return canFormWord(word, wordSet);\n    });\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/concatenated-words/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 8,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 8,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "class TrieNode {\n    constructor() {\n        this.children = new Map();\n        this.isEnd = false;\n    }\n}\n\nvar findAllConcatenatedWordsInADict = function(words) {\n    const isConcatenated = (word, root, count) => {\n        let node = root;\n        for (let i = 0; i < word.length; i++) {\n            const char = word[i];\n            if (!node.children.has(char)) return false;\n            node = node.children.get(char);\n            if (node.isEnd) {\n                if (i === word.length - 1) return count >= 1;\n                if (isConcatenated(word.slice(i + 1), root, count + 1)) return true;\n            }\n        }\n        return false;\n    };\n    \n    const root = new TrieNode();\n    const result = [];\n    \n    words.sort((a, b) => a.length - b.length);\n    \n    for (const word of words) {\n        if (isConcatenated(word, root, 0)) {\n            result.push(word);\n        }\n        let node = root;\n        for (const char of word) {\n            if (!node.children.has(char)) {\n                node.children.set(char, new TrieNode());\n            }\n            node = node.children.get(char);\n        }\n        node.isEnd = true;\n    }\n    \n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/concatenated-words/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findAllConcatenatedWordsInADict = function(words) {\n    words.sort((a, b) => a.length - b.length);\n    const wordSet = new Set(words);\n    const dp = new Map();\n    \n    const canFormWord = (word) => {\n        if (dp.has(word)) return dp.get(word);\n        for (let i = 1; i < word.length; i++) {\n            const prefix = word.substring(0, i);\n            const suffix = word.substring(i);\n            if (wordSet.has(prefix) && (wordSet.has(suffix) || canFormWord(suffix))) {\n                dp.set(word, true);\n                return true;\n            }\n        }\n        dp.set(word, false);\n        return false;\n    };\n    \n    return words.filter(word => {\n        wordSet.delete(word);\n        return canFormWord(word);\n    });\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/concatenated-words/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'queue' is assigned a value but never used.",
+                    "line": 3,
+                    "column": 11,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 3,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findAllConcatenatedWordsInADict = function(words) {\n    const wordSet = new Set(words);\n    const queue = [];\n    \n    const canFormWord = (word) => {\n        const visited = new Set();\n        const queue = [word];\n        \n        while (queue.length) {\n            const currentWord = queue.shift();\n            for (let i = 1; i < currentWord.length; i++) {\n                const prefix = currentWord.substring(0, i);\n                const suffix = currentWord.substring(i);\n                if (wordSet.has(prefix) && wordSet.has(suffix)) {\n                    return true;\n                }\n                if (wordSet.has(prefix) && !visited.has(suffix)) {\n                    queue.push(suffix);\n                    visited.add(suffix);\n                }\n            }\n        }\n        \n        return false;\n    };\n    \n    return words.filter(word => {\n        wordSet.delete(word);\n        return canFormWord(word);\n    });\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/concatenated-words/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findAllConcatenatedWordsInADict = function(words) {\n    const isConcatenated = (word, dict, memo) => {\n        if (memo.has(word)) return memo.get(word);\n        for (let i = 1; i < word.length; i++) {\n            const prefix = word.slice(0, i);\n            if (dict.has(prefix) && isConcatenated(word.slice(i), dict, memo)) {\n                memo.set(word, true);\n                return true;\n            }\n        }\n        memo.set(word, false);\n        return false;\n    };\n    \n    const dict = new Set(words);\n    const memo = new Map();\n    return words.filter(word => {\n        dict.delete(word);\n        return isConcatenated(word, dict, memo);\n    });\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/concatenated-words/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 8,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 8,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "class TrieNode {\n    constructor() {\n        this.children = new Map();\n        this.isEnd = false;\n    }\n}\n\nvar findAllConcatenatedWordsInADict = function(words) {\n    const root = new TrieNode();\n    \n    const isConcatenated = (word, root, memo) => {\n        if (memo.has(word)) return memo.get(word);\n        let node = root;\n        for (let i = 0; i < word.length; i++) {\n            const char = word[i];\n            if (!node.children.has(char)) return false;\n            node = node.children.get(char);\n            if (node.isEnd) {\n                if (i === word.length - 1 || isConcatenated(word.slice(i + 1), root, memo)) {\n                    memo.set(word, true);\n                    return true;\n                }\n            }\n        }\n        memo.set(word, false);\n        return false;\n    };\n    \n    for (const word of words) {\n        let node = root;\n        for (const char of word) {\n            if (!node.children.has(char)) {\n                node.children.set(char, new TrieNode());\n            }\n            node = node.children.get(char);\n        }\n        node.isEnd = true;\n    }\n    \n    const memo = new Map();\n    return words.filter(word => {\n        return isConcatenated(word, root, memo);\n    });\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/concatenated-words/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findAllConcatenatedWordsInADict' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var findAllConcatenatedWordsInADict = function(words) {\n    words.sort((a, b) => a.length - b.length);\n    const wordSet = new Set(words);\n    \n    const canFormWord = (word, dp) => {\n        if (dp.has(word)) return dp.get(word);\n        for (let i = 1; i < word.length; i++) {\n            const prefix = word.substring(0, i);\n            const suffix = word.substring(i);\n            if (wordSet.has(prefix) && (wordSet.has(suffix) || canFormWord(suffix, dp))) {\n                dp.set(word, true);\n                return true;\n            }\n        }\n        dp.set(word, false);\n        return false;\n    };\n    \n    const dp = new Map();\n    return words\n\n.filter(word => {\n        wordSet.delete(word);\n        return canFormWord(word, dp);\n    });\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

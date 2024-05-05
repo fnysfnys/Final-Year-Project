@@ -1,0 +1,202 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/poor-pigs/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n  if (buckets <= 1) return 0;\n  if (minutesToTest <= minutesToDie) return Math.ceil(minutesToTest / minutesToDie);\n\n  return Math.ceil(Math.log2(buckets) / Math.log2(minutesToTest / minutesToDie + 1));\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/poor-pigs/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n  if (buckets <= 1) return 0;\n  if (minutesToTest <= minutesToDie) return Math.ceil(minutesToTest / minutesToDie);\n\n  let pigs = 1;\n  let possibleOutcomes = Math.pow(2, pigs);\n  while (possibleOutcomes < buckets) {\n    pigs++;\n    possibleOutcomes *= Math.pow(2, pigs);\n  }\n  return pigs;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/poor-pigs/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n  if (buckets <= 1) return 0;\n  if (minutesToTest <= minutesToDie) return Math.ceil(minutesToTest / minutesToDie);\n\n  let pigs = 0;\n  let mask = (1 << buckets) - 1;\n  while ((mask & (mask + 1)) !== 0) {\n    mask &= mask + 1;\n    pigs++;\n  }\n  return pigs;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/poor-pigs/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n  const dp = [];\n  for (let i = 0; i <= minutesToTest; i++) {\n    dp[i] = new Array(buckets + 1).fill(0);\n  }\n\n  for (let i = 1; i <= minutesToTest; i++) {\n    for (let j = 1; j <= buckets; j++) {\n      if (j === 1) {\n        dp[i][j] = 1;\n      } else if (i <= minutesToDie) {\n        dp[i][j] = Math.ceil(i / minutesToDie);\n      } else {\n        dp[i][j] = Math.min(dp[i - minutesToDie][j - 1] + 1, dp[i][j - 1]);\n      }\n    }\n  }\n\n  return dp[minutesToTest][buckets];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/poor-pigs/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n  if (buckets <= 1) return 0;\n  if (minutesToTest <= minutesToDie) return Math.ceil(minutesToTest / minutesToDie);\n\n  let pigs = 1;\n  let combinations = 1;\n  while (combinations < buckets) {\n    pigs++;\n    combinations += choose(pigs, minutesToTest / minutesToDie);\n  }\n  return pigs;\n}\n\nfunction choose(n, k) {\n  if (k > n) return 0;\n  if (k === 0 || k === n) return 1;\n  return choose(n - 1, k - 1) + choose(n - 1, k);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/poor-pigs/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'poorPigs' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 18
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function poorPigs(buckets, minutesToDie, minutesToTest) {\n  if (buckets <= 1) return 0;\n  if (minutesToTest <= minutesToDie) return Math.ceil(minutesToTest / minutesToDie);\n\n  let pigs = 1;\n  let possibleOutcomes = 1;\n  while (possibleOutcomes < buckets) {\n    pigs++;\n    possibleOutcomes *= pigs + 1;\n  }\n  return pigs;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

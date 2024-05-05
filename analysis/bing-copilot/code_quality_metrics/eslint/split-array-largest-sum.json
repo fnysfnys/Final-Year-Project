@@ -1,0 +1,37 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/split-array-largest-sum/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 19
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "    var splitArray = function(nums, k) {\n        const n = nums.length;\n        const targetSum = nums.reduce((acc, num) => acc + num, 0) / k;\n        let currentSum = 0;\n        let subarrayCount = 0;\n\n        for (let i = 0; i < n; i++) {\n            currentSum += nums[i];\n            if (currentSum >= targetSum) {\n                subarrayCount++;\n                currentSum = 0;\n            }\n        }\n\n        return subarrayCount === k;\n    };\n    ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

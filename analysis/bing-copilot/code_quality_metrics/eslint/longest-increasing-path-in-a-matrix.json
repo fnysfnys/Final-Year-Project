@@ -1,0 +1,70 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const memo = new Array(rows).fill(null).map(() => new Array(cols).fill(0));\n    \n    const dfs = (i, j) => {\n        if (memo[i][j] > 0) return memo[i][j];\n        const directions = [[0, 1], [1, 0], [0, -1], [-1, 0]];\n        let maxPath = 1;\n        \n        for (const [dx, dy] of directions) {\n            const x = i + dx;\n            const y = j + dy;\n            if (x >= 0 && x < rows && y >= 0 && y < cols && matrix[x][y] > matrix[i][j]) {\n                maxPath = Math.max(maxPath, 1 + dfs(x, y));\n            }\n        }\n        \n        memo[i][j] = maxPath;\n        return maxPath;\n    };\n    \n    let result = 0;\n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            result = Math.max(result, dfs(i, j));\n        }\n    }\n    \n    return result;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/longest-increasing-path-in-a-matrix/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'longestIncreasingPath' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 26
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var longestIncreasingPath = function(matrix) {\n    const rows = matrix.length;\n    const cols = matrix[0].length;\n    const indegree = new Array(rows).fill(null).map(() => new Array(cols).fill(0));\n    const directions = [[0, 1], [1, 0], [0, -1], [-1, 0]];\n    \n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            for (const [dx, dy] of directions) {\n                const x = i + dx;\n                const y = j + dy;\n                if (x >= 0 && x < rows && y >= 0 && y < cols && matrix[x][y] < matrix[i][j]) {\n                    indegree[x][y]++;\n                }\n            }\n        }\n    }\n    \n    const queue = [];\n    for (let i = 0; i < rows; i++) {\n        for (let j = 0; j < cols; j++) {\n            if (indegree[i][j] === 0) {\n                queue.push([i, j]);\n            }\n        }\n    }\n    \n    let result = 0;\n    while (queue.length > 0) {\n        const [i, j] = queue.shift();\n        for (const [dx, dy] of directions) {\n            const x = i + dx;\n            const y = j + dy;\n            if (x >= 0 && x < rows && y >= 0 && y < cols && matrix[x][y] > matrix[i][j]) {\n                indegree[x][y]--;\n                if (indegree[x][y] === 0) {\n                    queue.push([x, y]);\n                }\n            }\n        }\n        result++;\n    }\n    \n    return result;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

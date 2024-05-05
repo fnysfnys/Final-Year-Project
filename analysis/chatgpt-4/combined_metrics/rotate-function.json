@@ -1,0 +1,41 @@
+{
+    "Python": {
+        "solution1": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "1111111100000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 3,
+            "normalised_warnings": 0.1
+        },
+        "solution2": {
+            "status_display": "Accepted",
+            "compare_result": "1111111111111111111111111111111111111111111111111111111111",
+            "runtime": "898 ms",
+            "memory": "19.5 MB",
+            "complexity": 3,
+            "normalised_warnings": 0.09090909090909091
+        }
+    },
+    "Java": {
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "1111111111111111111111111111111111111111111111111111111111",
+            "runtime": "3 ms",
+            "memory": "59.1 MB",
+            "complexity": 3,
+            "readability": 0.8797121047973633,
+            "normalised_warnings": 0.05263157894736842
+        }
+    },
+    "JavaScript": {
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "1111111111111111111111111111111111111111111111111111111111",
+            "runtime": "77 ms",
+            "memory": "59 MB",
+            "complexity": 3,
+            "normalised_warnings": 0.0
+        }
+    }
+}

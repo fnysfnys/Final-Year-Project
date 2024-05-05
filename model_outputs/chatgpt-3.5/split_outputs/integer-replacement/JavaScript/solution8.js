@@ -1,0 +1,15 @@
+var integerReplacement = function(n) {
+    let count = 0;
+    do {
+        if (n === 1) break;
+        if (n % 2 === 0) {
+            n /= 2;
+        } else if (n % 4 === 1 || n === 3) {
+            n--;
+        } else {
+            n++;
+        }
+        count++;
+    } while (true);
+    return count;
+};

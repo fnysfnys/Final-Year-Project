@@ -1,0 +1,334 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/distinct-subsequences/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n   let count = 0;\n   let suffixTree = {};\n   for (let i = 0; i < s.length; i++) {\n       let node = suffixTree;\n       for (let j = i; j < s.length; j++) {\n           if (!node[s[j]]) {\n               node[s[j]] = {};\n           }\n           node = node[s[j]];\n       }\n   }\n   for (let i = 0; i < t.length; i++) {\n       let node = suffixTree;\n       for (let j = 0; j < t[i].length; j++) {\n           if (!node[t[i][j]]) {\n               count++;\n               break;\n           }\n           node = node[t[i][j]];\n       }\n   }\n   return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/distinct-subsequences/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n   let count = 0;\n   for (let i = 0; i < s.length; i++) {\n       for (let j = 0; j < t.length; j++) {\n           if (s[i] === t[j]) {\n               count++;\n           }\n       }\n   }\n   return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/distinct-subsequences/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n   let count = 0;\n   let suffixAutomaton = {};\n   for (let i = 0; i < s.length; i++) {\n       let node = suffixAutomaton;\n       for (let j = i; j < s.length; j++) {\n           if (!node[s[j]]) {\n               node[s[j]] = {};\n           }\n           node = node[s[j]];\n       }\n   }\n   let hash = {};\n   for (let i = 0; i < t.length; i++) {\n       let node = suffixAutomaton;\n       for (let j = 0; j < t[i].length; j++) {\n           if (!node[t[i][j]]) {\n               count++;\n               break;\n           }\n           node = node[t[i][j]];\n       }\n       hash[t[i]] = count;\n   }\n   return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/distinct-subsequences/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n   let count = 0;\n   let trie = {};\n   for (let i = 0; i < s.length; i++) {\n       let node = trie;\n       for (let j = 0; j < s[i].length; j++) {\n           if (!node[s[i][j]]) {\n               node[s[i][j]] = {};\n           }\n           node = node[s[i][j]];\n       }\n   }\n   for (let i = 0; i < t.length; i++) {\n       let node = trie;\n       for (let j = 0; j < t[i].length; j++) {\n           if (!node[t[i][j]]) {\n               count++;\n               break;\n           }\n           node = node[t[i][j]];\n       }\n   }\n   return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/distinct-subsequences/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n   let count = 0;\n   let hash = {};\n   for (let i = 0; i < s.length; i++) {\n       if (!hash[s[i]]) {\n           hash[s[i]] = 1;\n       } else {\n           hash[s[i]]++;\n       }\n   }\n   for (let i = 0; i < t.length; i++) {\n       if (hash[t[i]]) {\n           count++;\n       }\n   }\n   return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/distinct-subsequences/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n   let count = 0;\n   let suffixAutomaton = {};\n   for (let i = 0; i < s.length; i++) {\n       let node = suffixAutomaton;\n       for (let j = i; j < s.length; j++) {\n           if (!node[s[j]]) {\n               node[s[j]] = {};\n           }\n           node = node[s[j]];\n       }\n   }\n   for (let i = 0; i < t.length; i++) {\n       let node = suffixAutomaton;\n       for (let j = 0; j < t[i].length; j++) {\n           if (!node[t[i][j]]) {\n               count++;\n               break;\n           }\n           node = node[t[i][j]];\n       }\n   }\n   return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/distinct-subsequences/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n   let count = 0;\n   let suffixArray = [];\n   for (let i = 0; i < s.length; i++) {\n       suffixArray.push(s.substring(i));\n   }\n   for (let i = 0; i < t.length; i++) {\n       for (let j = 0; j < suffixArray.length; j++) {\n           if (suffixArray[j] === t[i]) {\n               count++;\n               break;\n           }\n       }\n   }\n   return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/distinct-subsequences/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n   let count = 0;\n   for (let i = 0; i < s.length; i++) {\n       let window = s.substring(i, i + t.length);\n       if (window === t) {\n           count++;\n       }\n   }\n   return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/distinct-subsequences/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n   let count = 0;\n   let suffixArray = [];\n   for (let i = 0; i < s.length; i++) {\n       suffixArray.push(s.substring(i));\n   }\n   let hash = {};\n   for (let i = 0; i < t.length; i++) {\n       for (let j = 0; j < suffixArray.length; j++) {\n           if (suffixArray[j] === t[i]) {\n               count++;\n               break;\n           }\n       }\n       hash[t[i]] = count;\n   }\n   return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/distinct-subsequences/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numDistinct' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 21
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function numDistinct(s, t) {\n   let count = 0;\n   let suffixTree = {};\n   for (let i = 0; i < s.length; i++) {\n       let node = suffixTree;\n       for (let j = i; j < s.length; j++) {\n           if (!node[s[j]]) {\n               node[s[j]] = {};\n           }\n           node = node[s[j]];\n       }\n   }\n   let hash = {};\n   for (let i = 0; i < t.length; i++) {\n       let node = suffixTree;\n       for (let j = 0; j < t[i].length; j++) {\n           if (!node[t[i][j]]) {\n               count++;\n               break;\n           }\n           node = node[t[i][j]];\n       }\n       hash[t[i]] = count;\n   }\n   return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

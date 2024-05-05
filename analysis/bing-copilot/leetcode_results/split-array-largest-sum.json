@@ -1,0 +1,68 @@
+{
+    "Java": {
+        "solution2": {
+            "status_display": "Compile Error",
+            "compare_result": null,
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution3": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111",
+            "runtime": "0 ms",
+            "memory": "41.3 MB"
+        },
+        "solution4": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111",
+            "runtime": "0 ms",
+            "memory": "41 MB"
+        },
+        "solution1": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "11111111111111111111111111111000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        }
+    },
+    "JavaScript": {
+        "solution1": {
+            "status_display": "Wrong Answer",
+            "compare_result": "00000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        }
+    },
+    "Python": {
+        "solution1": {
+            "status_display": "Wrong Answer",
+            "compare_result": "00111100010100000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution5": {
+            "status_display": "Wrong Answer",
+            "compare_result": "11111100111101111111111100111111",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution4": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111",
+            "runtime": "16 ms",
+            "memory": "11.8 MB"
+        },
+        "solution3": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111",
+            "runtime": "7265 ms",
+            "memory": "12.4 MB"
+        },
+        "solution2": {
+            "status_display": "Wrong Answer",
+            "compare_result": "00111100010100001101010000011000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        }
+    }
+}

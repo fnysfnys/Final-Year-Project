@@ -1,0 +1,158 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/can-i-win/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canIWin(maxChoosableInteger, desiredTotal) {\n   // Check if the desired total is achievable\n   if (desiredTotal > maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n       return false;\n   }\n\n   // Check if the first player can win\n   for (let i = 1; i <= maxChoosableInteger; i++) {\n       if (i + desiredTotal <= maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n           return true;\n       }\n   }\n\n   return false;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/can-i-win/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canIWin(maxChoosableInteger, desiredTotal) {\n   // Check if the desired total is achievable\n   if (desiredTotal > maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n       return false;\n   }\n\n   // Check if the first player can win\n   for (let i = 1; i <= maxChoosableInteger; i++) {\n       if (i + desiredTotal <= maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n           return true;\n       }\n   }\n\n   // Check if the second player can win\n   for (let i = 1; i <= maxChoosableInteger; i++) {\n       for (let j = 1; j <= maxChoosableInteger; j++) {\n           if (i + j + desiredTotal <= maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n               return true;\n           }\n       }\n   }\n\n   return false;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/can-i-win/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'memo' is assigned a value but never used.",
+                    "line": 3,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 3,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canIWin(maxChoosableInteger, desiredTotal) {\n   // Initialize a map to store the results\n   const memo = new Map();\n\n   // Check if the desired total is achievable\n   if (desiredTotal > maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n       return false;\n   }\n\n   // Check if the first player can win\n   for (let i = 1; i <= maxChoosableInteger; i++) {\n       if (i + desiredTotal <= maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n           return true;\n       }\n   }\n\n   // Check if the second player can win\n   for (let i = 1; i <= maxChoosableInteger; i++) {\n       for (let j = 1; j <= maxChoosableInteger; j++) {\n           if (i + j + desiredTotal <= maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n               return true;\n           }\n       }\n   }\n\n   return false;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/code-llama/parsed_outputs/can-i-win/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canIWin' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 17
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'dp' is assigned a value but never used.",
+                    "line": 3,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 3,
+                    "endColumn": 12
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function canIWin(maxChoosableInteger, desiredTotal) {\n   // Initialize a 2D array to store the results\n   const dp = Array(maxChoosableInteger + 1).fill(0).map(() => Array(desiredTotal + 1).fill(false));\n\n   // Check if the desired total is achievable\n   if (desiredTotal > maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n       return false;\n   }\n\n   // Check if the first player can win\n   for (let i = 1; i <= maxChoosableInteger; i++) {\n       if (i + desiredTotal <= maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n           return true;\n       }\n   }\n\n   // Check if the second player can win\n   for (let i = 1; i <= maxChoosableInteger; i++) {\n       for (let j = 1; j <= maxChoosableInteger; j++) {\n           if (i + j + desiredTotal <= maxChoosableInteger * (maxChoosableInteger + 1) / 2) {\n               return true;\n           }\n       }\n   }\n\n   return false;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

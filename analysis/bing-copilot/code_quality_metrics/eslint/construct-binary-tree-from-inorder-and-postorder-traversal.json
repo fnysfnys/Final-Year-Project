@@ -1,0 +1,224 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is defined but never used.",
+                    "line": 1,
+                    "column": 15,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 24
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 6,
+                    "column": 27,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 6,
+                    "endColumn": 35
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "     function buildTree(inorder, postorder) {\n         if (inorder.length === 0 || postorder.length === 0) {\n             return null;\n         }\n         const rootVal = postorder.pop();\n         const root = new TreeNode(rootVal);\n         const rootIndex = inorder.indexOf(rootVal);\n         root.right = buildTree(inorder.slice(rootIndex + 1), postorder);\n         root.left = buildTree(inorder.slice(0, rootIndex), postorder);\n         return root;\n     }\n     ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is defined but never used.",
+                    "line": 1,
+                    "column": 15,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 24
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 5,
+                    "column": 29,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 5,
+                    "endColumn": 37
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'inorderIndex' is not defined.",
+                    "line": 9,
+                    "column": 62,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 9,
+                    "endColumn": 74
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'inorderIndex' is not defined.",
+                    "line": 11,
+                    "column": 89,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 11,
+                    "endColumn": 101
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'inorderIndex' is not defined.",
+                    "line": 13,
+                    "column": 26,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 13,
+                    "endColumn": 38
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 5,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "     function buildTree(inorder, postorder) {\n         const stack = [];\n         let root = null;\n         for (let i = postorder.length - 1; i >= 0; i--) {\n             let curr = new TreeNode(postorder[i]);\n             if (!root) {\n                 root = curr;\n             } else {\n                 if (stack[stack.length - 1].val === inorder[inorderIndex]) {\n                     let parent = stack.pop();\n                     while (stack.length > 0 && stack[stack.length - 1].val === inorder[inorderIndex]) {\n                         parent = stack.pop();\n                         inorderIndex--;\n                     }\n                     parent.left = curr;\n                 } else {\n                     stack[stack.length - 1].right = curr;\n                 }\n             }\n             stack.push(curr);\n         }\n         return root;\n     }\n     ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is defined but never used.",
+                    "line": 1,
+                    "column": 15,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 24
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 7,
+                    "column": 31,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 7,
+                    "endColumn": 39
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "     function buildTree(inorder, postorder) {\n         const indexMap = new Map();\n         inorder.forEach((val, index) => indexMap.set(val, index));\n         const build = (left, right) => {\n             if (left > right) return null;\n             const rootVal = postorder.pop();\n             const root = new TreeNode(rootVal);\n             const rootIndex = indexMap.get(rootVal);\n             root.right = build(rootIndex + 1, right);\n             root.left = build(left, rootIndex - 1);\n             return root;\n         };\n         return build(0, inorder.length - 1);\n     }\n     ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is defined but never used.",
+                    "line": 1,
+                    "column": 15,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 24
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 3,
+                    "column": 25,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 3,
+                    "endColumn": 33
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 6,
+                    "column": 31,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 6,
+                    "endColumn": 39
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "     function buildTree(inorder, postorder) {\n         const stack = [];\n         let root = new TreeNode(postorder[postorder.length - 1]);\n         stack.push(root);\n         for (let i = postorder.length - 2; i >= 0; i--) {\n             const curr = new TreeNode(postorder[i]);\n             if (curr.val !== stack[stack.length - 1].val) {\n                 stack[stack.length - 1].right = curr;\n             } else {\n                 let parent = stack.pop();\n                 parent.left = curr;\n                 while (stack.length > 0 && stack[stack.length - 1].val === curr.val) {\n                     parent = stack.pop();\n                 }\n             }\n             stack.push(curr);\n         }\n         return root;\n     }\n     ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

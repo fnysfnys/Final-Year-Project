@@ -1,0 +1,837 @@
+{
+    "Java": {
+        "solution2": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/poor-pigs/Java/solution2.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@severity": "error",
+                            "@message": "First sentence should end with a period.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'buckets'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToDie'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "59",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToTest'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution3": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/poor-pigs/Java/solution3.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@severity": "error",
+                            "@message": "First sentence should end with a period.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'buckets'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToDie'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "59",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToTest'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "6",
+                            "@column": "12",
+                            "@severity": "error",
+                            "@message": "Each variable declaration must be in its own statement.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.coding.MultipleVariableDeclarationsCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution4": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/poor-pigs/Java/solution4.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@severity": "error",
+                            "@message": "First sentence should end with a period.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'buckets'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToDie'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "59",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToTest'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution8": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/poor-pigs/Java/solution8.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@severity": "error",
+                            "@message": "First sentence should end with a period.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'buckets'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToDie'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "59",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToTest'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 81).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution9": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/poor-pigs/Java/solution9.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@severity": "error",
+                            "@message": "First sentence should end with a period.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'buckets'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToDie'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "59",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToTest'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 83).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "13",
+                            "@column": "33",
+                            "@severity": "error",
+                            "@message": "Parameter n should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "13",
+                            "@column": "40",
+                            "@severity": "error",
+                            "@message": "Parameter k should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution5": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/poor-pigs/Java/solution5.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@severity": "error",
+                            "@message": "First sentence should end with a period.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'buckets'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToDie'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "59",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToTest'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "7",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 83).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution6": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/poor-pigs/Java/solution6.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@severity": "error",
+                            "@message": "First sentence should end with a period.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'buckets'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToDie'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "59",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToTest'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@severity": "error",
+                            "@message": "Line is longer than 80 characters (found 87).",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "27",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "40",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "58",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "9",
+                            "@column": "77",
+                            "@severity": "error",
+                            "@message": "Parameter pigs should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution10": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/poor-pigs/Java/solution10.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@severity": "error",
+                            "@message": "First sentence should end with a period.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "29",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "33",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'buckets'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "42",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "46",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToDie'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "60",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "64",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToTest'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution7": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/poor-pigs/Java/solution7.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@severity": "error",
+                            "@message": "First sentence should end with a period.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'buckets'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToDie'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "59",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToTest'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        }
+                    ]
+                }
+            }
+        },
+        "solution1": {
+            "checkstyle": {
+                "@version": "10.12.7",
+                "file": {
+                    "@name": "/Users/gabrielturner/UCL/Year4/FYP/FYP/scripts/code_quality_metrics/../../model_outputs/chatgpt-4/parsed_outputs/poor-pigs/Java/solution1.java",
+                    "error": [
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "File does not end with a newline.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"
+                        },
+                        {
+                            "@line": "1",
+                            "@severity": "error",
+                            "@message": "Missing package-info.java file.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"
+                        },
+                        {
+                            "@line": "2",
+                            "@severity": "error",
+                            "@message": "First sentence should end with a period.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@severity": "error",
+                            "@message": "@return tag should be present and have description.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "28",
+                            "@severity": "error",
+                            "@message": "Parameter buckets should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "32",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'buckets'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "41",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToDie should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "45",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToDie'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "59",
+                            "@severity": "error",
+                            "@message": "Parameter minutesToTest should be final.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"
+                        },
+                        {
+                            "@line": "5",
+                            "@column": "63",
+                            "@severity": "error",
+                            "@message": "Expected @param tag for 'minutesToTest'.",
+                            "@source": "com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

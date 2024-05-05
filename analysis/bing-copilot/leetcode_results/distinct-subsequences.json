@@ -1,0 +1,110 @@
+{
+    "Python": {
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "342 ms",
+            "memory": "68.3 MB"
+        },
+        "solution5": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "11111111111111111111111111111111111111111111111111100000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution4": {
+            "status_display": "Wrong Answer",
+            "compare_result": "00111000100000010000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution7": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "258 ms",
+            "memory": "11.9 MB"
+        },
+        "solution3": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "11111111111111111111111111111111111111111111111111100000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution2": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "1102 ms",
+            "memory": "99.7 MB"
+        },
+        "solution6": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "430 ms",
+            "memory": "68.5 MB"
+        }
+    },
+    "Java": {
+        "solution2": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "7 ms",
+            "memory": "41.1 MB"
+        },
+        "solution3": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "11111111111111111111111111111111111111111111111111111000000000000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution4": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111100000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "16 ms",
+            "memory": "48.7 MB"
+        }
+    },
+    "JavaScript": {
+        "solution5": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "114 ms",
+            "memory": "73.9 MB"
+        },
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "553 ms",
+            "memory": "95.8 MB"
+        },
+        "solution4": {
+            "status_display": "Wrong Answer",
+            "compare_result": "00111000100000010000000000000000000000000000000000000000000001000",
+            "runtime": "N/A",
+            "memory": "N/A"
+        },
+        "solution3": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "58 ms",
+            "memory": "52.2 MB"
+        },
+        "solution6": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "74 ms",
+            "memory": "52.3 MB"
+        },
+        "solution2": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "110 ms",
+            "memory": "73.7 MB"
+        }
+    }
+}

@@ -1,0 +1,136 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-the-repetitions/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 25
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var getMaxRepetitions = function(s1, n1, s2, n2) {\n       const regex = new RegExp(s2, 'g');\n       const matches = (s1.repeat(n1)).match(regex);\n       return matches ? Math.floor(matches.length / n2) : 0;\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-the-repetitions/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 25
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var getMaxRepetitions = function(s1, n1, s2, n2) {\n       function canObtainFromS1(s1, s2) {\n           let i = 0;\n           for (const char of s1) {\n               if (char === s2[i]) {\n                   i++;\n                   if (i === s2.length) {\n                       i = 0;\n                   }\n               }\n           }\n           return i === 0;\n       }\n       \n       let count = 0;\n       for (let i = 0; i < n1; i++) {\n           if (canObtainFromS1(s1, s2)) {\n               count++;\n           }\n       }\n       return Math.floor(count / n2);\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-the-repetitions/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 25
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var getMaxRepetitions = function(s1, n1, s2, n2) {\n       const lastIndex = new Map();\n       let j = 0, count = 0;\n       for (let i = 0; i < n1; i++) {\n           for (const char of s1) {\n               if (char === s2[j]) {\n                   j++;\n                   if (j === s2.length) {\n                       j = 0;\n                       count++;\n                   }\n               }\n           }\n           if (lastIndex.has(j)) {\n               const prevCount = lastIndex.get(j);\n               const patternCount = count - prevCount;\n               const remainingRepetitions = n1 - i - 1;\n               count += Math.floor(remainingRepetitions / (i - prevCount)) * patternCount;\n               i = n1 - remainingRepetitions % (i - prevCount);\n           }\n           lastIndex.set(j, count);\n       }\n       return Math.floor(count / n2);\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-the-repetitions/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 25
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var getMaxRepetitions = function(s1, n1, s2, n2) {\n       const dp = Array(n1 + 1).fill(0);\n       let j = 0, count = 0;\n       for (let i = 1; i <= n1; i++) {\n           for (const char of s1) {\n               if (char === s2[j]) {\n                   j++;\n                   if (j === s2.length) {\n                       j = 0;\n                       count++;\n                   }\n               }\n           }\n           dp[i] = count;\n           if (dp[i] === dp[i - 1]) {\n               break; // Pattern repeats, exit early\n           }\n       }\n       return Math.floor(dp[n1] / n2);\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

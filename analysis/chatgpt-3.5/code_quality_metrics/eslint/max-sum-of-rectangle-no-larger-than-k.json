@@ -1,0 +1,37 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/max-sum-of-rectangle-no-larger-than-k/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxSumSubmatrix' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 20
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxSumSubmatrix = function(matrix, k) {\n    const m = matrix.length;\n    const n = matrix[0].length;\n    let maxSum = -Infinity;\n\n    for (let left = 0; left < n; left++) {\n        const rowSum = new Array(m).fill(0);\n        for (let right = left; right < n; right++) {\n            for (let i = 0; i < m; i++) {\n                rowSum[i] += matrix[i][right];\n            }\n            let currentSum = 0;\n            let maxCurrentSum = -Infinity;\n            for (let i = 0; i < m; i++) {\n                currentSum = Math.max(rowSum[i], currentSum + rowSum[i]);\n                maxCurrentSum = Math.max(maxCurrentSum, currentSum);\n            }\n            if (maxCurrentSum <= k) {\n                maxSum = Math.max(maxSum, maxCurrentSum);\n            }\n        }\n    }\n    \n    return maxSum;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

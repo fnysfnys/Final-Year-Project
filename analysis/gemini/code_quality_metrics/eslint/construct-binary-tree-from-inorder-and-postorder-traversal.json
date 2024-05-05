@@ -1,0 +1,312 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 2,
+                    "column": 18,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 2,
+                    "endColumn": 26
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 9,
+                    "column": 24,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 9,
+                    "endColumn": 32
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 3,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n  let curr = new TreeNode(postorder.pop()), prev = null;\n  while (postorder.length) {\n    let val = postorder.pop();\n    if (prev && prev.val === val) {\n      prev.right = curr;\n      curr = prev;\n    } else {\n      const node = new TreeNode(val);\n      if (curr.left) {\n        node.right = curr.left;\n      }\n      curr.left = node;\n    }\n    prev = curr;\n  }\n  return curr;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 7,
+                    "column": 14,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 7,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n  if (!inorder.length) return null;\n  const rootVal = postorder.pop();\n  const rootIndex = inorder.indexOf(rootVal);\n  const left = buildTree(inorder.slice(0, rootIndex), postorder.slice(0, rootIndex));\n  const right = buildTree(inorder.slice(rootIndex + 1), postorder.slice(rootIndex));\n  return new TreeNode(rootVal, left, right);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 9,
+                    "column": 22,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 9,
+                    "endColumn": 30
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 13,
+                    "column": 24,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 13,
+                    "endColumn": 32
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 14,
+                    "column": 23,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 14,
+                    "endColumn": 31
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 17,
+                    "column": 24,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 17,
+                    "endColumn": 32
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 20,
+                    "column": 23,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 20,
+                    "endColumn": 31
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'node' is not defined.",
+                    "line": 23,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 23,
+                    "endColumn": 14
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 7,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n  const map = {};\n  for (let i = 0; i < inorder.length; i++) {\n    map[inorder[i]] = i;\n  }\n  const stack = [[postorder.pop(), map[postorder.pop()]]];\n  while (stack.length) {\n    const [val, index] = stack.pop();\n    const node = new TreeNode(val);\n    if (index + 1 < inorder.length && index > 0) {\n      stack.push([postorder.pop(), map[inorder[index + 1]]]);\n      stack.push([postorder.pop(), map[inorder[index - 1]]]);\n      node.right = new TreeNode(postorder.pop());\n      node.left = new TreeNode(postorder.pop());\n    } else if (index + 1 < inorder.length) {\n      stack.push([postorder.pop(), map[inorder[index + 1]]]);\n      node.right = new TreeNode(postorder.pop());\n    } else if (index > 0) {\n      stack.push([postorder.pop(), map[inorder[index - 1]]]);\n      node.left = new TreeNode(postorder.pop());\n    }\n  }\n  return node;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 3,
+                    "column": 18,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 3,
+                    "endColumn": 26
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 9,
+                    "column": 24,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 9,
+                    "endColumn": 32
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 13,
+                    "column": 23,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 13,
+                    "endColumn": 31
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 4,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n  const stack = [];\n  let root = new TreeNode(postorder.pop());\n  stack.push(root);\n  while (inorder.length) {\n    let nextVal = inorder.pop();\n    let last = stack[stack.length - 1];\n    if (last.val !== nextVal) {\n      last.right = new TreeNode(nextVal);\n      stack.push(last.right);\n    } else {\n      stack.pop();\n      last.left = new TreeNode(nextVal);\n      stack.push(last.left);\n    }\n  }\n  return root;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 12,
+                    "column": 16,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 12,
+                    "endColumn": 24
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n  const map = {};\n  for (let i = 0; i < inorder.length; i++) {\n    map[inorder[i]] = i;\n  }\n  function helper(start, end) {\n    if (start > end) return null;\n    const rootVal = postorder.pop();\n    const rootIndex = map[rootVal];\n    const left = helper(start, rootIndex - 1);\n    const right = helper(rootIndex + 1, end);\n    return new TreeNode(rootVal, left, right);\n  }\n  return helper(0, inorder.length - 1);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

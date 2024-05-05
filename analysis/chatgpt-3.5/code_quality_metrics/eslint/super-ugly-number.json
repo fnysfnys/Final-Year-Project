@@ -1,0 +1,378 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/super-ugly-number/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 60,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 60,
+                    "endColumn": 23
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "class MinHeap {\n    constructor() {\n        this.heap = [1];\n    }\n\n    insert(val) {\n        this.heap.push(val);\n        this.heapifyUp();\n    }\n\n    extractMin() {\n        const min = this.heap[1];\n        const last = this.heap.pop();\n\n        if (this.heap.length > 1) {\n            this.heap[1] = last;\n            this.heapifyDown();\n        }\n\n        return min;\n    }\n\n    heapifyUp() {\n        let index = this.heap.length - 1;\n\n        while (index > 1) {\n            const parentIndex = Math.floor(index / 2);\n\n            if (this.heap[index] < this.heap[parentIndex]) {\n                [this.heap[index], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[index]];\n                index = parentIndex;\n            } else {\n                break;\n            }\n        }\n    }\n\n    heapifyDown() {\n        let index = 1;\n\n        while (index * 2 < this.heap.length) {\n            let leftChildIndex = index * 2;\n            let rightChildIndex = index * 2 + 1;\n            let smallerChildIndex = leftChildIndex;\n\n            if (rightChildIndex < this.heap.length && this.heap[rightChildIndex] < this.heap[leftChildIndex]) {\n                smallerChildIndex = rightChildIndex;\n            }\n\n            if (this.heap[index] > this.heap[smallerChildIndex]) {\n                [this.heap[index], this.heap[smallerChildIndex]] = [this.heap[smallerChildIndex], this.heap[index]];\n                index = smallerChildIndex;\n            } else {\n                break;\n            }\n        }\n    }\n}\n\nvar nthSuperUglyNumber = function(n, primes) {\n    let minHeap = new MinHeap();\n    minHeap.insert(1);\n\n    while (n > 1) {\n        let current = minHeap.extractMin();\n        for (let prime of primes) {\n            minHeap.insert(current * prime);\n        }\n        n--;\n    }\n\n    return minHeap.extractMin();\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/super-ugly-number/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'MinHeap' is not defined.",
+                    "line": 2,
+                    "column": 23,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 2,
+                    "endColumn": 30
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    let minHeap = new MinHeap();\n    minHeap.insert(1);\n\n    while (n > 1) {\n        let current = minHeap.extractMin();\n        for (let prime of primes) {\n            minHeap.insert(current * prime);\n        }\n        n--;\n    }\n\n    return minHeap.extractMin();\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/super-ugly-number/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    let ugly = [1];\n    let set = new Set(ugly);\n\n    let i = 1;\n    while (ugly.length < n) {\n        let minVal = Number.MAX_SAFE_INTEGER;\n\n        for (let prime of primes) {\n            minVal = Math.min(minVal, prime * ugly[i - 1]);\n        }\n\n        if (!set.has(minVal)) {\n            set.add(minVal);\n            ugly.push(minVal);\n        }\n\n        i++;\n    }\n\n    return ugly[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/super-ugly-number/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    let ugly = [1];\n    let set = new Set(ugly);\n\n    while (ugly.length < n) {\n        let minVal = Number.MAX_SAFE_INTEGER;\n\n        for (let prime of primes) {\n            for (let num of ugly) {\n                let nextUgly = prime * num;\n                if (!set.has(nextUgly)) {\n                    set.add(nextUgly);\n                    minVal = Math.min(minVal, nextUgly);\n                }\n            }\n        }\n\n        ugly.push(minVal);\n    }\n\n    return ugly[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/super-ugly-number/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    let ugly = new Array(n);\n    ugly[0] = 1;\n\n    let pointers = new Array(primes.length).fill(0);\n\n    for (let i = 1; i < n; i++) {\n        let minVal = Number.MAX_SAFE_INTEGER;\n        for (let j = 0; j < primes.length; j++) {\n            minVal = Math.min(minVal, ugly[pointers[j]] * primes[j]);\n        }\n\n        ugly[i] = minVal;\n\n        for (let j = 0; j < primes.length; j++) {\n            if (ugly[pointers[j]] * primes[j] === minVal) {\n                pointers[j]++;\n            }\n        }\n    }\n\n    return ugly[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/super-ugly-number/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    const uglyNumbers = [1];\n    \n    function generateUglyNumber(index) {\n        if (uglyNumbers.length >= n) {\n            return;\n        }\n        \n        let minVal = Number.MAX_SAFE_INTEGER;\n        \n        for (let prime of primes) {\n            for (let num of uglyNumbers) {\n                let nextUgly = prime * num;\n                if (nextUgly > uglyNumbers[uglyNumbers.length - 1]) {\n                    minVal = Math.min(minVal, nextUgly);\n                }\n            }\n        }\n        \n        uglyNumbers.push(minVal);\n        generateUglyNumber(index + 1);\n    }\n    \n    generateUglyNumber(1);\n    \n    return uglyNumbers[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/super-ugly-number/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'PriorityQueue' is not defined.",
+                    "line": 2,
+                    "column": 25,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 2,
+                    "endColumn": 38
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    const minHeap = new PriorityQueue({ comparator: (a, b) => a - b });\n    minHeap.enqueue(1);\n\n    while (n > 1) {\n        const current = minHeap.dequeue();\n        for (let prime of primes) {\n            minHeap.enqueue(current * prime);\n        }\n        n--;\n    }\n\n    return minHeap.dequeue();\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/super-ugly-number/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    let dp = new Array(n);\n    dp[0] = 1;\n\n    let pointers = new Array(primes.length).fill(0);\n\n    for (let i = 1; i < n; i++) {\n        let minVal = Number.MAX_SAFE_INTEGER;\n        for (let j = 0; j < primes.length; j++) {\n            minVal = Math.min(minVal, dp[pointers[j]] * primes[j]);\n        }\n\n        dp[i] = minVal;\n\n        for (let j = 0; j < primes.length; j++) {\n            if (dp[pointers[j]] * primes[j] === minVal) {\n                pointers[j]++;\n            }\n        }\n    }\n\n    return dp[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/super-ugly-number/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'i' is assigned a value but never used.",
+                    "line": 20,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 20,
+                    "endColumn": 10
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    let ugly = [1];\n\n\n\n    let i = 1;\n    while (ugly.length < n) {\n        let minVal = Number.MAX_SAFE_INTEGER;\n\n        for (let prime of primes) {\n            for (let num of ugly) {\n                let nextUgly = prime * num;\n                if (nextUgly > ugly[ugly.length - 1]) {\n                    minVal = Math.min(minVal, nextUgly);\n                }\n            }\n        }\n\n        ugly.push(minVal);\n        i++;\n    }\n\n    return ugly[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/super-ugly-number/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'i' is assigned a value but never used.",
+                    "line": 20,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 20,
+                    "endColumn": 10
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    let ugly = [1];\n    let set = new Set(ugly);\n\n    let i = 1;\n    while (ugly.length < n) {\n        let minVal = Number.MAX_SAFE_INTEGER;\n\n        for (let prime of primes) {\n            for (let num of ugly) {\n                let nextUgly = prime * num;\n                if (!set.has(nextUgly)) {\n                    set.add(nextUgly);\n                    minVal = Math.min(minVal, nextUgly);\n                }\n            }\n        }\n\n        ugly.push(minVal);\n        i++;\n    }\n\n    return ugly[n - 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

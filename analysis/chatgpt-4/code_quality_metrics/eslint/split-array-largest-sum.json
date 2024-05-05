@@ -1,0 +1,345 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/split-array-largest-sum/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var splitArray = function(nums, k) {\n    function getMaxSum(subarrays) {\n        return Math.max(...subarrays.map(subarray => subarray.reduce((a, b) => a + b, 0)));\n    }\n\n    function split(start, k) {\n        if (k == 1) return [nums.slice(start)];\n\n        let results = [];\n        for (let i = start + 1; i <= nums.length - k + 1; i++) {\n            let firstPart = nums.slice(start, i);\n            let partitions = split(i, k - 1);\n\n            for\n\n(let part of partitions) {\n                results.push([firstPart, ...part]);\n            }\n        }\n        return results;\n    }\n\n    let allPossibleSplits = split(0, k);\n    return Math.min(...allPossibleSplits.map(getMaxSum));\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/split-array-largest-sum/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var splitArray = function(nums, k) {\n    function canSplit(maxSum) {\n        let sum = 0, count = 1;\n        for (let num of nums) {\n            if (sum + num > maxSum) {\n                sum = num;\n                count++;\n            } else {\n                sum += num;\n            }\n        }\n        return count <= k;\n    }\n\n    let left = Math.max(...nums), right = nums.reduce((a, b) => a + b);\n    while (left < right) {\n        let mid = Math.floor((left + right) / 2);\n        if (canSplit(mid)) {\n            right = mid;\n        } else {\n            left = mid + 1;\n        }\n    }\n    return left;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/split-array-largest-sum/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var splitArray = function(nums, k) {\n    let result = Infinity;\n\n    function dfs(index, k, currentMax, currentSum) {\n        if (k == 1) {\n            result = Math.min(result, Math.max(currentMax, nums.slice(index).reduce((a, b) => a + b, 0)));\n            return;\n        }\n        let sum = 0;\n        for (let i = index; i <= nums.length - k; i++) {\n            sum += nums[i];\n            dfs(i + 1, k - 1, Math.max(currentMax, sum), currentSum - sum);\n        }\n    }\n\n    dfs(0, k, 0, nums.reduce((a, b) => a + b, 0));\n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/split-array-largest-sum/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var splitArray = function(nums, k) {\n    const memo = new Map();\n\n    function helper(start, k) {\n        if (k == 1) return nums.slice(start).reduce((a, b) => a + b, 0);\n        if (memo.has(`${start},${k}`)) return memo.get(`${start},${k}`);\n\n        let sum = 0, minMaxSum = Infinity;\n        for (let i = start; i < nums.length - k + 1; i++) {\n            sum += nums[i];\n            minMaxSum = Math.min(minMaxSum, Math.max(sum, helper(i + 1, k - 1)));\n        }\n\n        memo.set(`${start},${k}`, minMaxSum);\n        return minMaxSum;\n    }\n\n    return helper(0, k);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/split-array-largest-sum/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                },
+                {
+                    "ruleId": "no-constant-condition",
+                    "severity": 2,
+                    "message": "Unexpected constant condition.",
+                    "line": 5,
+                    "column": 12,
+                    "nodeType": "Literal",
+                    "messageId": "unexpected",
+                    "endLine": 5,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var splitArray = function(nums, k) {\n    let sum = nums.reduce((a, b) => a + b);\n    let target = Math.ceil(sum / k);\n\n    while (true) {\n        let currentSum = 0, count = 1;\n        for (let num of nums) {\n            if (currentSum + num > target) {\n                currentSum = num;\n                count++;\n            } else {\n                currentSum += num;\n            }\n        }\n\n        if (count > k) {\n            target++;\n        } else {\n            return target;\n        }\n    }\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/split-array-largest-sum/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var splitArray = function(nums, k) {\n    function isValid(mid) {\n        let sum = 0, count = 1;\n        for (let num of nums) {\n            if (sum + num > mid) {\n                sum = num;\n                count++;\n                if (count > k) return false;\n            } else {\n                sum += num;\n            }\n        }\n        return true;\n    }\n\n    let low = Math.max(...nums), high = nums.reduce((a, b) => a + b);\n    while (low < high) {\n        const mid = Math.floor((low + high) / 2);\n        if (isValid(mid)) {\n            high = mid;\n        } else {\n            low = mid + 1;\n        }\n    }\n    return low;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/split-array-largest-sum/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var splitArray = function(nums, k) {\n    let low = Math.max(...nums), high = nums.reduce((a, b) => a + b);\n\n    while (low < high) {\n        const mid = Math.floor((low + high) / 2);\n        let sum = 0, count = 1;\n        for (let num of nums) {\n            if (sum + num > mid) {\n                count++;\n                sum = num;\n            } else {\n                sum += num;\n            }\n        }\n        if (count > k) {\n            low = mid + 1;\n        } else {\n            high = mid;\n        }\n    }\n    return low;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/split-array-largest-sum/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var splitArray = function(nums, k) {\n    const n = nums.length;\n    const dp = new Array(k + 1).fill(0).map(() => new Array(n + 1).fill(Infinity));\n    const prefixSum = new Array(n + 1).fill(0);\n\n    for (let i = 0; i < n; i++) {\n        prefixSum[i + 1] = prefixSum[i] + nums[i];\n    }\n\n    dp[0][0] = 0;\n    for (let i = 1; i <= k; i++) {\n        for (let j = 1; j <= n; j++) {\n            for (let m = 0; m < j; m++) {\n                dp[i][j] = Math.min(dp[i][j], Math.max(dp[i - 1][m], prefixSum[j] - prefixSum[m]));\n            }\n        }\n    }\n    return dp[k][n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/split-array-largest-sum/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var splitArray = function(nums, k) {\n    const n = nums.length;\n    const dp = new Array(k + 1).fill(0).map(() => new Array(n + 1).fill(Infinity));\n\n    for (let i = 0; i <= n; i++) {\n        dp[1][i] = nums.slice(0, i).reduce((a, b) => a + b, 0);\n    }\n\n    for (let i = 2; i <= k; i++) {\n        for (let j = 0; j <= n; j++) {\n            for (let m = 0; m < j; m++) {\n                dp[i][j] = Math.min(dp[i][j], Math.max(dp[i - 1][m], nums.slice(m, j).reduce((a, b) => a + b, 0)));\n            }\n        }\n    }\n    return dp[k][n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/split-array-largest-sum/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'splitArray' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 15
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var splitArray = function(nums, k) {\n    const n = nums.length;\n    const dp = new Array(k + 1).fill(0).map(() => new Array(n + 1).fill(Infinity));\n    const prefixSum = nums.reduce((acc, val, i) => {\n        acc[i + 1] = acc[i] + val;\n        return acc;\n    }, [0]);\n\n    dp[0][0] = 0;\n    for (let i = 1; i <= k; i++) {\n        for (let j = 1; j <= n; j++) {\n            for (let m = 0; m < j; m++) {\n                dp[i][j] = Math.min(dp[i][j], Math.max(dp[i - 1][m], prefixSum[j] - prefixSum[m]));\n            }\n        }\n    }\n    return dp[k][n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

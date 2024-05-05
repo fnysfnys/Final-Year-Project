@@ -1,0 +1,301 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/burst-balloons/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxCoins' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxCoins = function(nums) {\n    const n = nums.length;\n    const memo = Array.from({ length: n + 2 }, () => Array(n + 2).fill(0));\n\n    const dp = (left, right) => {\n        if (left + 1 === right) return 0;\n        if (memo[left][right] > 0) return memo[left][right];\n\n        let maxCoins = 0;\n        for (let k = left + 1; k < right; k++) {\n            maxCoins = Math.max(maxCoins, nums[left] * nums[k] * nums[right] + dp(left, k) + dp(k, right));\n        }\n        memo[left][right] = maxCoins;\n        return maxCoins;\n    };\n\n    return dp(0, n + 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/burst-balloons/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxCoins' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxCoins = function(nums) {\n    const n = nums.length;\n    const memo = Array.from({ length: n + 2 }, () => Array(n + 2).fill(0));\n\n    const dp = (left, right) => {\n        if (left + 1 === right) return 0;\n        if (memo[left][right] > 0) return memo[left][right];\n\n        let maxCoins = 0;\n        for (let i = left + 1; i < right; i++) {\n            maxCoins = Math.max(maxCoins, nums[left] * nums[i] * nums[right] + dp(left, i) + dp(i, right));\n        }\n        memo[left][right] = maxCoins;\n        return maxCoins;\n    };\n\n    return dp(0, n + 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/burst-balloons/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxCoins' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxCoins = function(nums) {\n    const n = nums.length;\n    const memo = new Map();\n\n    const dp = (left, right) => {\n        if (left + 1 === right) return 0;\n        if (memo.has(left * n + right)) return memo.get(left * n + right);\n\n        let maxCoins = 0;\n        for (let i = left + 1; i < right; i++) {\n            maxCoins = Math.max(maxCoins, nums[left] * nums[i] * nums[right] + dp(left, i) + dp(i, right));\n        }\n        memo.set(left * n + right, maxCoins);\n        return maxCoins;\n    };\n\n    return dp(0, n + 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/burst-balloons/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxCoins' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxCoins = function(nums) {\n    const n = nums.length;\n    const dp = (left, right) => {\n        if (left + 1 === right) return 0;\n        let maxCoins = 0;\n        for (let i = left + 1; i < right; i++) {\n            maxCoins = Math.max(maxCoins, nums[left] * nums[i] * nums[right] + dp(left, i) + dp(i, right));\n        }\n        return maxCoins;\n    };\n\n    return dp(0, n + 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/burst-balloons/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxCoins' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxCoins = function(nums) {\n    const n = nums.length;\n    const memo = new Map();\n\n    const dp = (left, right) => {\n        if (left + 1 === right) return 0;\n        if (memo.has(left + ',' + right)) return memo.get(left + ',' + right);\n\n        let maxCoins = 0;\n        for (let k = left + 1; k < right; k++) {\n            maxCoins = Math.max(maxCoins, nums[left] * nums[k] * nums[right] + dp(left, k) + dp(k, right));\n        }\n        memo.set(left + ',' + right, maxCoins);\n        return maxCoins;\n    };\n\n    return dp(0, n + 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/burst-balloons/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxCoins' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxCoins = function(nums) {\n    const n = nums.length;\n    nums.unshift(1);\n    nums.push(1);\n\n    const dp = Array.from({ length: n + 2 }, () => Array(n + 2).fill(0));\n\n    for (let len = 2; len <= n + 1; len++) {\n        for (let left = 0; left <= n - len + 1; left++) {\n            let right = left + len;\n            for (let k = left + 1; k < right; k++) {\n                dp[left][right] = Math.max(dp[left][right], nums[left] * nums[k] * nums[right] + dp[left][k] + dp[k][right]);\n            }\n        }\n    }\n\n    return dp[0][n + 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/burst-balloons/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxCoins' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxCoins = function(nums) {\n    const n = nums.length;\n    nums.unshift(1);\n    nums.push(1);\n\n    const dp = Array.from({ length: n + 2 }, () => Array(n + 2).fill(0));\n\n    for (let len = 2; len <= n + 1; len++) {\n        for (let left = 0; left <= n - len + 1; left++) {\n            let right = left + len;\n            for (let i = left + 1; i < right; i++) {\n                dp[left][right] = Math.max(dp[left][right], nums[left] * nums[i] * nums[right] + dp[left][i] + dp[i][right]);\n            }\n        }\n    }\n\n    return dp[0][n + 1];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/burst-balloons/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxCoins' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxCoins = function(nums) {\n    const n = nums.length;\n    const memo = new Map();\n\n    const dp = (left, right) => {\n        if (left + 1 === right) return 0;\n        if (memo.has(left + ',' + right)) return memo.get(left + ',' + right);\n\n        let maxCoins = 0;\n        for (let i = left + 1\n\n; i < right; i++) {\n            maxCoins = Math.max(maxCoins, nums[left] * nums[i] * nums[right] + dp(left, i) + dp(i, right));\n        }\n        memo.set(left + ',' + right, maxCoins);\n        return maxCoins;\n    };\n\n    return dp(0, n + 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/burst-balloons/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxCoins' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxCoins = function(nums) {\n    const n = nums.length;\n    const dp = Array.from({ length: n + 2 }, () => Array(n + 2).fill(0));\n\n    for (let len = 1; len <= n; len++) {\n        for (let left = 1; left <= n - len + 1; left++) {\n            let right = left + len - 1;\n            for (let k = left; k <= right; k++) {\n                dp[left][right] = Math.max(dp[left][right], nums[k - 1] * nums[k] * nums[k + 1] + dp[left][k - 1] + dp[k + 1][right]);\n            }\n        }\n    }\n\n    return dp[1][n];\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

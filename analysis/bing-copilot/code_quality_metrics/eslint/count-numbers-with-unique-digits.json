@@ -1,0 +1,268 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var countNumbersWithUniqueDigits = function(n) {\n       const dp = Array(n + 1).fill(0);\n       dp[0] = 1;\n       for (let i = 1; i <= n; i++) {\n           dp[i] = 9;\n           for (let j = 9; j >= 9 - i + 2; j--) {\n               dp[i] *= j;\n           }\n       }\n       return dp.reduce((sum, val) => sum + val, 0);\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var countNumbersWithUniqueDigits = function(n) {\n       return new Set(Array.from({ length: Math.pow(10, n) }, (_, i) => i))\n           .size;\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var countNumbersWithUniqueDigits = function(n) {\n       if (n === 0) return 1;\n       const uniqueDigits = (num, used) => {\n           if (num > Math.pow(10, n)) return 0;\n           let count = 1;\n           for (let i = 0; i < 10; i++) {\n               if (!used[i]) {\n                   used[i] = true;\n                   count += uniqueDigits(num * 10 + i, used);\n                   used[i] = false;\n               }\n           }\n           return count;\n       };\n       return uniqueDigits(0, Array(10).fill(false));\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var countNumbersWithUniqueDigits = function(n) {\n       return Array.from({ length: Math.pow(10, n) })\n           .filter((_, i, arr) => i === arr.lastIndexOf(i))\n           .length;\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var countNumbersWithUniqueDigits = function(n) {\n       if (n === 0) return 1;\n       let result = 10;\n       let uniqueDigits = 9;\n       for (let i = 2; i <= n; i++) {\n           uniqueDigits *= 11 - i;\n           result += uniqueDigits;\n       }\n       return result;\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var countNumbersWithUniqueDigits = function(n) {\n       let counts = {};\n       for (let i = 0; i < Math.pow(10, n); i++) {\n           counts[i] = 1 + (counts[i] || 0);\n       }\n       return Object.keys(counts).length;\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var countNumbersWithUniqueDigits = function(n) {\n       let result = 1;\n       for (let i = 0; i < n; i++) {\n           result += 9 * Math.pow(9, i);\n       }\n       return result;\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/count-numbers-with-unique-digits/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'countNumbersWithUniqueDigits' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 8,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 36
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "   var countNumbersWithUniqueDigits = function(n) {\n       const memo = new Map();\n       const helper = (n) => {\n           if (n === 0) return 1;\n           if (memo.has(n)) return memo.get(n);\n           const result = 10 * helper(n - 1) - 9 * helper(n - 2);\n           memo.set(n, result);\n           return result;\n       };\n       return helper(n);\n   };\n   ",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

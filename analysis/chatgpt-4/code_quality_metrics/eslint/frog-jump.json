@@ -1,0 +1,334 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/frog-jump/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    const n = stones.length;\n    for (let i = 1; i < n; i++) {\n        if (stones[i] > stones[i - 1] + i) return false;\n    }\n    const lastStone = stones[n - 1];\n    const stack = [[0, 0]]; // [position, jump]\n    while (stack.length) {\n        let [pos, jump] = stack.pop();\n        for (let nextJump = jump - 1; nextJump <= jump + 1; nextJump++) {\n            if (nextJump > 0) {\n                let nextPos = pos + nextJump;\n                if (nextPos === lastStone) return true;\n                if (stones.includes(nextPos)) {\n                    stack.push([nextPos, nextJump]);\n                }\n            }\n        }\n    }\n    return false;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/frog-jump/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones, position = 0, jump = 0, memo = {}) {\n    let key = position + ',' + jump;\n    if (key in memo) return memo[key];\n    if (position === stones.length - 1) return true;\n    for (let i = position + 1; i < stones.length; i++) {\n        let gap = stones[i] - stones[position];\n        if (gap >= jump - 1 && gap <= jump + 1) {\n            if (canCross(stones, i, gap, memo)) {\n                memo[key] = true;\n                return true;\n            }\n        }\n    }\n    memo[key] = false;\n    return false;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/frog-jump/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    let dp = new Array(stones.length).fill(0).map(() => new Set());\n    dp[0].add(0);\n    for (let i = 1; i < stones.length; i++) {\n        for (let j = 0; j < i; j++) {\n            let diff = stones[i] - stones[j];\n            if (dp[j].has(diff) || dp[j].has(diff - 1) || dp[j].has(diff + 1)) {\n                dp[i].add(diff);\n            }\n        }\n    }\n    return dp[stones.length - 1].size > 0;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/frog-jump/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    function backtrack(index, jump) {\n        if (index == stones.length - 1) return true;\n        for (let i = index + 1; i < stones.length; i++) {\n            let gap = stones[i] - stones[index];\n            if (gap < jump - 1) continue;\n            if (gap > jump + 1) return false;\n            if (backtrack(i, gap)) return true;\n        }\n        return false;\n    }\n    return backtrack(0, 0);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/frog-jump/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    for (let i = 1; i < stones.length; ++i)\n        if (stones[i] - stones[i - 1] > i) return false;\n\n    const lastStone = stones[stones.length - 1];\n    const positions = new Set(stones);\n    let currentPositions = new Set([0]);\n    let jumpDistance = 1;\n\n    while (currentPositions.size > 0) {\n        const nextPositions = new Set();\n        for (let pos of currentPositions) {\n            for (let j = jumpDistance - 1; j <= jumpDistance + 1; j++) {\n                if (j > 0 && positions.has(pos + j)) {\n                    if (pos + j == lastStone) return true;\n                    nextPositions.add(pos + j);\n                }\n            }\n        }\n        currentPositions = nextPositions;\n        jumpDistance++;\n    }\n    return false;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/frog-jump/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    let stoneMap = new Map();\n    for (let i = 0; i < stones.length; i++) {\n        stoneMap.set(stones[i], new Set());\n    }\n    stoneMap.get(0).add(0);\n    for (let stone of stones) {\n        for (let step of stoneMap.get(stone)) {\n            for (let i = step - 1; i <= step + 1; i++) {\n                if (i > 0 && stoneMap.has(stone + i)) {\n                    stoneMap.get(stone + i).add(i);\n                }\n            }\n        }\n    }\n    return stoneMap.get(stones[stones.length - 1]).size > 0;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/frog-jump/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    let stonePositions = new Set(stones);\n    let lastStone = stones[stones.length\n\n- 1];\n    let dp = {};\n    for (let stone of stones) {\n        dp[stone] = new Set();\n    }\n    dp[0].add(0);\n\n    for (let stone of stones) {\n        for (let step of dp[stone]) {\n            for (let i = -1; i <= 1; i++) {\n                let nextStep = step + i;\n                let nextStone = stone + nextStep;\n                if (nextStep > 0 && stonePositions.has(nextStone)) {\n                    dp[nextStone].add(nextStep);\n                }\n            }\n        }\n    }\n    return dp[lastStone].size > 0;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/frog-jump/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    const dp = new Array(stones.length).fill(0).map(() => new Set());\n    dp[0].add(0);\n    for (let i = 1; i < stones.length; i++) {\n        for (let j = 0; j < i; j++) {\n            let gap = stones[i] - stones[j];\n            if (dp[j].has(gap - 1) || dp[j].has(gap) || dp[j].has(gap + 1)) {\n                dp[i].add(gap);\n            }\n        }\n    }\n    return dp[stones.length - 1].size > 0;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/frog-jump/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    let stoneSet = new Set(stones);\n    let queue = [[0, 0]];\n    while (queue.length) {\n        let [stone, jump] = queue.shift();\n        for (let i = jump - 1; i <= jump + 1; i++) {\n            if (i > 0 && stoneSet.has(stone + i)) {\n                if (stone + i === stones[stones.length - 1]) {\n                    return true;\n                }\n                queue.push([stone + i, i]);\n            }\n        }\n    }\n    return false;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/chatgpt-4/parsed_outputs/frog-jump/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    let stoneSet = new Set(stones);\n    let stack = [[0, 0]];\n    while (stack.length) {\n        let [stone, jump] = stack.pop();\n        for (let i = jump - 1; i <= jump + 1; i++) {\n            if (i > 0 && stoneSet.has(stone + i)) {\n                if (stone + i === stones[stones.length - 1]) {\n                    return true;\n                }\n                stack.push([stone + i, i]);\n            }\n        }\n    }\n    return false;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

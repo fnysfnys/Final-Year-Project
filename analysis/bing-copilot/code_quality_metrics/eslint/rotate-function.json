@@ -1,0 +1,103 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/rotate-function/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    let maxVal = -Infinity;\n    \n    for (let k = 0; k < n; k++) {\n        let sum = 0;\n        for (let i = 0; i < n; i++) {\n            sum += i * nums[(i + k) % n];\n        }\n        maxVal = Math.max(maxVal, sum);\n    }\n    \n    return maxVal;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/rotate-function/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    let queue = [...nums];\n    let f0 = 0;\n\n    for (let i = 0; i < n; i++) {\n        f0 += i * nums[i];\n    }\n\n    let maxVal = f0;\n\n    for (let k = 1; k < n; k++) {\n        const removed = queue.shift();\n        queue.push(removed);\n        f0 = f0 + (n - 1) * (queue[0] - removed);\n        maxVal = Math.max(maxVal, f0);\n    }\n\n    return maxVal;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/rotate-function/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'maxRotateFunction' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 22
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var maxRotateFunction = function(nums) {\n    const n = nums.length;\n    let sum = 0;\n    let f0 = 0;\n\n    for (let i = 0; i < n; i++) {\n        sum += nums[i];\n        f0 += i * nums[i];\n    }\n\n    let maxVal = f0;\n\n    for (let k = 1; k < n; k++) {\n        f0 = f0 + sum - n * nums[n - k];\n        maxVal = Math.max(maxVal, f0);\n    }\n\n    return maxVal;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

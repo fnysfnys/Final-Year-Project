@@ -1,0 +1,103 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/super-ugly-number/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    const isSuperUgly = (num) => {\n        for (const prime of primes) {\n            while (num % prime === 0) {\n                num /= prime;\n            }\n        }\n        return num === 1;\n    };\n\n    let count = 0;\n    let num = 1;\n    while (count < n) {\n        if (isSuperUgly(num)) {\n            count++;\n        }\n        num++;\n    }\n    return num - 1;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/super-ugly-number/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    const uglies = [1];\n    const indices = new Array(primes.length).fill(0);\n\n    while (uglies.length < n) {\n        let nextUgly = Infinity;\n        for (let i = 0; i < primes.length; i++) {\n            nextUgly = Math.min(nextUgly, primes[i] * uglies[indices[i]]);\n        }\n        uglies.push(nextUgly);\n        for (let i = 0; i < primes.length; i++) {\n            if (nextUgly === primes[i] * uglies[indices[i]]) {\n                indices[i]++;\n            }\n        }\n    }\n    return uglies[n - 1];\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/super-ugly-number/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 23
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var nthSuperUglyNumber = function(n, primes) {\n    const heap = [1];\n    const seen = new Set([1]);\n\n    while (heap.length > 0) {\n        const curr = heap.shift();\n        if (seen.size === n) {\n            return curr;\n        }\n        for (const prime of primes) {\n            const next = curr * prime;\n            if (!seen.has(next)) {\n                seen.add(next);\n                heap.push(next);\n            }\n        }\n        heap.sort((a, b) => a - b);\n    }\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

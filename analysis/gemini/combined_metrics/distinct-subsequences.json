@@ -1,0 +1,107 @@
+{
+    "Python": {
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "279 ms",
+            "memory": "72.9 MB",
+            "complexity": 6,
+            "normalised_warnings": 0.1
+        },
+        "solution5": {
+            "status_display": "Runtime Error",
+            "compare_result": "00000000000000000000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 7,
+            "normalised_warnings": 0.16
+        },
+        "solution4": {
+            "status_display": "Runtime Error",
+            "compare_result": "10000000000000000000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 4,
+            "normalised_warnings": 0.1111111111111111
+        },
+        "solution3": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "11111111111111111111111111111111111111111111111111100000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 6,
+            "normalised_warnings": 0.2222222222222222
+        },
+        "solution2": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "517 ms",
+            "memory": "175.5 MB",
+            "complexity": 6,
+            "normalised_warnings": 0.07692307692307693
+        }
+    },
+    "Java": {
+        "solution2": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111100000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 6,
+            "readability": 0.8126447200775146,
+            "normalised_warnings": 0.56
+        },
+        "solution3": {
+            "status_display": "Time Limit Exceeded",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111100000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 6,
+            "readability": 0.7874869406223297,
+            "normalised_warnings": 0.56
+        },
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "16 ms",
+            "memory": "49.1 MB",
+            "complexity": 5,
+            "readability": 0.659885585308075,
+            "normalised_warnings": 0.3888888888888889
+        }
+    },
+    "JavaScript": {
+        "solution1": {
+            "status_display": "Accepted",
+            "compare_result": "11111111111111111111111111111111111111111111111111111111111111111",
+            "runtime": "87 ms",
+            "memory": "73.1 MB",
+            "complexity": 6,
+            "normalised_warnings": 0.0
+        },
+        "solution4": {
+            "status_display": "Runtime Error",
+            "compare_result": "00000000000000000000000000000000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 9,
+            "normalised_warnings": 0.0
+        },
+        "solution3": {
+            "status_display": "Wrong Answer",
+            "compare_result": "00111011000100010000101101010001011001100001100000000000000001111",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 4,
+            "normalised_warnings": 0.0
+        },
+        "solution2": {
+            "status_display": "Wrong Answer",
+            "compare_result": "10001100000000000000000000001000000000000000000000000000000000000",
+            "runtime": "N/A",
+            "memory": "N/A",
+            "complexity": 5,
+            "normalised_warnings": 0.0
+        }
+    }
+}

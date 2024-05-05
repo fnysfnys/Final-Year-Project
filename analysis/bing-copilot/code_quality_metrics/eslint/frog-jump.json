@@ -1,0 +1,136 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/frog-jump/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    const DELIMITER = '#';\n    const cache = new Map();\n\n    const recurse = (index, jumpSize) => {\n        if (index === stones.length - 1) return true;\n\n        const key = `${index}${DELIMITER}${jumpSize}`;\n        if (cache.has(key)) return cache.get(key);\n\n        for (let i = index + 1; i < stones.length; i++) {\n            const gap = stones[i] - stones[index];\n            if (gap >= jumpSize - 1 && gap <= jumpSize + 1) {\n                if (recurse(i, gap)) {\n                    cache.set(key, true);\n                    return true;\n                }\n            }\n        }\n\n        cache.set(key, false);\n        return false;\n    };\n\n    return recurse(0, 0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/frog-jump/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    const memo = new Map();\n\n    const recurse = (index, jumpSize) => {\n        if (index === stones.length - 1) return true;\n        if (memo.has(`${index}-${jumpSize}`)) return memo.get(`${index}-${jumpSize}`);\n\n        for (let i = index + 1; i < stones.length; i++) {\n            const gap = stones[i] - stones[index];\n            if (gap >= jumpSize - 1 && gap <= jumpSize + 1) {\n                if (recurse(i, gap)) {\n                    memo.set(`${index}-${jumpSize}`, true);\n                    return true;\n                }\n            }\n        }\n\n        memo.set(`${index}-${jumpSize}`, false);\n        return false;\n    };\n\n    return recurse(0, 0);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/frog-jump/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    const jumpMap = new Map();\n    for (const stone of stones) {\n        jumpMap.set(stone, new Set());\n    }\n    jumpMap.get(0).add(0);\n\n    for (let i = 0; i < stones.length; i++) {\n        for (const jump of jumpMap.get(stones[i])) {\n            for (const nextJump of [jump - 1, jump, jump + 1]) {\n                if (nextJump > 0 && jumpMap.has(stones[i] + nextJump)) {\n                    jumpMap.get(stones[i] + nextJump).add(nextJump);\n                }\n            }\n        }\n    }\n\n    return jumpMap.get(stones[stones.length - 1]).size > 0;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/frog-jump/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'canCross' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var canCross = function(stones) {\n    const dp = new Array(stones.length).fill(false);\n    dp[0] = true;\n\n    const jumpMap = new Map();\n    for (const stone of stones) {\n        jumpMap.set(stone, new Set());\n    }\n\n    for (let i = 0; i < stones.length; i++) {\n        for (const jump of jumpMap.get(stones[i])) {\n            const nextStone = stones[i] + jump;\n            if (jump > 0 && jumpMap.has(nextStone)) {\n                jumpMap.get(nextStone).add(jump);\n                jumpMap.get(nextStone).add(jump + 1);\n                jumpMap.get(nextStone).add(jump - 1);\n            }\n        }\n    }\n\n    for (let i = 1; i < stones.length; i++) {\n        for (const jump of jumpMap.get(stones[i])) {\n            if (dp[i - 1] && stones[i] + jump === stones[stones.length - 1]) {\n                dp[i] = true;\n                break;\n            }\n        }\n    }\n\n    return dp[stones.length - 1];\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

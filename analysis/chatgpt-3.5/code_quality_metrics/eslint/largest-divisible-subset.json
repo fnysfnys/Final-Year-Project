@@ -1,0 +1,268 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/largest-divisible-subset/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var largestDivisibleSubset = function(nums) {\n    nums.sort((a, b) => a - b);\n    const n = nums.length;\n    const dp = new Array(n).fill(1);\n    const prev = new Array(n).fill(-1);\n    let maxIndex = 0;\n\n    for (let i = 1; i < n; i++) {\n        for (let j = 0; j < i; j++) {\n            if (nums[i] % nums[j] === 0 && dp[i] < dp[j] + 1) {\n                dp[i] = dp[j] + 1;\n                prev[i] = j;\n            }\n        }\n        if (dp[i] > dp[maxIndex]) {\n            maxIndex = i;\n        }\n    }\n\n    const result = [];\n    while (maxIndex !== -1) {\n        result.push(nums[maxIndex]);\n        maxIndex = prev[maxIndex];\n    }\n\n    return result.reverse();\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/largest-divisible-subset/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var largestDivisibleSubset = function(nums) {\n    nums.sort((a, b) => a - b);\n    const n = nums.length;\n    const dp = new Array(n).fill(1);\n    let maxIndex = 0;\n\n    for (let i = 1; i < n; i++) {\n        for (let j = 0; j < i; j++) {\n            if (nums[i] % nums[j] === 0) {\n                dp[i] = Math.max(dp[i], dp[j] + 1);\n            }\n        }\n        if (dp[i] > dp[maxIndex]) {\n            maxIndex = i;\n        }\n    }\n\n    const result = [];\n    let currentDivisor = nums[maxIndex];\n    let currentLength = dp[maxIndex];\n\n    for (let i = maxIndex; i >= 0; i--) {\n        if (currentDivisor % nums[i] === 0 && dp[i] === currentLength) {\n            result.unshift(nums[i]);\n            currentDivisor = nums[i];\n            currentLength--;\n        }\n    }\n\n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/largest-divisible-subset/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var largestDivisibleSubset = function(nums) {\n    nums.sort((a, b) => a - b);\n    const n = nums.length;\n    const dp = new Array(n).fill(1);\n    const prev = new Array(n).fill(-1);\n    let maxIndex = 0;\n\n    for (let i = 1; i < n; i++) {\n        for (let j = 0; j < i; j++) {\n            if (nums[i] % nums[j] === 0 && dp[i] < dp[j] + 1) {\n                dp[i] = dp[j] + 1;\n                prev[i] = j;\n            }\n        }\n        if (dp[i] > dp[maxIndex]) {\n            maxIndex = i;\n        }\n    }\n\n    const result = [];\n    let current = maxIndex;\n    while (current !== -1) {\n        result.push(nums[current]);\n        current = prev[current];\n    }\n\n    return result.reverse();\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/largest-divisible-subset/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var largestDivisibleSubset = function(nums) {\n    nums.sort((a, b) => a - b);\n\n    function dfs(start, current) {\n        let maxSubset = current.slice();\n\n        for (let i = start; i < nums.length; i++) {\n            if (current.length === 0 || nums[i] % current[current.length - 1] === 0) {\n                current.push(nums[i]);\n                const subset = dfs(i + 1, current);\n                if (subset.length > maxSubset.length) {\n                    maxSubset = subset;\n                }\n                current.pop();\n            }\n        }\n\n        return maxSubset;\n    }\n\n    return dfs(0, []);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/largest-divisible-subset/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var largestDivisibleSubset = function(nums) {\n    nums.sort((a, b) => a - b);\n    const n = nums.length;\n    const memo = new Map();\n\n    function dp(index, prev) {\n        if (index === n) return [];\n\n        const key = `${index}-${prev}`;\n        if (memo.has(key)) return memo.get(key);\n\n        const include = [];\n        if (prev === null || nums[index] % prev === 0) {\n            include.push(nums[index], ...dp(index + 1, nums[index]));\n        }\n\n        const exclude = dp(index + 1, prev);\n\n        const result = include.length > exclude.length ? include : exclude;\n        memo.set(key, result);\n        return result;\n    }\n\n    return dp(0, null);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/largest-divisible-subset/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var largestDivisibleSubset = function(nums) {\n    nums.sort((a, b) => a - b);\n    const n = nums.length;\n    const dp = new Array(n).fill(1);\n    const sets = new Array(n).fill(null).map(() => new Set());\n\n    for (let i = 1; i < n; i++) {\n        for (let j = 0; j < i; j++) {\n            if (nums[i] % nums[j] === 0 && dp[i] < dp[j] + 1) {\n                dp[i] = dp[j] + 1;\n                sets[i] = new Set([...sets[j], nums[i]]);\n            }\n        }\n    }\n\n    let maxIndex = 0;\n    for (let i = 0; i < n; i++) {\n        if (dp[i] > dp[maxIndex]) {\n            maxIndex = i;\n        }\n    }\n\n    return Array.from(sets[maxIndex]);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/largest-divisible-subset/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var largestDivisibleSubset = function(nums) {\n    nums.sort((a, b) => a - b);\n    const n = nums.length;\n    const dp = new Map();\n\n    function dfs(index) {\n        if (dp.has(index)) return dp.get(index);\n\n        let maxSubset = [];\n        const currentNum = nums[index];\n\n        for (let i = index + 1; i < n; i++) {\n            if (currentNum % nums[i] === 0) {\n                const subset = dfs(i);\n                if (subset.length > maxSubset.length) {\n                    maxSubset = subset;\n                }\n            }\n        }\n\n        maxSubset = [currentNum, ...maxSubset];\n        dp.set(index, maxSubset);\n        return maxSubset;\n    }\n\n    let maxSubset = [];\n    for (let i = 0; i < n; i++) {\n        const subset = dfs(i);\n        if (subset.length > maxSubset.length) {\n            maxSubset = subset;\n        }\n    }\n\n    return maxSubset;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/largest-divisible-subset/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'largestDivisibleSubset' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var largestDivisibleSubset = function(nums) {\n    nums.sort((a, b) => a - b);\n    const n = nums.length;\n    const subsets = Array(n).fill(null).map(() => new Set());\n\n    for (let i = 0; i < n; i++) {\n        for (let j = 0; j < i; j++) {\n            if (nums[i\n\n] % nums[j] === 0) {\n                subsets[i].add(nums[j]);\n            }\n        }\n    }\n\n    let maxSubset = new Set();\n    for (let i = 0; i < n; i++) {\n        let currentSubset = new Set(subsets[i]);\n        for (const num of subsets[i]) {\n            if (currentSubset.size < subsets[i].size && currentSubset.has(num)) {\n                currentSubset.delete(num);\n            }\n        }\n        if (currentSubset.size + 1 > maxSubset.size) {\n            maxSubset = new Set([...currentSubset, nums[i]]);\n        }\n    }\n\n    return Array.from(maxSubset);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

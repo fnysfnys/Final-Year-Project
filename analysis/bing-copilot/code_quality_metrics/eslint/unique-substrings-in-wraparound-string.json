@@ -1,0 +1,48 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing-copilot/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-irregular-whitespace",
+                    "severity": 2,
+                    "message": "Irregular whitespace not allowed.",
+                    "line": 7,
+                    "column": 4,
+                    "nodeType": "Program",
+                    "messageId": "noIrregularWhitespace",
+                    "endLine": 7,
+                    "endColumn": 5
+                },
+                {
+                    "ruleId": "no-irregular-whitespace",
+                    "severity": 2,
+                    "message": "Irregular whitespace not allowed.",
+                    "line": 26,
+                    "column": 4,
+                    "nodeType": "Program",
+                    "messageId": "noIrregularWhitespace",
+                    "endLine": 26,
+                    "endColumn": 5
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "/**\n * We define the string base to be the infinite wraparound string of \"abcdefghijklmnopqrstuvwxyz\", so base will look like this:\n * \n * \"...zabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd....\".\n * \n * Given a string s, return the number of unique non-empty substrings of s that are present in base.\n * \u00a0\n * Example 1:\n * \n * Input: s = \"a\"\n * Output: 1\n * Explanation: Only the substring \"a\" of s is in base.\n * \n * Example 2:\n * \n * Input: s = \"cac\"\n * Output: 2\n * Explanation: There are two substrings (\"a\", \"c\") of s in base.\n * \n * Example 3:\n * \n * Input: s = \"zab\"\n * Output: 6\n * Explanation: There are six substrings (\"z\", \"a\", \"b\", \"za\", \"ab\", and \"zab\") of s in base.\n * \n * \u00a0\n * Constraints:\n * \n * 1 <= s.length <= 105\n * s consists of lowercase English letters.\n * \n * @param {string} s\n * @return {number}\n */\nvar findSubstringInWraproundString = function(s) {\n    // Initialize an array to store the maximum length of substring ending at each character\n    const maxLenEndingAt = new Array(26).fill(0);\n    \n    // Initialize the current length of substring\n    let curLen = 0;\n    \n    // Iterate over each character in the string\n    for (let i = 0; i < s.length; i++) {\n        const curr = s.charCodeAt(i) - 'a'.charCodeAt(0);\n        \n        // If the current character can be added to the previous substring\n        if (i > 0 && (s.charCodeAt(i - 1) !== (curr + 25) % 26 + 'a'.charCodeAt(0))) {\n            curLen = 0;\n        }\n        \n        // Update the current length of substring\n        curLen++;\n        \n        // Update the maximum length ending at the current character\n        maxLenEndingAt[curr] = Math.max(maxLenEndingAt[curr], curLen);\n    }\n    \n    // Calculate the total count of unique non-empty substrings\n    let ans = 0;\n    for (const len of maxLenEndingAt) {\n        ans += len;\n    }\n    \n    return ans;\n};\n\n// Example usage:\nconsole.log(findSubstringInWraproundString(\"zab\")); // Output: 6\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,466 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 5,
+                    "column": 22,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 5,
+                    "endColumn": 30
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 14,
+                    "column": 33,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 14,
+                    "endColumn": 41
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 21,
+                    "column": 32,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 21,
+                    "endColumn": 40
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 4,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n    if (inorder.length === 0) return null;\n    \n    const rootVal = postorder.pop();\n    const root = new TreeNode(rootVal);\n    const stack = [];\n    stack.push(root);\n    \n    for (let i = inorder.length - 1; i >= 0; i--) {\n        let currentNode = stack[stack.length - 1];\n        let inorderIndex = inorder.indexOf(currentNode.val);\n        \n        while (inorderIndex !== i) {\n            const newNode = new TreeNode(postorder.pop());\n            currentNode.right = newNode;\n            stack.push(newNode);\n            currentNode = newNode;\n            inorderIndex = inorder.indexOf(currentNode.val);\n        }\n        \n        currentNode.left = new TreeNode(postorder.pop());\n        stack.push(currentNode.left);\n    }\n    \n    return root;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 5,
+                    "column": 22,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 5,
+                    "endColumn": 30
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n    if (inorder.length === 0) return null;\n    \n    const rootVal = postorder.pop();\n    const root = new TreeNode(rootVal);\n    \n    const rootIndexInorder = inorder.indexOf(rootVal);\n    \n    root.right = buildTree(inorder.slice(rootIndexInorder + 1), postorder);\n    root.left = buildTree(inorder.slice(0, rootIndexInorder), postorder);\n    \n    return root;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 6,
+                    "column": 26,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 6,
+                    "endColumn": 34
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n    const build = (inStart, inEnd, postStart, postEnd) => {\n        if (inStart > inEnd) return null;\n        \n        const rootVal = postorder[postEnd];\n        const root = new TreeNode(rootVal);\n        const rootIndex = inorder.indexOf(rootVal);\n        \n        root.right = build(rootIndex + 1, inEnd, postStart + rootIndex - inStart, postEnd - 1);\n        root.left = build(inStart, rootIndex - 1, postStart, postStart + rootIndex - inStart - 1);\n        \n        return root;\n    };\n    \n    return build(0, inorder.length - 1, 0, postorder.length - 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 6,
+                    "column": 26,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 6,
+                    "endColumn": 34
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n    const build = (inStart, inEnd, postStart, postEnd) => {\n        if (inStart > inEnd) return null;\n        \n        const rootVal = postorder[postEnd];\n        const root = new TreeNode(rootVal);\n        const rootIndex = inorder.indexOf(rootVal);\n        const rightTreeSize = inEnd - rootIndex;\n        \n        root.left = build(inStart, rootIndex - 1, postStart, postEnd - rightTreeSize - 1);\n        root.right = build(rootIndex + 1, inEnd, postEnd - rightTreeSize, postEnd - 1);\n        \n        return root;\n    };\n    \n    return build(0, inorder.length - 1, 0, postorder.length - 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 6,
+                    "column": 26,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 6,
+                    "endColumn": 34
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n    const build = (inLeft, inRight, postLeft, postRight) => {\n        if (inLeft > inRight) return null;\n        \n        const rootVal = postorder[postRight];\n        const root = new TreeNode(rootVal);\n        const inorderIndex = inorder.indexOf(rootVal);\n        const leftTreeSize = inorderIndex - inLeft;\n        \n        root.left = build(inLeft, inorderIndex - 1, postLeft, postLeft + leftTreeSize - 1);\n        root.right = build(inorderIndex + 1, inRight, postLeft + leftTreeSize, postRight - 1);\n        \n        return root;\n    };\n    \n    return build(0, inorder.length - 1, 0, postorder.length - 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 5,
+                    "column": 22,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 5,
+                    "endColumn": 30
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n    if (inorder.length === 0) return null;\n    \n    const rootVal = postorder.pop();\n    const root = new TreeNode(rootVal);\n    const rootIndexInorder = inorder.indexOf(rootVal);\n    \n    root.right = buildTree(inorder.slice(rootIndexInorder + 1), postorder);\n    root.left = buildTree(inorder.slice(0, rootIndexInorder), postorder);\n    \n    return root;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 6,
+                    "column": 26,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 6,
+                    "endColumn": 34
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n    const build = (inStart, inEnd, postStart, postEnd) => {\n        if (inStart > inEnd) return null;\n        \n        const rootVal = postorder[postEnd];\n        const root = new TreeNode(rootVal);\n        const rootIndex = inorder.indexOf(rootVal);\n        const rightTreeSize = inEnd - rootIndex;\n        \n        root.right = build(rootIndex + 1, inEnd, postEnd - rightTreeSize, postEnd - 1);\n        root.left = build(inStart, rootIndex - 1, postStart, postEnd - rightTreeSize - 1);\n        \n        return root;\n    };\n    \n    return build(0, inorder.length - 1, 0, postorder.length - 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 9,
+                    "column": 26,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 9,
+                    "endColumn": 34
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n    const indexMap = new Map();\n    inorder.forEach((val, index) => indexMap.set(val, index));\n    \n    const build = (left, right) => {\n        if (left > right) return null;\n        \n        const rootVal = postorder.pop();\n        const root = new TreeNode(rootVal);\n        const inorderIndex = indexMap.get(rootVal);\n        \n        root.right = build(inorderIndex + 1, right);\n        root.left = build(left, inorderIndex - 1);\n        \n        return root;\n    };\n    \n    return build(0, inorder.length - 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 6,
+                    "column": 26,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 6,
+                    "endColumn": 34
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n    const build = (inStart, inEnd, postStart, postEnd) => {\n        if (inStart > inEnd) return null;\n        \n        const rootVal = postorder[postEnd];\n        const root = new TreeNode(rootVal);\n        const rootIndexInorder = inorder.indexOf(rootVal);\n        const leftTreeSize = rootIndexInorder - inStart;\n        \n        root.left = build(inStart, rootIndexInorder - 1, postStart, postStart + leftTreeSize - 1);\n        root.right = build(rootIndexInorder + 1, inEnd,\n\n postStart + leftTreeSize, postEnd - 1);\n        \n        return root;\n    };\n    \n    return build(0, inorder.length - 1, 0, postorder.length - 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/construct-binary-tree-from-inorder-and-postorder-traversal/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'buildTree' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 14
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'TreeNode' is not defined.",
+                    "line": 6,
+                    "column": 26,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 6,
+                    "endColumn": 34
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var buildTree = function(inorder, postorder) {\n    const build = (inStart, inEnd, postStart, postEnd) => {\n        if (inStart > inEnd) return null;\n        \n        const rootVal = postorder[postEnd];\n        const root = new TreeNode(rootVal);\n        const rootIndex = inorder.indexOf(rootVal);\n        const leftTreeSize = rootIndex - inStart;\n        \n        root.left = build(inStart, rootIndex - 1, postStart, postStart + leftTreeSize - 1);\n        root.right = build(rootIndex + 1, inEnd, postStart + leftTreeSize, postEnd - 1);\n        \n        return root;\n    };\n    \n    return build(0, inorder.length - 1, 0, postorder.length - 1);\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

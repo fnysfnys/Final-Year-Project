@@ -1,0 +1,202 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/arithmetic-slices/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n  if (nums.length < 3) return 0;\n\n  let dp = 0, totalCount = 0;\n\n  for (let i = 2; i < nums.length; i++) {\n    if (nums[i] - nums[i - 1] === nums[i - 1] - nums[i - 2]) {\n      dp++;\n      totalCount += dp;\n    } else {\n      dp = 0;\n    }\n  }\n\n  return totalCount;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/arithmetic-slices/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n  if (nums.length < 3) return 0;\n\n  const dp = new Array(nums.length).fill(0);\n  let totalCount = 0;\n\n  for (let i = 2; i < nums.length; i++) {\n    if (nums[i] - nums[i - 1] === nums[i - 1] - nums[i - 2]) {\n      dp[i] = dp[i - 1] + 1;\n      totalCount += dp[i];\n    }\n  }\n\n  return totalCount;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/arithmetic-slices/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n  if (nums.length < 3) return 0;\n\n  let count = 0;\n\n  for (let i = 2; i < nums.length; i++) {\n    const n = i - 1;\n    count += (n * (n + 1)) / 2;\n  }\n\n  return count;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/arithmetic-slices/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 3,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 3,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "const memo = {};\n\nvar numberOfArithmeticSlices = function(nums, i = 0, diff = null) {\n  if (i >= nums.length) return 0;\n\n  const key = `${i}-${diff}`;\n\n  if (memo[key]) return memo[key];\n\n  let count = 0;\n\n  if (diff !== null && nums[i] - nums[i - 1] === diff) {\n    count += 1 + numberOfArithmeticSlices(nums, i + 1, diff);\n  } else {\n    count += numberOfArithmeticSlices(nums, i + 1, nums[i] - nums[i - 1]);\n  }\n\n  memo[key] = count;\n\n  return count;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/arithmetic-slices/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n  if (nums.length < 3) return 0;\n\n  const set = new Set([nums[0]]);\n  let count = 0, diff = null;\n\n  for (let i = 1; i < nums.length; i++) {\n    if (diff !== null && !set.has(nums[i] - diff)) {\n      count += set.size - 1;\n      set.clear();\n    }\n    set.add(nums[i]);\n    diff = nums[i] - nums[i - 1];\n  }\n\n  count += set.size - 1;\n\n  return count;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/arithmetic-slices/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'numberOfArithmeticSlices' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 29
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var numberOfArithmeticSlices = function(nums) {\n  if (nums.length < 3) return 0;\n\n  let count = 0, diff = nums[1] - nums[0], curr = 2;\n\n  while (curr < nums.length) {\n    if (nums[curr] - nums[curr - 1] !== diff) {\n      count += Math.floor((curr - 2) * (curr - 1) / 2);\n      diff = nums[curr] - nums[curr - 1];\n      curr = 2;\n    } else {\n      curr++;\n    }\n  }\n\n  count += Math.floor((curr - 2) * (curr - 1) / 2);\n\n  return count;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

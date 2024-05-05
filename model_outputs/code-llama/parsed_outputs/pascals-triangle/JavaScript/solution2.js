@@ -1,0 +1,14 @@
+var generate = function(numRows) {
+   let triangle = [];
+   for (let i = 0; i < numRows; i++) {
+       triangle[i] = [];
+       for (let j = 0; j <= i; j++) {
+           if (j === 0 || j === i) {
+               triangle[i][j] = 1;
+           } else {
+               triangle[i][j] = generate(i - 1)[j - 1] + generate(i - 1)[j];
+           }
+       }
+   }
+   return triangle;
+};

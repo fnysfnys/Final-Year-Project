@@ -1,0 +1,334 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'result' is assigned a value but never used.",
+                    "line": 18,
+                    "column": 7,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 18,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function* generate(numRows) {\n    if (numRows < 1) return;\n\n    let row = [1];\n    yield row;\n\n    for (let i = 1; i < numRows; i++) {\n        let nextRow = [1];\n        for (let j = 1; j < i; j++) {\n            nextRow[j] = row[j - 1] + row[j];\n        }\n        nextRow.push(1);\n        row = nextRow;\n        yield row;\n    }\n}\n\nconst result = [...generate(5)];",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'generate' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var generate = function(numRows) {\n    if (numRows === 0) return [];\n    var result = [[1]];\n\n    for (var i = 1; i < numRows; i++) {\n        var row = [1];\n        for (var j = 1; j < i; j++) {\n            row[j] = result[i - 1][j - 1] + result[i - 1][j];\n        }\n        row.push(1);\n        result.push(row);\n    }\n\n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution10": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/JavaScript/solution10.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'generate' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var generate = function(numRows) {\n    var result = [];\n\n    for (var i = 0; i < numRows; i++) {\n        var row = [];\n        for (var j = 0; j <= i; j++) {\n            var value = factorial(i) / (factorial(j) * factorial(i - j));\n            row.push(value);\n        }\n        result.push(row);\n    }\n\n    return result;\n};\n\nfunction factorial(n) {\n    if (n === 0) return 1;\n    return n * factorial(n - 1);\n}",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'generate' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var generate = function(numRows) {\n    if (numRows === 0) return [];\n    var result = [[1]];\n\n    for (var i = 1; i < numRows; i++) {\n        var row = [];\n        row[0] = 1;\n        for (var j = 1; j < i; j++) {\n            row[j] = result[i - 1][j - 1] + result[i - 1][j];\n        }\n        row[i] = 1;\n        result.push(row);\n    }\n\n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'generate' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var generate = function(numRows) {\n    if (numRows === 0) return [];\n    var result = [[1]];\n    var i = 1;\n\n    while (i < numRows) {\n        var row = [1];\n        for (var j = 1; j < i; j++) {\n            row[j] = result[i - 1][j - 1] + result[i - 1][j];\n        }\n        row.push(1);\n        result.push(row);\n        i++;\n    }\n\n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution7": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/JavaScript/solution7.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'generate' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var generate = function(numRows) {\n    if (numRows === 0) return [];\n    var result = [];\n\n    for (var i = 0; i < numRows; i++) {\n        result.push(Array(i + 1).fill(1).reduce((row, _, j) => {\n            if (j !== 0 && j !== i) {\n                row[j] = result[i - 1][j - 1] + result[i - 1][j];\n            }\n            return row;\n        }, []));\n    }\n\n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution6": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/JavaScript/solution6.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'generate' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var generate = function(numRows) {\n    if (numRows === 0) return [];\n    var result = [];\n\n    for (var i = 0; i < numRows; i++) {\n        var row = Array(i + 1).fill(1);\n        for (var j = 1; j < i; j++) {\n            row[j] = result[i - 1][j - 1] + result[i - 1][j];\n        }\n        result.push(row);\n    }\n\n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'generate' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var generate = function(numRows) {\n    if (numRows === 0) return [];\n    if (numRows === 1) return [[1]];\n\n    var prevTriangle = generate(numRows - 1);\n    var prevRow = prevTriangle[numRows - 2];\n    var newRow = [1];\n\n    for (var i = 1; i < prevRow.length; i++) {\n        newRow.push(prevRow[i - 1] + prevRow[i]);\n    }\n\n    newRow.push(1);\n    prevTriangle.push(newRow);\n    return prevTriangle;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution9": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/JavaScript/solution9.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'generate' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var generate = function(numRows) {\n    const memo = {};\n\n    const generateRow = function(rowNum) {\n        if (rowNum === 0) return [1];\n        if (memo[rowNum]) return memo[rowNum];\n\n        const prevRow = generateRow(rowNum - 1);\n        const newRow = [1];\n\n        for (let i = 1; i < prevRow.length; i++) {\n            newRow.push(prevRow[i - 1] + prevRow[i]);\n        }\n\n        newRow.push(1);\n        memo[rowNum] = newRow;\n        return newRow;\n    };\n\n    const result = [];\n\n    for (let i = 0; i < numRows; i++) {\n        result.push(generateRow(i));\n    }\n\n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution8": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYPv2/model_outputs/chatgpt-3.5/parsed_outputs/pascals-triangle/JavaScript/solution8.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'generate' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 13
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var generate = function(numRows) {\n    if (numRows === 0) return [];\n    var result = [];\n\n    for (var i = 0; i < numRows; i++) {\n        var row = [1];\n        for (var j = 1; j < i; j++) {\n            var [left, right] = result[i - 1].slice(j - 1, j + 1);\n            row[j] = left + right;\n        }\n        if (i !== 0) row.push(1);\n        result.push(row);\n    }\n\n    return result;\n};",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

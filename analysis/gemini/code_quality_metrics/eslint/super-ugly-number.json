@@ -1,0 +1,180 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/super-ugly-number/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 28
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function nthSuperUglyNumber(n, primes) {\n  let left = 1, right = Math.pow(1000, n);\n  while (left < right) {\n    const mid = Math.floor((left + right) / 2);\n    let count = 0;\n    for (const prime of primes) {\n      count += Math.floor(mid / prime);\n    }\n    if (count < n) {\n      left = mid + 1;\n    } else {\n      right = mid;\n    }\n  }\n  return left;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/super-ugly-number/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 28
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function nthSuperUglyNumber(n, primes) {\n  let count = 0, num = 1;\n  while (count < n) {\n    if (isSuperUgly(num, primes)) {\n      count++;\n    }\n    num++;\n  }\n  return num - 1;\n}\n\nfunction isSuperUgly(num, primes) {\n  for (let prime of primes) {\n    while (num % prime === 0) {\n      num /= prime;\n    }\n  }\n  return num === 1;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/super-ugly-number/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 28
+                },
+                {
+                    "ruleId": "no-undef",
+                    "severity": 2,
+                    "message": "'PriorityQueue' is not defined.",
+                    "line": 2,
+                    "column": 18,
+                    "nodeType": "Identifier",
+                    "messageId": "undef",
+                    "endLine": 2,
+                    "endColumn": 31
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function nthSuperUglyNumber(n, primes) {\n  const pq = new PriorityQueue();\n  pq.push({ num: 1, i: 0, j: 0 });\n  const seen = new Set();\n  for (let i = 0; i < n; i++) {\n    const { num, i, j } = pq.pop();\n    if (seen.has(num)) continue;\n    seen.add(num);\n    pq.push({ num: num * primes[i], i, j: j + 1 });\n    if (i > 0) pq.push({ num: num * primes[j], i: i - 1, j });\n  }\n  return pq.top().num;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/super-ugly-number/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 28
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function nthSuperUglyNumber(n, primes) {\n  const dp = [1];\n  const pointers = primes.map(() => 0);\n  for (let i = 1; i < n; i++) {\n    const nextUgly = Math.min(...primes.map((prime, j) => prime * dp[pointers[j]]));\n    for (let j = 0; j < primes.length; j++) {\n      if (nextUgly === primes[j] * dp[pointers[j]]) {\n        pointers[j]++;\n      }\n    }\n    dp.push(nextUgly);\n  }\n  return dp[n - 1];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/super-ugly-number/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'nthSuperUglyNumber' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 28
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function nthSuperUglyNumber(n, primes) {\n  const dp = [];\n  dp[0] = 1;\n  let i = 1, j = 0, k = 0;\n  while (i < n) {\n    const nextUgly = Math.min(dp[j] * primes[0], dp[k] * primes[1], ...dp.slice(j, k + 1).map(x => x * primes[primes.length - 1]));\n    if (nextUgly === dp[j] * primes[0]) j++;\n    if (nextUgly === dp[k] * primes[1]) k++;\n    dp[i] = nextUgly;\n    i++;\n  }\n  return dp[n - 1];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

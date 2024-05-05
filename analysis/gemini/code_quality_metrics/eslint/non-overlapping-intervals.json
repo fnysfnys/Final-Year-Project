@@ -1,0 +1,180 @@
+{
+    "JavaScript": {
+        "solution5": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/non-overlapping-intervals/JavaScript/solution5.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 31
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function eraseOverlapIntervals(intervals) {\n  intervals.sort((a, b) => a[0] - b[0]); // Sort by start time\n  const stack = [];\n  let count = 0;\n  for (const [start, end] of intervals) {\n    while (stack.length && stack[stack.length - 1][1] > start) {\n      count++; // Overlap occurs, remove top\n      stack.pop();\n    }\n    stack.push([start, end]);\n  }\n  return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/non-overlapping-intervals/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 31
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function eraseOverlapIntervals(intervals) {\n  intervals.sort((a, b) => a[1] - b[1]); // Sort by end time\n  let count = 0;\n  let prevEnd = intervals[0][1];\n  for (let i = 1; i < intervals.length; i++) {\n    if (intervals[i][0] < prevEnd) {\n      count++;\n    } else {\n      prevEnd = intervals[i][1];\n    }\n  }\n  return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/non-overlapping-intervals/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 31
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function eraseOverlapIntervals(intervals) {\n  intervals.sort((a, b) => a[0] - b[0]); // Sort by start time\n  const n = intervals.length;\n  const dp = new Array(n + 1).fill(0);\n  for (let i = 1; i <= n; i++) {\n    const prev = dp[i - 1];\n    const prevNonOverlap = i - 2 >= 0 ? dp[i - 2] : 0;\n    dp[i] = Math.max(prev, prevNonOverlap + 1); // Choose max between no removal and removing current\n  }\n  return n - dp[n];\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/non-overlapping-intervals/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 31
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function eraseOverlapIntervals(intervals) {\n  intervals.sort((a, b) => a[0] - b[0]); // Sort by start time\n  let count = mergeSort(intervals, 0, intervals.length - 1);\n  return count;\n\n  function mergeSort(arr, start, end) {\n    if (start >= end) return 0;\n    const mid = Math.floor((start + end) / 2);\n    let countLeft = mergeSort(arr, start, mid);\n    let countRight = mergeSort(arr, mid + 1, end);\n    countLeft += merge(arr, start, mid, end);\n    return countLeft + countRight;\n  }\n\n  function merge(arr, start, mid, end) {\n    let count = 0;\n    let i = start;\n    let j = mid + 1;\n    let k = start;\n    const temp = [];\n    while (i <= mid && j <= end) {\n      if (arr[i][1] <= arr[j][0]) {\n        temp[k++] = arr[i++];\n      } else {\n        count++; // Overlap occurs\n        temp[k++] = arr[j++];\n      }\n    }\n    while (i <= mid) temp[k++] = arr[i++];\n    while (j <= end) temp[k++] = arr[j++];\n    for (i = start; i <= end; i++) arr[i] = temp[i];\n    return count;\n  }\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/non-overlapping-intervals/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'eraseOverlapIntervals' is defined but never used.",
+                    "line": 3,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 3,
+                    "endColumn": 31
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'_' is assigned a value but never used.",
+                    "line": 8,
+                    "column": 15,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 8,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "const IntervalTree = require('interval-tree');\n\nfunction eraseOverlapIntervals(intervals) {\n  const tree = new IntervalTree();\n  intervals.forEach(([start, end]) => tree.insert([start, end]));\n  let count = 0;\n  let prevEnd = 0;\n  for (const [_, [start, end]] of tree.searchInterval([prevEnd, Infinity])) {\n    if (start < end) {\n      count++;\n      prevEnd = end;\n    }\n  }\n  return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,136 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function findSubstringInWraproundString(s) {\n  const n = s.length;\n  const dp = new Array(n + 1).fill(0);\n  let maxLen = 0;\n  \n  for (let i = 1; i <= n; i++) {\n    if (i > 1 && (s.charCodeAt(i - 1) - s.charCodeAt(i - 2) + 26) % 26 === 1) {\n      maxLen++;\n    } else {\n      maxLen = 1;\n    }\n    dp[i] = Math.max(dp[i], maxLen);\n  }\n  \n  return dp.slice(1).reduce((acc, curr) => acc + curr, 0);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function findSubstringInWraproundString(s) {\n  const trie = {};\n  \n  function insert(word) {\n    let node = trie;\n    for (const char of word) {\n      node[char] = node[char] || {};\n      node = node[char];\n    }\n    node.isWord = true;\n  }\n  \n  function search(word) {\n    let node = trie;\n    for (const char of word) {\n      if (!node[char]) return false;\n      node = node[char];\n    }\n    return node.isWord;\n  }\n  \n  const suffixes = s.split('').map((_, i) => s.slice(i)).sort();\n  \n  for (const suffix of suffixes) {\n    if (search(suffix)) {\n      continue;\n    }\n    insert(suffix);\n    let prefix = suffix.slice(1);\n    while (prefix.length > 0 && !search(prefix)) {\n      prefix = prefix.slice(1);\n    }\n  }\n  \n  let count = 0;\n  function dfs(node) {\n    count += node.isWord ? 1 : 0;\n    for (const char of Object.keys(node)) {\n      dfs(node[char]);\n    }\n  }\n  \n  dfs(trie);\n  return count;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function findSubstringInWraproundString(s) {\n  const charSet = new Set();\n  let left = 0, right = 0;\n  let res = 0;\n  \n  while (right < s.length) {\n    charSet.add(s[right]);\n    while (left <= right && !isConsecutive(charSet)) {\n      charSet.delete(s[left]);\n      left++;\n    }\n    res += right - left + 1;\n    right++;\n  }\n  \n  return res;\n}\n\nfunction isConsecutive(set) {\n  const sorted = [...set].sort();\n  for (let i = 1; i < sorted.length; i++) {\n    if (sorted[i].charCodeAt() - sorted[i - 1].charCodeAt() !== 1) {\n      return false;\n    }\n  }\n  return true;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/unique-substrings-in-wraparound-string/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'findSubstringInWraproundString' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 40
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function findSubstringInWraproundString(s) {\n  const counts = new Array(26).fill(0);\n  let prevLen = 1;\n  let res = 0;\n  \n  for (const char of s) {\n    const index = char.charCodeAt() - 'a'.charCodeAt();\n    counts[index] = Math.max(counts[index], prevLen);\n    res += counts[index];\n    prevLen = (index > 0 && char.charCodeAt() - 1 === String.fromCharCode('a'.charCodeAt() + index - 1).charCodeAt()) ? prevLen + 1 : 1;\n  }\n  \n  return res;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

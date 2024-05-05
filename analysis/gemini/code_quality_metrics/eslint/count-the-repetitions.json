@@ -1,0 +1,125 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/count-the-repetitions/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getMaxRepetitions(s1, n1, s2, n2) {\n  const l1 = s1.length, l2 = s2.length;\n  let count = 0, i = 0, j = 0;\n\n  while (count < n2 * l2) {\n    if (s1[i] === s2[j]) {\n      j++;\n      if (j === l2) {\n        count++;\n        j = 0;\n      }\n    }\n    i = (i + 1) % (l1 * n1);\n  }\n\n  return Math.floor(count / l2);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/count-the-repetitions/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'l1' is assigned a value but never used.",
+                    "line": 2,
+                    "column": 9,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 2,
+                    "endColumn": 11
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getMaxRepetitions(s1, n1, s2, n2) {\n  const l1 = s1.length, l2 = s2.length;\n  const next = buildNext(s2);\n\n  let count = 0, i = 0, j = 0;\n\n  while (count < n2 * l2) {\n    if (j === l2) {\n      count++;\n      j = next[j - 1];\n    } else if (s1[i] === s2[j]) {\n      i++;\n      j++;\n    } else if (j > 0) {\n      j = next[j - 1];\n    } else {\n      i++;\n    }\n  }\n\n  return Math.floor(count / l2);\n\n  function buildNext(s) {\n    const l = s.length;\n    const next = new Array(l).fill(-1);\n    next[0] = 0;\n\n    for (let i = 1; i < l; i++) {\n      let j = next[i - 1];\n      while (j !== -1 && s[i] !== s[j]) {\n        j = next[j];\n      }\n      next[i] = j + 1;\n    }\n\n    return next;\n  }\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/gemini/parsed_outputs/count-the-repetitions/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'getMaxRepetitions' is defined but never used.",
+                    "line": 1,
+                    "column": 10,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 27
+                },
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'n2' is defined but never used.",
+                    "line": 1,
+                    "column": 40,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 42
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 2,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "function getMaxRepetitions(s1, n1, s2, n2) {\n  const l1 = s1.length, l2 = s2.length;\n  const dp = new Array(l1 * n1 + 1).fill(0);\n\n  for (let i = 1; i <= l1 * n1; i++) {\n    for (let j = 0; j < l2; j++) {\n      if (s1[(i - 1) % l1] === s2[j]) {\n        dp[i] = Math.max(dp[i], dp[(i - l1) % l1] + 1);\n      }\n    }\n  }\n\n  return Math.floor(dp[l1 * n1] / l2);\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}

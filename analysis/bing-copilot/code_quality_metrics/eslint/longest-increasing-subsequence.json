@@ -1,0 +1,136 @@
+{
+    "JavaScript": {
+        "solution1": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/longest-increasing-subsequence/JavaScript/solution1.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'lengthOfLIS' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var lengthOfLIS = function(nums) {\n    if (nums.length === 0) return 0;\n    const dp = new Array(nums.length).fill(1);\n    for (let i = 1; i < nums.length; i++) {\n        for (let j = 0; j < i; j++) {\n            if (nums[i] > nums[j]) {\n                dp[i] = Math.max(dp[i], dp[j] + 1);\n            }\n        }\n    }\n    return Math.max(...dp);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution4": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/longest-increasing-subsequence/JavaScript/solution4.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'lengthOfLIS' is assigned a value but never used.",
+                    "line": 29,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 29,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "class SegmentTree {\n    constructor(nums) {\n        this.tree = new Array(4 * nums.length).fill(0);\n        this.buildTree(nums, 0, 0, nums.length - 1);\n    }\n\n    buildTree(nums, idx, left, right) {\n        if (left === right) {\n            this.tree[idx] = nums[left];\n            return;\n        }\n        const mid = Math.floor((left + right) / 2);\n        this.buildTree(nums, 2 * idx + 1, left, mid);\n        this.buildTree(nums, 2 * idx + 2, mid + 1, right);\n        this.tree[idx] = Math.max(this.tree[2 * idx + 1], this.tree[2 * idx + 2]);\n    }\n\n    query(idx, left, right, qLeft, qRight) {\n        if (qLeft > right || qRight < left) return 0;\n        if (qLeft <= left && qRight >= right) return this.tree[idx];\n        const mid = Math.floor((left + right) / 2);\n        return Math.max(\n            this.query(2 * idx + 1, left, mid, qLeft, qRight),\n            this.query(2 * idx + 2, mid + 1, right, qLeft, qRight)\n        );\n    }\n}\n\nvar lengthOfLIS = function(nums) {\n    const segTree = new SegmentTree(nums);\n    const dp = new Array(nums.length).fill(1);\n    for (let i = 1; i < nums.length; i++) {\n        dp[i] = 1 + segTree.query(0, 0, nums.length - 1, 0, i - 1);\n        segTree.update(i, dp[i]);\n    }\n    return Math.max(...dp);\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution3": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/longest-increasing-subsequence/JavaScript/solution3.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'lengthOfLIS' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var lengthOfLIS = function(nums) {\n    const dp = [];\n    for (const num of nums) {\n        const idx = binarySearch(dp, num);\n        if (idx === dp.length) dp.push(num);\n        else dp[idx] = num;\n    }\n    return dp.length;\n};\n\nfunction binarySearch(arr, target) {\n    let left = 0, right = arr.length;\n    while (left < right) {\n        const mid = Math.floor((left + right) / 2);\n        if (arr[mid] < target) left = mid + 1;\n        else right = mid;\n    }\n    return left;\n}\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        },
+        "solution2": {
+            "filePath": "/Users/gabrielturner/UCL/Year4/FYP/FYP/model_outputs/bing_copilot/parsed_outputs/longest-increasing-subsequence/JavaScript/solution2.js",
+            "messages": [
+                {
+                    "ruleId": "no-unused-vars",
+                    "severity": 2,
+                    "message": "'lengthOfLIS' is assigned a value but never used.",
+                    "line": 1,
+                    "column": 5,
+                    "nodeType": "Identifier",
+                    "messageId": "unusedVar",
+                    "endLine": 1,
+                    "endColumn": 16
+                }
+            ],
+            "suppressedMessages": [],
+            "errorCount": 1,
+            "fatalErrorCount": 0,
+            "warningCount": 0,
+            "fixableErrorCount": 0,
+            "fixableWarningCount": 0,
+            "source": "var lengthOfLIS = function(nums) {\n    const tails = [];\n    for (const num of nums) {\n        const idx = tails.findIndex(t => t >= num);\n        if (idx === -1) tails.push(num);\n        else tails[idx] = num;\n    }\n    return tails.length;\n};\n",
+            "usedDeprecatedRules": [
+                {
+                    "ruleId": "no-extra-semi",
+                    "replacedBy": []
+                },
+                {
+                    "ruleId": "no-mixed-spaces-and-tabs",
+                    "replacedBy": []
+                }
+            ]
+        }
+    }
+}
